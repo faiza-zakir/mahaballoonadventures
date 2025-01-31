@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-
 import { Col, Container, Row } from "react-bootstrap";
-import { fetchPackagesData } from "../api/commonApi";
+import { fetchPackagesData } from "../../api/commonApi";
 import PackagCard from "./Card/Card";
 import "./styles.scss";
 import { useSearchParams } from "next/navigation";

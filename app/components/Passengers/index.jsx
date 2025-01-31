@@ -7,7 +7,7 @@ import { PhoneInput } from "react-international-phone";
 import "./styles.scss";
 import { useParams } from "next/navigation";
 import { useRouter } from "next/navigation";
-import { CreateEntryBooking, ReferenceBooking } from "../api/commonApi";
+import { CreateEntryBooking, ReferenceBooking } from "../../api/commonApi";
 import { BounceLoader } from "react-spinners";
 
 function Index() {

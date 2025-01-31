@@ -4,7 +4,11 @@ import img1 from "../../../../assets/HomePage/Packages/card1.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { useParams } from "next/navigation";
-import { setBooking, setPackageId, setPackage } from "../../../../store/booking";
+import {
+  setBooking,
+  setPackageId,
+  setPackage,
+} from "../../../../store/booking";
 import { useDispatch } from "react-redux";
 function Card(
   {
@@ -56,7 +60,8 @@ function Card(
         <div className="mt-1">
           <p className="para bds">Location</p>
           <p className="para">{location}</p>
-          <Link href={`/${lang}/compare-packages?compare1=${id}`}>Compare</Link>
+          <Link href={`/compare-packages?compare1=${id}`}>Compare</Link>
+          {/* <Link href={`/${lang}/compare-packages?compare1=${id}`}>Compare</Link> */}
         </div>
       </div>
       {active == id ? (
