@@ -179,8 +179,10 @@ function Index() {
                     <option value="" disabled selected>
                       Select a Package
                     </option>
-                    {packagesData?.map((item) => (
-                      <option value={item?.id}>{item?.title}</option>
+                    {packagesData?.map((item, i) => (
+                      <option value={item?.id} key={i}>
+                        {item?.title}
+                      </option>
                     ))}
                   </select>
                   {/* {selectedPackage ? selectedPackage : "Premium ~ Romantic"} */}

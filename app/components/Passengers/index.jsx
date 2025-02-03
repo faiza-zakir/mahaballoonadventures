@@ -205,7 +205,7 @@ function Index() {
             <Col className="colHalf" md={8}>
               <div className="sec-title mt-5">Enter Passengers Details</div>
               {fieldsAdults?.map((item, i) => (
-                <div className="wrapper mt-40">
+                <div className="wrapper mt-40" key={i}>
                   <div className="tag-line mt-5">Passenger Adult {i + 1}</div>
                   <Row>
                     <Col xs="12" md="6">
@@ -375,7 +375,7 @@ function Index() {
               {childAmount == 0 ? null : (
                 <>
                   {fieldsChilds?.map((item, i) => (
-                    <div className="wrapper mt-40">
+                    <div className="wrapper mt-40" key={i}>
                       <div className="tag-line mt-5">
                         Passenger Child {i + 1}
                       </div>

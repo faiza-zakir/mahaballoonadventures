@@ -76,12 +76,13 @@ function Index() {
                 <option value="" disabled selected>
                   Package to Compare
                 </option>
-                {packagesData?.map((item) => (
+                {packagesData?.map((item, i) => (
                   <option
                     value={item?.id}
                     disabled={
                       selectedPackage?.campare2 == item?.id ? true : false
                     }
+                    key={i}
                   >
                     {item?.title}
                   </option>
@@ -115,12 +116,13 @@ function Index() {
                 <option value="" disabled selected>
                   Package to Compare with
                 </option>
-                {packagesData?.map((item) => (
+                {packagesData?.map((item, i) => (
                   <option
                     value={item?.id}
                     disabled={
                       selectedPackage?.campare1 == item?.id ? true : false
                     }
+                    key={i}
                   >
                     {item?.title}
                   </option>

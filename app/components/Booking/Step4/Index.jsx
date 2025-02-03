@@ -31,7 +31,7 @@ function Index(props) {
       <Row className="step2Size">
         <Col className="colHalf PassengerLIStCol" md={8}>
           {fieldsAdults?.map((item, i) => (
-            <div className="wrapper mt-40">
+            <div className="wrapper mt-40" key={i}>
               <div className="sec-title mt-5">Passenger Adult {i + 1}</div>
               <Row>
                 <Col xs="12" md="6">
@@ -216,7 +216,7 @@ function Index(props) {
           {childAmount == 0 ? null : (
             <>
               {fieldsChilds?.map((item, i) => (
-                <div className="wrapper mt-40">
+                <div className="wrapper mt-40" key={i}>
                   <div className="sec-title mt-5">Passenger Child {i + 1}</div>
                   <Row>
                     <Col xs={12} md={6}>

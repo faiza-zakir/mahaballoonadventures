@@ -233,6 +233,7 @@ Excellent service with a nice and super friendly staff. The pilots were amazing!
                     currentSlide={currentSlide}
                     index={i}
                     handleopen={handleOpen}
+                    key={i}
                   />
                 ))}
               </Slider>
@@ -246,6 +247,7 @@ Excellent service with a nice and super friendly staff. The pilots were amazing!
                     currentSlide={currentSlide}
                     index={i}
                     handleopen={handleOpen}
+                    key={i}
                   />
                 ))}
               </Slider>
@@ -264,6 +266,7 @@ Excellent service with a nice and super friendly staff. The pilots were amazing!
                       setCurrentSlide(i);
                     }
                   }}
+                  key={i}
                 ></div>
               ))}
             </div>
@@ -280,6 +283,7 @@ Excellent service with a nice and super friendly staff. The pilots were amazing!
                       setCurrentSlide(i);
                     }
                   }}
+                  key={i}
                 ></div>
               ))}
             </div>

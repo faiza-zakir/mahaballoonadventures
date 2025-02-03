@@ -143,8 +143,8 @@ function Index(props) {
             <PrevArrow />
           </div>
           <Slider ref={sliderRef} {...settings}>
-            {cardData?.map((item) => (
-              <Card {...item} />
+            {cardData?.map((item, i) => (
+              <Card {...item} key={i} />
             ))}
           </Slider>
           <div className="sliderArrows mt-5">

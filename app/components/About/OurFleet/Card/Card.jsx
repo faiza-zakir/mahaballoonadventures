@@ -9,6 +9,7 @@ function Card(props) {
   return (
     <div
       className={`fleetOpotion3Card3i21j ${lang == "ar" ? "r_dir" : "l_dir"}`}
+      key={props?.key}
     >
       <div className="cardFlight">
         <div className="imageWrapper mb-4">

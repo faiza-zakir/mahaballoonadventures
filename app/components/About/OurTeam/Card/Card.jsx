@@ -7,7 +7,10 @@ function Card(props) {
   const { lang = "en" } = useParams();
 
   return (
-    <div className={`ourTeamCard32 ${lang == "ar" ? "r_dir" : "l_dir"}`}>
+    <div
+      className={`ourTeamCard32 ${lang == "ar" ? "r_dir" : "l_dir"}`}
+      key={props.key}
+    >
       <div className="cardFlight">
         <div className="imageWrapper mb-4">
           <img src={props?.thumb} alt="" />

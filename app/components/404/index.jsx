@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { IoSadOutline } from "react-icons/io5";
 import "./styles.scss";
 
-function index() {
+const Error = () => {
   const router = useRouter();
 
   return (
@@ -23,6 +23,6 @@ function index() {
       </Container>
     </div>
   );
-}
+};
 
-export default index;
+export default Error;

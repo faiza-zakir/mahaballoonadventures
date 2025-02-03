@@ -29,6 +29,7 @@ function Card(
     <div
       className={`pkCompareCard32 ${lang == "ar" ? "r_dir" : "l_dir"}`}
       {...props}
+      key={props?.key}
     >
       <div className="ImgThumb">
         {featured && <div className="featured">Featured</div>}

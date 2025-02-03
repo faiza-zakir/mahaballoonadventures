@@ -9,7 +9,10 @@ function Card(props) {
   const { title, short_des, category, readTime, thumb, route } = props;
 
   return (
-    <div className={`BlogsCardHomepahg32 ${lang == "ar" ? "r_dir" : "l_dir"}`}>
+    <div
+      className={`BlogsCardHomepahg32 ${lang == "ar" ? "r_dir" : "l_dir"}`}
+      key={props?.key}
+    >
       <div className="cardFlight">
         <div className="imageWrapper">
           <img src={thumb} alt="blog_thumbnail" />

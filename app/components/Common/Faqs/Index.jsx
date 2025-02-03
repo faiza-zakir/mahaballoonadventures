@@ -47,8 +47,8 @@ function Index(props) {
                 {viewMore ? (
                   <>
                     <Accordion defaultActiveKey="0" flush>
-                      {props?.content?.map((item) => (
-                        <Accordion.Item eventKey={item?.id}>
+                      {props?.content?.map((item, i) => (
+                        <Accordion.Item eventKey={item?.id} key={i}>
                           <Accordion.Header>{item?.qes?.en}</Accordion.Header>
                           <Accordion.Body>
                             <div
@@ -65,8 +65,8 @@ function Index(props) {
                 ) : (
                   <>
                     <Accordion defaultActiveKey="0" flush>
-                      {props?.content?.slice(0, 10)?.map((item) => (
-                        <Accordion.Item eventKey={item?.id}>
+                      {props?.content?.slice(0, 10)?.map((item, i) => (
+                        <Accordion.Item eventKey={item?.id} key={i}>
                           <Accordion.Header>{item?.qes?.en}</Accordion.Header>
                           <Accordion.Body>
                             <div
@@ -93,8 +93,8 @@ function Index(props) {
             </>
           ) : (
             <Accordion defaultActiveKey="0" flush>
-              {faqsData?.map((item) => (
-                <Accordion.Item eventKey={item?.id}>
+              {faqsData?.map((item, i) => (
+                <Accordion.Item eventKey={item?.id} key={i}>
                   <Accordion.Header>{item?.qes}</Accordion.Header>
                   <Accordion.Body>{item?.ans}</Accordion.Body>
                 </Accordion.Item>

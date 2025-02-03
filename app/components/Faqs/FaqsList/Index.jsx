@@ -77,7 +77,7 @@ function Index() {
         <div className="mt-5">
           <Accordion defaultActiveKey="0" flush>
             {faqsPageData?.map((item, i) => (
-              <Accordion.Item eventKey={i}>
+              <Accordion.Item eventKey={i} key={i}>
                 <Accordion.Header>{item?.ques?.en}</Accordion.Header>
                 <Accordion.Body>
                   <div

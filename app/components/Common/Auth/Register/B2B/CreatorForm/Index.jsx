@@ -101,8 +101,8 @@ function Index(props) {
       </p>
       <div className="regFormWrapper">
         <Row>
-          {InFIelds?.map((item) => (
-            <Col lg={4}>
+          {InFIelds?.map((item, i) => (
+            <Col lg={4} key={i}>
               <div className="form_group mt-4">
                 <label htmlFor={item?.name}>{item?.label}</label>
                 <input

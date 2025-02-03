@@ -16,6 +16,7 @@ function Card(props) {
         lang == "ar" ? "r_dir" : "l_dir"
       } ${props?.currentSlide == props?.index ? "" : "testLidk"}`}
       {...props}
+      key={props?.key}
     >
       <div
         className={` cardFlight ${

@@ -107,16 +107,16 @@ function Index(props) {
           {blogData ? (
             <>
               <Slider ref={sliderRef} {...settings}>
-                {blogData?.map((item) => (
-                  <Card {...item} slider={true} />
+                {blogData?.map((item, i) => (
+                  <Card {...item} slider={true} key={i} />
                 ))}
               </Slider>
             </>
           ) : (
             <>
               <Slider ref={sliderRef} {...settings}>
-                {blogDataTs?.map((item) => (
-                  <Card {...item} slider={true} />
+                {blogDataTs?.map((item, i) => (
+                  <Card {...item} slider={true} key={i} />
                 ))}
               </Slider>
             </>

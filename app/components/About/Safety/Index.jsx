@@ -17,7 +17,7 @@ function Index(props) {
           <Col md={6} lg>
             <div className={lang == "ar" ? "safetyHalf1 arB" : "safetyHalf1"}>
               {props?.content?.safety?.slice(0, 5)?.map((item, i) => (
-                <div className="safetyItem">
+                <div className="safetyItem" key={i}>
                   <div className="safetyNo">0{i + 1}</div>
                   <Accordion defaultActiveKey="0" flush>
                     <Accordion.Item eventKey="0">
@@ -45,7 +45,7 @@ function Index(props) {
           <Col md={6} lg>
             <div className={lang == "ar" ? "safetyHalf2 arB" : "safetyHalf2"}>
               {props?.content?.safety?.slice(5, 10)?.map((item, i) => (
-                <div className="safetyItem">
+                <div className="safetyItem" key={i}>
                   <div className="safetyNo">
                     {i == 4 ? "" : "0"}
                     {i + 6}

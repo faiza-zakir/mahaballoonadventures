@@ -16,7 +16,7 @@ function index() {
       <div className="ProudctsWrapper">
         <div className="sec-title bdr-btm pb-3 pt-1">Wishlist Summary</div>
         {cartItems?.map((item, i) => (
-          <Row className="mt-3 bdr-btm pt-3 pb-3">
+          <Row className="mt-3 bdr-btm pt-3 pb-3" key={i}>
             <Col lg="4">
               <div className="product-item">
                 <div className="btn-remove">

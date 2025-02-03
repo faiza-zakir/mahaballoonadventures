@@ -100,8 +100,8 @@ function Index() {
             <PrevArrow />
           </div>
           <Slider ref={sliderRef} {...settings}>
-            {BlogList?.map((item) => (
-              <Card {...item} slider={true} />
+            {BlogList?.map((item, i) => (
+              <Card {...item} slider={true} key={i} />
             ))}
           </Slider>
         </div>
