@@ -5,7 +5,7 @@ import Step3 from "./Step3/Index";
 import Step4 from "./Step4/Index";
 import TotalInfo from "./TotalInfo/Index";
 import FooterB from "./Footer/Index";
-import DetailsForm from "./DetailsForm";
+// import DetailsForm from "./DetailsForm";
 import AddressForm from "./AddressForm";
 import { Container } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
@@ -22,7 +22,7 @@ import "./styles.scss";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
-function Index() {
+const Index = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const isBookingModal = useSelector((state) => state.booking.isBookingModal);
@@ -720,6 +720,6 @@ function Index() {
       </Modal>
     </div>
   );
-}
+};
 
 export default Index;
