@@ -1,10 +1,9 @@
 import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import DrSliderArrows from "../../components/DrSliderArrows/Index";
+import DrSliderArrows from "../../DrSliderArrows/Index";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "./Card/Card";
-
 import img1 from "../assets/About/balloon.jpg";
 
 import "./styles.scss";

@@ -4,7 +4,7 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "./Card/Card";
 
-import DrSliderArrows from "../../../components/DrSliderArrows/Index";
+import DrSliderArrows from "../../DrSliderArrows/Index";
 
 import { useParams } from "next/navigation";
 import Details from "./Details/Details";

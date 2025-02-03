@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Steps from "../../../../../components/Common/Steps/Index";
+import Steps from "../../../../Common/Steps/Index";
 import "./styles.scss";
 
 function Index(props) {

@@ -7,7 +7,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { IoMdCloseCircle } from "react-icons/io";
-import ProductListingCard from "../../components/Common/ProductListingCard/Index";
+import ProductListingCard from "../../Common/ProductListingCard/Index";
 import { useParams } from "next/navigation";
 import useOutsideAlerter from "../Hook/useOutsideAlerter";
 import "./styles.scss";

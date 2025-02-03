@@ -4,7 +4,7 @@ import { Step, Stepper } from "react-form-stepper";
 import Slider from "react-slick";
 import "./styles.scss";
 import { useParams } from "next/navigation";
-import DrSliderArrows from "../../../components/DrSliderArrows/Index";
+import DrSliderArrows from "../../DrSliderArrows/Index";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 function Index(props) {

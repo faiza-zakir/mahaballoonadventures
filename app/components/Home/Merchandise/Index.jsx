@@ -3,12 +3,12 @@ import "./styles.scss";
 import Slider from "react-slick";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { Col, Container, Row } from "react-bootstrap";
-import ProductListingCard from "../../components/Common/ProductListingCard/Index";
+import ProductListingCard from "../../Common/ProductListingCard/Index";
 import prod1 from "../assets/Products/prod1.jpg";
 import prod2 from "../assets/Products/prod2.jpg";
 import prod3 from "../assets/Products/prod3.jpg";
 import prod4 from "../assets/Products/prod4.jpg";
-import DrSliderArrows from "../../components/DrSliderArrows/Index";
+import DrSliderArrows from "../../DrSliderArrows/Index";
 
 function Index() {
   const settings = {

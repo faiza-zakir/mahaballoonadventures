@@ -1,8 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import BlogCard from "../../../components/Blogs/Card/Card";
+import BlogCard from "../../Blogs/Card/Card";
 import BlogListData from "../../../Db/blogs";
-
 import "./styles.scss";
 function Index() {
   return (

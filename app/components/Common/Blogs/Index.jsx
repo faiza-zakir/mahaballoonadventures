@@ -3,7 +3,7 @@ import Slider from "react-slick";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "./Card/Card";
-import DrSliderArrows from "../../../components/DrSliderArrows/Index";
+import DrSliderArrows from "../../DrSliderArrows/Index";
 import blogDataTs from "../../../Db/blogs";
 import useWindowSize from "../../../Hook/useWindowSize";
 

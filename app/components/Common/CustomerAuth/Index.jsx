@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import LoginComp from "../../../components/Common/CustomerAuth/Login/Index";
-import RegisterComp from "../../../components/Common/CustomerAuth/Register/Index";
-import ForgotPassForm from "../../../components/Common/CustomerAuth/ForgetPassForm/Index";
+import LoginComp from "../../Common/CustomerAuth/Login/Index";
+import RegisterComp from "../../Common/CustomerAuth/Register/Index";
+import ForgotPassForm from "../../Common/CustomerAuth/ForgetPassForm/Index";
 import "./styles.scss";
 import { toast } from "react-toastify";
 import useAuthApi from "../../../api/useAuthApi";

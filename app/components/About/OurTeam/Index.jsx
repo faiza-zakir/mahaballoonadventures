@@ -11,7 +11,7 @@ import member1 from "../assets/About/member1.png";
 import member2 from "../assets/About/member2.png";
 import member3 from "../assets/About/member3.png";
 import member4 from "../assets/About/member4.png";
-import DrSliderArrows from "../../components/DrSliderArrows/Index";
+import DrSliderArrows from "../../DrSliderArrows/Index";
 
 import "./styles.scss";
 function Index() {

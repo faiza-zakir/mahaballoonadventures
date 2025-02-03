@@ -4,7 +4,7 @@ import { AiOutlineLink } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
-import Loader from "../../../components/Common/Loader/Loader";
+import Loader from "../../Common/Loader/Loader";
 import BlogListData from "../../../Db/blogs";
 import { useParams } from "next/navigation";
 import {

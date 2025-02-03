@@ -12,19 +12,17 @@ import LangContext from "../../../utils/LanguageContext";
 
 // import { FaAngleRight, FaSearch } from "react-icons/fa";
 // import serviceImg from "../assets/Navbar/maha.png";
-// import AuthComp from "../../components/Common/Auth/Index";
-// import CustomerAuthComp from "../../components/Common/CustomerAuth/Index";
+// import AuthComp from "../Common/Auth/Index";
+// import CustomerAuthComp from "../Common/CustomerAuth/Index";
 const cart = "https://d3gelo9cifr8ed.cloudfront.net/assets/icons/cart.svg";
 const heart = "https://d3gelo9cifr8ed.cloudfront.net/assets/icons/heart.svg";
 const person = "https://d3gelo9cifr8ed.cloudfront.net/assets/icons/person.svg";
 const avatar = "https://d3gelo9cifr8ed.cloudfront.net/avatar.png";
 const navLogo = "https://d3gelo9cifr8ed.cloudfront.net/assets/mahaNav.png";
 const logo = "https://d3gelo9cifr8ed.cloudfront.net/assets/Logo.png";
-const AuthComp = lazy(() => import("../../../components/Common/Auth/Index"));
-const CustomerAuthComp = lazy(() =>
-  import("../../../components/Common/CustomerAuth/Index")
-);
-const Booking = lazy(() => import("../../../components/Booking/Index"));
+const AuthComp = lazy(() => import("../../Common/Auth/Index"));
+const CustomerAuthComp = lazy(() => import("../../Common/CustomerAuth/Index"));
+const Booking = lazy(() => import("../../Booking/Index"));
 
 // import { MdOutlineLanguage } from "react-icons/md";
 import { GoDot } from "react-icons/go";

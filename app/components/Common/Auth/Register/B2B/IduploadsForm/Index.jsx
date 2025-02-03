@@ -1,9 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Button, Col, Modal, Row } from "react-bootstrap";
 import { BsUpload } from "react-icons/bs";
-import UploadWidget from "../../../../../../components/Upload/Index";
-import Details from "../../../../../../components/Terms/Details/Index";
-
+import UploadWidget from "../../../../../Upload/Index";
+import Details from "../../../../../Terms/Details/Index";
 import "./styles.scss";
 import Head from "next/head";
 function Index(props) {

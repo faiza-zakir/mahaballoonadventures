@@ -4,9 +4,9 @@ import Slider from "react-slick";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { Col, Container, Row } from "react-bootstrap";
 import Card from "./Card/Card";
-import DrSliderArrows from "../../../components/DrSliderArrows/Index";
+import DrSliderArrows from "../../DrSliderArrows/Index";
 import useWindowSize from "../../../Hook/useWindowSize";
-import Details from "./Details/Details";
+// import Details from "./Details/Details";
 import DetailsV2 from "./DetailsV2/Index";
 import "./styles.scss";
 

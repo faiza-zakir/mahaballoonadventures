@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import LoginCompB2B from "../../../components/Common/Auth/Login/B2B/Index";
-import RegisterB2BGeneral from "../../../components/Common/Auth/Register/B2B/General/Index";
-import ForgotPasswordForm from "../../../components/Common/Auth/Register/B2B/ForgetPassForm/Index";
-import ResetPasswordForm from "../../../components/Common/Auth/Register/B2B/ResetPasswordForm/Index";
-import Button from "react-bootstrap/Button";
+import LoginCompB2B from "../../Common/Auth/Login/B2B/Index";
+import RegisterB2BGeneral from "../../Common/Auth/Register/B2B/General/Index";
+import ForgotPasswordForm from "../../Common/Auth/Register/B2B/ForgetPassForm/Index";
+import ResetPasswordForm from "../../Common/Auth/Register/B2B/ResetPasswordForm/Index";
+// import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";

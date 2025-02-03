@@ -6,7 +6,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import Card from "./Card/Card";
 
 // details
-import DrSliderArrows from "../../../components/DrSliderArrows/Index";
+import DrSliderArrows from "../../DrSliderArrows/Index";
 import Details from "./Details/Details";
 import { useParams } from "next/navigation";
 import { fetchPackagesData } from "../../../api/commonApi";
