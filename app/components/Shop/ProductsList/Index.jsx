@@ -114,9 +114,10 @@ const Index = () => {
   ];
 
   const wrapperRef = useRef(null);
-  useEffect(() => {
-    useOutsideAlerter(wrapperRef, setShowFilter);
-  }, [wrapperRef]);
+  // useEffect(() => {
+  //   useOutsideAlerter(wrapperRef, setShowFilter);
+  // }, [wrapperRef]);
+  useOutsideAlerter(wrapperRef, setShowFilter);
 
   return (
     <div className="ProductList3939Kdk3 py-60">

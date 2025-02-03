@@ -50,9 +50,10 @@ const Index = () => {
     }
   }, [videoLink]);
 
-  useEffect(() => {
-    useOutsideAlerter(wrapperRef, handleClose);
-  }, [wrapperRef]);
+  // useEffect(() => {
+  //   useOutsideAlerter(wrapperRef, handleClose);
+  // }, [wrapperRef]);
+  useOutsideAlerter(wrapperRef, handleClose);
 
   let galleryList = [
     {

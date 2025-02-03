@@ -145,9 +145,11 @@ const Index = (props) => {
     return !isDateInSlots; // Disable if not in slotsData
   };
 
-  useEffect(() => {
-    useOutsideAlerter(wrapperRef, setOpenDatePicker);
-  }, [wrapperRef]);
+  // useEffect(() => {
+  //   useOutsideAlerter(wrapperRef, setOpenDatePicker);
+  // }, [wrapperRef]);
+
+  useOutsideAlerter(wrapperRef, setOpenDatePicker);
 
   return (
     <div className="calender9dk3">

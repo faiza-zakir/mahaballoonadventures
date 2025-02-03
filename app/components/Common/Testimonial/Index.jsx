@@ -158,9 +158,11 @@ Excellent service with a nice and super friendly staff. The pilots were amazing!
     }
   }, [videoLink]);
 
-  useEffect(() => {
-    useOutsideAlerter(wrapperRef, handleClose);
-  }, [wrapperRef]);
+  // useEffect(() => {
+  //   useOutsideAlerter(wrapperRef, handleClose);
+  // }, [wrapperRef]);
+
+  useOutsideAlerter(wrapperRef, handleClose);
 
   const nextSlide = () => {
     if (sliderRef.current) {
