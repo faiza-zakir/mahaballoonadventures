@@ -420,8 +420,8 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 </div>
                 <p className="details">
                   By subscribing you agree to with our{" "}
-                  <Link>Privacy Policy</Link> and provide consent to receive
-                  updates from our company.
+                  <Link href={`/privacy-policy`}>Privacy Policy</Link> and
+                  provide consent to receive updates from our company.
                 </p>
               </div>
             </Col>
