@@ -563,9 +563,7 @@ const Index = () => {
         settotalResp({});
         dispatch(setBooking(false));
         window.location.assign(
-          `${import.meta.env.VITE_PAYMENTBASEURL}/?token=${
-            response?.data?.cart?.data?.cartId
-          }`
+          `${process.env.NEXT_PUBLIC_PAYMENTBASEURL}/?token=${response?.data?.cart?.data?.cartId}`
         );
         // dispatch(setBooking(false));
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import thumb from "../../../../assets/HomePage/testimonial.jpg";
+import Image from "next/image";
+// import thumb from "../../../../assets/HomePage/testimonial.jpg";
 import social1 from "../../../../assets/icons/google_symbol.svg.svg";
 import social2 from "../../../../assets/icons/facebook.svg";
 import social3 from "../../../../assets/icons/linkedin_symbol.svg.svg";
@@ -85,7 +86,13 @@ function Index(props) {
           </Col>
           <Col lg={6}>
             <div className="imgWrapper">
-              <img src={thumb} alt="" />
+              {/* <img src={thumb} alt="" /> */}
+              <Image
+                src="/assets/HomePage/testimonial.jpg"
+                alt="User"
+                width={500}
+                height={500}
+              />
             </div>
           </Col>
         </Row>

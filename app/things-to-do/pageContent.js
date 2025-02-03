@@ -4,10 +4,11 @@ import GiftOffer from "../components/Common/GiftOffer/Index";
 import FaqsComm from "../components/Common/Faqs/Index";
 import BlogsComm from "../components/Common/Blogs/Index";
 import SightSeeing from "../components/ThingsToDo/OurPackages/Index";
-import banner from "../assets/Banner/ThingsToDoInDubaibanner.webp";
+// import banner from "../assets/Banner/ThingsToDoInDubaibanner.webp";
 // details
-
 import content from "../Db/thingsTodo";
+const banner =
+  "https://res.cloudinary.com/dpuuse7d9/image/upload/v1738578623/gdvjfcoaaxynakaajjvy.webp";
 
 function PageContent() {
   return (

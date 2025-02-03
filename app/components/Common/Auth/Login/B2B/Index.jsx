@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import thumb from "../../../../../assets/About/member1.png";
+import Image from "next/image";
 import "./styles.scss";
 import useAuthApi from "../../../../../api/useAuthApi";
 import { toast } from "react-toastify";
@@ -124,7 +124,13 @@ function Index(props) {
           </Col>
           <Col lg={6}>
             <div className="imgWrapper">
-              <img src={thumb} alt="" />
+              {/* <img src={thumb} alt="User" /> */}
+              <Image
+                src="/assets/About/member1.png"
+                alt="User"
+                width={500}
+                height={500}
+              />
             </div>
           </Col>
         </Row>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import thumb from "../../../../assets/HomePage/testimonial.jpg";
+import Image from "next/image";
+// import thumb from "../../../../assets/HomePage/testimonial.jpg";
 import "./styles.scss";
 import { PhoneInput } from "react-international-phone";
 function Index(props) {
@@ -145,7 +146,13 @@ function Index(props) {
           </Col>
           <Col lg={6}>
             <div className="imgWrapper">
-              <img src={thumb} alt="" />
+              {/* <img src={thumb} alt="" /> */}
+              <Image
+                src="/assets/HomePage/testimonial.jpg"
+                alt="User"
+                width={500}
+                height={500}
+              />
             </div>
           </Col>
         </Row>

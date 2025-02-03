@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import StepProgress from "../../../../../Common/Steps/Index";
 import RegisterForm from "../RegisterFrom/Index";
 import EmailVerify from "../EmailVerify/Index";
 import CreatorForm from "../CreatorForm/Index";
 import IduploadForm from "../IduploadsForm/Index";
-import thumb from "../../../../../../assets/About/member1.png";
+// import thumb from "../../../../../../assets/About/member1.png";
 import "./styles.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import { toast } from "react-toastify";
@@ -751,7 +752,13 @@ function Index(props) {
             </Col>
             <Col>
               <div className="imgWrapper">
-                <img src={thumb} alt="" />
+                {/* <img src={thumb} alt="" /> */}
+                <Image
+                  src="/assets/About/member1.png"
+                  alt="User"
+                  width={500}
+                  height={500}
+                />
               </div>
             </Col>
           </Row>

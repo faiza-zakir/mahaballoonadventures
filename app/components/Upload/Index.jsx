@@ -9,9 +9,9 @@ function Index(props) {
     cloudinaryRaf.current = window.cloudinary;
     widgetRef.current = cloudinaryRaf.current.createUploadWidget(
       {
-        cloudName: import.meta.env.VITE_cloudinaryname,
-        uploadPreset: import.meta.env.VITE_cloudinarypresents,
-        apiKey: import.meta.env.VITE_cloudinaryAPIkey,
+        cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_NAME,
+        uploadPreset: process.env.NEXT_PUBLIC_CLOUDINARY_PRESENTS,
+        apiKey: process.env.NEXT_PUBLIC_CLOUDINARY_APIKEY,
         sources: ["local"],
         resourceType: "image",
         clientAllowedFormats: "image",
