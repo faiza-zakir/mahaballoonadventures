@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import StepProgress from "../../../../../../components/Common/Steps/Index";
-import RegisterForm from "../../../../../../components/Common/Auth/Register/B2B/RegisterFrom/Index";
-import EmailVerify from "../../../../../../components/Common/Auth/Register/B2B/EmailVerify/Index";
-import CreatorForm from "../../../../../../components/Common/Auth/Register/B2b/CreatorForm/Index";
-import IduploadForm from "../../../../../../components/Common/Auth/Register/B2b/IduploadsForm/Index";
+import StepProgress from "../../../../../Common/Steps/Index";
+import RegisterForm from "../RegisterFrom/Index";
+import EmailVerify from "../EmailVerify/Index";
+import CreatorForm from "../CreatorForm/Index";
+import IduploadForm from "../IduploadsForm/Index";
 import thumb from "../../../../../../assets/About/member1.png";
-
 import "./styles.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import { toast } from "react-toastify";
