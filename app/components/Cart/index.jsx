@@ -9,7 +9,7 @@ import { useRouter, useParams } from "next/navigation";
 import { FaCheck } from "react-icons/fa";
 import "./styles.scss";
 
-function index() {
+const Index = () => {
   const cartItems = useSelector((state) => state.cart.products);
 
   const searchParams = useSearchParams();
@@ -62,6 +62,6 @@ function index() {
       </Container>
     </div>
   );
-}
+};
 
-export default index;
+export default Index;

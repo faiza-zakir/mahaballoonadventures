@@ -7,7 +7,7 @@ import { contactUs } from "../../../api/commonApi";
 import { toast } from "react-toastify";
 const img1 = "https://d3gelo9cifr8ed.cloudfront.net/assets/contactUs.webp";
 
-function index() {
+const Index = () => {
   const [formData, setFormData] = useState({});
   const [checkTerms, setCheckTerms] = useState(false);
   const [isLoaidng, setIsLoading] = useState(false);
@@ -155,6 +155,6 @@ function index() {
       </Container>
     </div>
   );
-}
+};
 
-export default index;
+export default Index;

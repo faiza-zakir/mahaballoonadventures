@@ -28,7 +28,7 @@ const testimonial6 =
 const testimonial7 =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Homepage/Our%20Testimonials7.webp";
 
-function Index(props) {
+const Index = (props) => {
   const { content } = props;
 
   const settings = {
@@ -332,6 +332,6 @@ Excellent service with a nice and super friendly staff. The pilots were amazing!
       /> */}
     </div>
   );
-}
+};
 
 export default Index;

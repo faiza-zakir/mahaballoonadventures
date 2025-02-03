@@ -23,7 +23,7 @@ import { IoIosCloseCircle } from "react-icons/io";
 import useOutsideAlerter from "../../../Hook/useOutsideAlerter";
 import "./styles.scss";
 
-function Index() {
+const Index = () => {
   const [videoOpen, setVideoOpen] = useState(false);
   const [videoLink, setVideoLink] = useState("");
   const [videoPoster, setVideoPoster] = useState("");
@@ -165,6 +165,6 @@ function Index() {
       </Container>
     </div>
   );
-}
+};
 
 export default Index;

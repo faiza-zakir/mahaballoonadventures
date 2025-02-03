@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import "./styles.scss";
 import { useRouter } from "next/navigation";
 
-function index() {
+const Index = () => {
   const cartItems = useSelector((state) => state.cart.products);
 
   const router = useRouter();
@@ -62,6 +62,6 @@ function index() {
       </div>
     </div>
   );
-}
+};
 
-export default index;
+export default Index;

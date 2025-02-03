@@ -9,7 +9,7 @@ import "react-date-picker/dist/DatePicker.css";
 import "react-calendar/dist/Calendar.css";
 import "./styles.scss";
 import { toast } from "react-toastify";
-function index(props) {
+const Index = (props) => {
   const { Range1, setOpenDatePicker, wrapperRef, setValue, value } = props;
 
   const [slotsData, setSlotsData] = useState([]);
@@ -207,6 +207,6 @@ function index(props) {
       </>
     </div>
   );
-}
+};
 
-export default index;
+export default Index;

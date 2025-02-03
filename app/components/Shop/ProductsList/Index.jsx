@@ -20,7 +20,7 @@ const prod4 = "https://d3gelo9cifr8ed.cloudfront.net/assets/Products/prod4.jpg";
 /**
  */
 
-function Index() {
+const Index = () => {
   const { lang = "en" } = useParams();
   const [showFilter, setShowFilter] = useState(false);
   let cardData = [
@@ -215,6 +215,6 @@ function Index() {
       </Container>
     </div>
   );
-}
+};
 
 export default Index;

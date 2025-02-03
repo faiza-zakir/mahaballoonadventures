@@ -7,7 +7,7 @@ import "./styles.scss";
 import { useRouter } from "next/navigation";
 import useCart from "../../../Hook/useCart";
 
-function index() {
+const Index = () => {
   const cartItems = useSelector((state) => state.cart.products);
   const router = useRouter();
   const { clearItemsCart, removeItemsCart } = useCart();
@@ -17,7 +17,7 @@ function index() {
       <div className="ProudctsWrapper">
         <div className="sec-title bdr-btm pb-3 pt-1">Order Summary</div>
         {cartItems?.map((item, i) => (
-          <Row className="mt-3 bdr-btm pt-3 pb-3">
+          <Row className="mt-3 bdr-btm pt-3 pb-3" key={i}>
             <Col lg="4">
               <div className="product-item">
                 <div
@@ -73,6 +73,6 @@ function index() {
       </div>
     </div>
   );
-}
+};
 
-export default index;
+export default Index;

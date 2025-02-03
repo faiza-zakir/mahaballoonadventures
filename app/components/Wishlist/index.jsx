@@ -5,7 +5,7 @@ import { FaHeart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import "./styles.scss";
 import { useRouter } from "next/navigation";
-function index() {
+const Index = () => {
   const wishlistItems = useSelector((state) => state.wishlist.products);
   const router = useRouter();
 
@@ -37,6 +37,6 @@ function index() {
       </Container>
     </div>
   );
-}
+};
 
-export default index;
+export default Index;
