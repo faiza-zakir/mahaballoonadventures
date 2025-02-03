@@ -6,7 +6,7 @@ import Step4 from "./Step4/Index";
 import TotalInfo from "./TotalInfo/Index";
 import FooterB from "./Footer/Index";
 // import DetailsForm from "./DetailsForm";
-import AddressForm from "./AddressForm";
+import AddressForm from "./AddressForm/Index";
 import { Container } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import { useDispatch, useSelector } from "react-redux";
