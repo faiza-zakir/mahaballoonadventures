@@ -8,13 +8,14 @@ import Card from "./Card/Card";
 // details
 import DrSliderArrows from "../../DrSliderArrows/Index";
 import Details from "./Details/Details";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { fetchPackagesData } from "../../../api/commonApi";
 import useWindowSize from "../../../Hook/useWindowSize";
 
 import "./styles.scss";
 function Index(props) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
 
   const [active, setActive] = useState();
   const [ExtraDetails, setExtraDetails] = useState([]);

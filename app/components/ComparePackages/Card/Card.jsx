@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import "./styles.scss";
 import { IoIosArrowDown } from "react-icons/io";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { setBooking, setPackageId, setPackage } from "../../../store/booking";
 import { useDispatch } from "react-redux";
 const img1 =
@@ -23,7 +23,8 @@ function Card(
   },
   props
 ) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const dispatch = useDispatch();
   return (
     <div

@@ -1,8 +1,9 @@
 import React from "react";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 
 function Index({ prevArrow, nextArrow }) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
 
   return (
     <>

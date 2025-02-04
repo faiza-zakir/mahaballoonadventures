@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Step, Stepper } from "react-form-stepper";
 import Slider from "react-slick";
 import "./styles.scss";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import DrSliderArrows from "../../DrSliderArrows/Index";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 const whyUsIntro =
@@ -11,11 +11,12 @@ const whyUsIntro =
 
 function Index(props) {
   const { content } = props;
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const sliderRef = useRef();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const [CurrentStep, setCurrentStep] = useState(0);
-  const { lang = "en" } = useParams();
 
   const settings = {
     dots: false,

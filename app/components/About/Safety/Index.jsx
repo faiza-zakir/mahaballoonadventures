@@ -1,11 +1,12 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Accordion from "react-bootstrap/Accordion";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import "./styles.scss";
 
 function Index(props) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   return (
     <div className="safetyMasuei2139 py-60">
       <Container>

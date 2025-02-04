@@ -2,12 +2,13 @@ import React from "react";
 import prod1 from "../assets/Products/prod1.jpg";
 import "./styles.scss";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useSelector, useDispatch } from "react-redux";
 import useCart from "../Hook/useCart";
 
 function Index(props) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   // const cart = useSelector((state) => state);
   const dispatch = useDispatch();
   const { addItemstoCart } = useCart();

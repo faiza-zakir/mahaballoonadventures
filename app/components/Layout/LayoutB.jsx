@@ -1,9 +1,10 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import FooterBasic from "./FooterBasic/Index";
 function LayoutB() {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   return (
     <>
       {/* <Navbar /> */}

@@ -1,11 +1,12 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
 import { Container } from "react-bootstrap";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import faqsPageData from "../../../Db/faqsPage";
 import "./styles.scss";
 function Index() {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
 
   let faqsData = [
     {

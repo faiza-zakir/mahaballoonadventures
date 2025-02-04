@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import useSize from "../../../utils/useSize";
 import "./styles.scss";
 const brand1 =
@@ -30,6 +30,8 @@ function Index(props) {
     autoplaySpeed: 2000,
     cssEase: "linear",
   };
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const sliderRef = useRef();
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -139,8 +141,6 @@ excitement, and breathtaking beauty.`,
   const [readMore, setReadMore] = useState(true);
   const [mobile, setMobile] = useState(false);
   const { width } = useSize();
-
-  let { lang = "en" } = useParams();
 
   useEffect(() => {
     if (width <= 580) {

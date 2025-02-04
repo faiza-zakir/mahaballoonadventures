@@ -5,18 +5,17 @@ import SubTotal from "./SubTotal/index";
 import { useSelector } from "react-redux";
 import { IoMdCart } from "react-icons/io";
 import { useSearchParams } from "next/navigation";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { FaCheck } from "react-icons/fa";
 import "./styles.scss";
 
 const Index = () => {
   const cartItems = useSelector((state) => state.cart.products);
-
   const searchParams = useSearchParams();
   const checkoutStatus = searchParams.get("checkout");
   const router = useRouter();
-
-  let { lang } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
 
   return (
     <div className="cartPage393 py-60">

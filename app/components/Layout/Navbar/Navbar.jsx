@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { lazy, Suspense } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { useParams, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { Container, Dropdown } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import Nav from "react-bootstrap/Nav";

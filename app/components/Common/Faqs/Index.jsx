@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import { Container } from "react-bootstrap";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import "./styles.scss";
 function Index(props) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const [viewMore, setViewMore] = useState(false);
 
   let faqsData = [

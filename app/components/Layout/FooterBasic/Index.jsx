@@ -9,12 +9,11 @@ import {
   FaLinkedin,
   FaYoutube,
 } from "react-icons/fa6";
-import { useLocation } from "react-router-dom";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 function Index() {
-  const { lang = "en" } = useParams();
-  const { pathname } = useLocation();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
 
   return (
     <div className="footerBasic39kd9">
@@ -47,7 +46,9 @@ function Index() {
                     </p>
                   )}
                   <Link href={`/${lang}/privacy-policy`}>Privacy Policy</Link>
-                  <Link href={`/${lang}/terms-of-service`}>Terms of Service</Link>
+                  <Link href={`/${lang}/terms-of-service`}>
+                    Terms of Service
+                  </Link>
                 </div>
               </div>
             </Col>

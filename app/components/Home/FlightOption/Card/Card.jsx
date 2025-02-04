@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import "./styles.scss";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import { useDispatch } from "react-redux";
 import { setBooking } from "../../../../store/booking";
 import ReactWhatsapp from "react-whatsapp";
@@ -23,7 +23,8 @@ function Card(props) {
     setActive,
     setExtraDetails,
   } = props;
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const dispatch = useDispatch();
   const [DetailsList, setDetailsList] = useState([]);
 

@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Step, Stepper } from "react-form-stepper";
 import Slider from "react-slick";
 import "./styles.scss";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import DrSliderArrows from "../../DrSliderArrows/Index";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
@@ -14,7 +14,8 @@ function Index(props) {
   console.log("🚀 ~ Index ~ currentSlide:", currentSlide);
 
   const [CurrentStep, setCurrentStep] = useState(0);
-  const { lang = "en" } = useParams();
+    const pathname = usePathname();
+    const lang = pathname.split("/")[1];
 
   const settings = {
     dots: false,

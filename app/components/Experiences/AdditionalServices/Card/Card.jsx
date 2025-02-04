@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styles.scss";
 import { IoIosArrowDown } from "react-icons/io";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import ReactWhatsapp from "react-whatsapp";
 import { whatsappNo } from "../../../../config/general";
 function Card(
@@ -22,7 +22,8 @@ function Card(
   },
   props
 ) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
 
   return (
     <div

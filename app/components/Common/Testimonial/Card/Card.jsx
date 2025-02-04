@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { FaPlay } from "react-icons/fa";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import ReactStars from "react-rating-stars-component";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 import "./styles.scss";
 
 function Card(props) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const { handleopen } = props;
 
   return (

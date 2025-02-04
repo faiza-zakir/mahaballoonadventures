@@ -6,7 +6,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa6";
 import Loader from "../../Common/Loader/Loader";
 import BlogListData from "../../../Db/blogs";
-import { useParams } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -16,7 +16,9 @@ import { toast } from "react-toastify";
 import "./styles.scss";
 
 function Index() {
-  const { id, lang } = useParams();
+  const { id } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const [blogDetail, setBlogDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
 

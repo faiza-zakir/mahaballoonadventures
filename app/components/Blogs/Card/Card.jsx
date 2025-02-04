@@ -1,10 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import "./styles.scss";
 
 function Card(props) {
-  const { lang } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const { title, short_des, category, readTime, thumb, route } = props;
   return (
     <div

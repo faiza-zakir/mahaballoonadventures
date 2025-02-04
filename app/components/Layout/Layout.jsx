@@ -1,13 +1,14 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 // const Navbar = lazy(() => import("../Layout/Navbar/Navbar"));
 import Navbar from "../Layout/Navbar/Navbar";
 import Footer from "../Layout/Footer/Footer";
 // import Navbar from "../Layout/Navbar/Navbar";
 // import FooterMbl from "./Footer/FooterMobile/FooterMbl";
 function Layout() {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   return (
     <>
       {/* <Suspense fallback={"Loading..."}> */}

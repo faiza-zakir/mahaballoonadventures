@@ -14,9 +14,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { registerInfo } from "../../../../../../store/auth";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 function Index(props) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const [Currentb2bType, setCurrentb2bType] = useState("individual");
   const [Selectedb2bType, setSelectedb2bType] = useState(null);
   const [formNext, setFormNext] = useState(1);

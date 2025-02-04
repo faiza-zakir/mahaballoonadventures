@@ -3,7 +3,7 @@ import "./styles.scss";
 import img1 from "../../../../assets/HomePage/Packages/card1.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   setBooking,
   setPackageId,
@@ -33,7 +33,8 @@ function Card(
   },
   props
 ) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const dispatch = useDispatch();
   const [DetailsList, setDetailsList] = useState([]);
   return (

@@ -1,10 +1,10 @@
 import React from "react";
-
+import { usePathname } from "next/navigation";
 import "./styles.scss";
-import { useParams } from "next/navigation";
 
 function Card(props) {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
 
   return (
     <div

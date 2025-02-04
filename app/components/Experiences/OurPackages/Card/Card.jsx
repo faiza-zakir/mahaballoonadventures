@@ -2,8 +2,12 @@ import React, { useState } from "react";
 import "./styles.scss";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
-import { useParams } from "next/navigation";
-import { setBooking, setPackage, setPackageId } from "../../../../store/booking";
+import { usePathname } from "next/navigation";
+import {
+  setBooking,
+  setPackage,
+  setPackageId,
+} from "../../../../store/booking";
 import { useDispatch } from "react-redux";
 function Card(props) {
   const {
@@ -20,7 +24,8 @@ function Card(props) {
     setExtraDetails,
     packageVal,
   } = props;
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const dispatch = useDispatch();
   const [DetailsList, setDetailsList] = useState([]);
 

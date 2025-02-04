@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import Slider from "react-slick";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import { Col, Container, Row } from "react-bootstrap";
@@ -13,7 +13,8 @@ import { fetchPackagesData } from "../../../api/commonApi";
 import "./styles.scss";
 
 function Index() {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const sliderRef = useRef();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [active, setActive] = useState(null);

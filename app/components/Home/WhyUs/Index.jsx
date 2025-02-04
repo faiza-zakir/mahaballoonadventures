@@ -1,5 +1,5 @@
 import React from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import "./styles.scss";
 import { Col, Container, Row } from "react-bootstrap";
 import content from "./content";
@@ -16,7 +16,8 @@ const whyUs =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Homepage/WhyUs.webp";
 
 function Index() {
-  let { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const router = useRouter();
   const settings = {
     dots: false,

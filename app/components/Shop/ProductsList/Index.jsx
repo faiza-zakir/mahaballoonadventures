@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-
 import { Col, Container, Row } from "react-bootstrap";
 import { IoFilterSharp } from "react-icons/io5";
 import { IoSearch } from "react-icons/io5";
@@ -8,7 +7,7 @@ import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { IoMdCloseCircle } from "react-icons/io";
 import ProductListingCard from "../../Common/ProductListingCard/Index";
-import { useParams } from "next/navigation";
+import { usePathname } from "next/navigation";
 import useOutsideAlerter from "../Hook/useOutsideAlerter";
 import "./styles.scss";
 
@@ -21,7 +20,8 @@ const prod4 = "https://d3gelo9cifr8ed.cloudfront.net/assets/Products/prod4.jpg";
  */
 
 const Index = () => {
-  const { lang = "en" } = useParams();
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const [showFilter, setShowFilter] = useState(false);
   let cardData = [
     {
