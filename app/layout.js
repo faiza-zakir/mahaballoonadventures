@@ -31,11 +31,6 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link
-          rel="sitemap"
-          type="application/xml"
-          href="https://mahaballoonadventures.ae/sitemap.xml"
-        />
         {/* Basic Cards  */}
         <meta property="og:title" content="Maha Hot Air Balloons" />
         <meta property="og:site_name" content="Maha Hot Air Balloons" />
