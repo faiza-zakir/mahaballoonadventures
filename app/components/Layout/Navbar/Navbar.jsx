@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
 import { lazy, Suspense } from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
-import { useRouter, useParams, useSearchParams } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import { Container, Dropdown } from "react-bootstrap";
 import { useSelector, useDispatch } from "react-redux";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import LangContext from "../../../utils/LanguageContext";
+// import LangContext from "../../../utils/LanguageContext";
+import { useLanguage } from "../../../context/LanguageContext";
 // import NavDropdown from "react-bootstrap/NavDropdown";
 
 // import { FaAngleRight, FaSearch } from "react-icons/fa";
@@ -39,23 +39,20 @@ import "./style.scss";
 import { MdOutlineLanguage } from "react-icons/md";
 
 const MainNavbar = () => {
-  const pathname = usePathname();
+  const pathname = usePathname(); // Fetch current pathname using App Router
+  const router = useRouter(); // Router hook from next/navigation
+  const { lang, setLang } = useLanguage();
   let { lang: NavLang = "en" } = useParams();
-  const lang = "en";
   const cartItems = useSelector((state) => state.cart.products);
   const UserData = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  const router = useRouter();
   const isBookingModal = useSelector((state) => state.booking.isBookingModal);
-
   const [scrolled, setScrolled] = useState(false);
-  // const { lang, setLang } = useContext(LangContext);
-  const [modalShow, setModalShow] = React.useState(false);
-  const [CustomermodalShow, setCustomerModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = useState(false);
+  const [CustomermodalShow, setCustomerModalShow] = useState(false);
   //
-  const [showDropDownDesk, setshowDropDownDesk] = React.useState(false);
-  const [showDropDownDeskAvatr, setshowDropDownDeskAvatr] =
-    React.useState(false);
+  const [showDropDownDesk, setshowDropDownDesk] = useState(false);
+  const [showDropDownDeskAvatr, setshowDropDownDeskAvatr] = useState(false);
 
   const { height, width } = useSize();
   const [scope, animate] = useAnimate();
@@ -179,23 +176,47 @@ const MainNavbar = () => {
     }
   };
 
-  const handleLanguageChange = async (value) => {
+  const handleLanguageChange = (value) => {
     console.log("🚀 ~ handleLanguageChange ~ value:", value);
-    // setLang(value);
+    // Set the language in context (setLang)
+    setLang(value);
+    // Split the pathname and change the language part
     let paths = pathname.split("/");
-    let langsData = ["en", "ar"];
+    const langsData = ["en", "ar"];
+
     if (langsData?.includes(paths?.[1])) {
+      // Change the language in the URL
       let newPath = [...paths];
-      newPath[1] = value;
+      newPath[1] = value; // Set new language
       let CombinePath = newPath.join("/");
-      // router.push(CombinePath);
-      const resp = await translatePageContent(value);
+
+      // Navigate to the new path
+      router.push(CombinePath);
     } else {
-      // router.push(`/${value}${pathname}`);
-      const resp = await translatePageContent(value);
+      // Prepend the selected language to the URL
+      router.push(`/${value}${pathname}`);
     }
+
     setshowDropDownDesk(false);
   };
+
+  // const handleLanguageChange = async (value) => {
+  //   console.log("🚀 ~ handleLanguageChange ~ value:", value);
+  //   // setLang(value);
+  //   let paths = pathname.split("/");
+  //   let langsData = ["en", "ar"];
+  //   if (langsData?.includes(paths?.[1])) {
+  //     let newPath = [...paths];
+  //     newPath[1] = value;
+  //     let CombinePath = newPath.join("/");
+  //     // router.push(CombinePath);
+  //     const resp = await translatePageContent(value);
+  //   } else {
+  //     // router.push(`/${value}${pathname}`);
+  //     const resp = await translatePageContent(value);
+  //   }
+  //   setshowDropDownDesk(false);
+  // };
   const closeToggler = () => {
     document.getElementById("responsive-navbar-nav").className =
       "navbar-collapse collapse";
@@ -310,8 +331,7 @@ const MainNavbar = () => {
           {/* //# brand navbar */}
           <Navbar.Brand
             // as={Link}
-            // href={`/${lang}`}
-            href={`/`}
+            href={`/${lang}`}
           >
             <div className="brandWrapper">
               <img
@@ -394,8 +414,7 @@ const MainNavbar = () => {
                 <div
                   className="icons2"
                   onClick={() => {
-                    router.push(`/wishlist`);
-                    // router.push(`/${lang}/wishlist`);
+                    router.push(`/${lang}/wishlist`);
                   }}
                 >
                   <span>0</span>
@@ -407,8 +426,7 @@ const MainNavbar = () => {
                   className=" icons2"
                   onClick={() => {
                     // dispatch(clearCart());
-                    // router.push(`/${lang}/cart`);
-                    router.push(`/cart`);
+                    router.push(`/${lang}/cart`);
                   }}
                 >
                   <span>{cartItems?.length}</span>
@@ -498,8 +516,7 @@ const MainNavbar = () => {
               <Nav.Link
                 onClick={() => closeToggler()}
                 // as={Link}
-                // href={`/${lang}/why-us`}
-                href={`/why-us`}
+                href={`/${lang}/why-us`}
                 className={`nav-item ${
                   pathname === `/${lang}/why-us` && "active"
                 }`}
@@ -509,8 +526,7 @@ const MainNavbar = () => {
               <Nav.Link
                 onClick={() => closeToggler()}
                 // as={Link}
-                // href={`/${lang}/experiences`}
-                href={`/experiences`}
+                href={`/${lang}/experiences`}
                 className={`nav-item ${
                   pathname === `/${lang}/experiences` && "active"
                 }`}
@@ -749,8 +765,7 @@ const MainNavbar = () => {
               <Nav.Link
                 onClick={() => closeToggler()}
                 // as={Link}
-                // href={`/${lang}/things-to-do`}
-                href={`/things-to-do`}
+                href={`/${lang}/things-to-do`}
                 className={`nav-item ${
                   pathname === `/${lang}/things-to-do` && "active"
                 }`}
@@ -762,8 +777,7 @@ const MainNavbar = () => {
               <Nav.Link
                 onClick={() => closeToggler()}
                 // as={Link}
-                // href={`/${lang}/testimonial`}
-                href={`/testimonial`}
+                href={`/${lang}/testimonial`}
                 className={`nav-item ${
                   pathname === `/${lang}/testimonial` && "active"
                 }`}
@@ -773,9 +787,7 @@ const MainNavbar = () => {
               <Nav.Link
                 onClick={() => closeToggler()}
                 // as={Link}
-                href={`/blogs`}
-                // href={`/${lang}/blogs`}
-
+                href={`/${lang}/blogs`}
                 className={`nav-item ${
                   pathname === `/${lang}/blogs` && "active"
                 }`}
@@ -785,8 +797,7 @@ const MainNavbar = () => {
               <Nav.Link
                 onClick={() => closeToggler()}
                 // as={Link}
-                // href={`/${lang}/contact-us`}
-                href={`/contact-us`}
+                href={`/${lang}/contact-us`}
                 className={`nav-item ${
                   pathname === `/${lang}/contact-us` && "active"
                 }`}
@@ -814,8 +825,7 @@ const MainNavbar = () => {
                   <div
                     className="icons1"
                     onClick={() => {
-                      // router.push(`/${lang}/wishlist`);
-                      router.push(`/wishlist`);
+                      router.push(`/${lang}/wishlist`);
                     }}
                   >
                     <img className="icns" src={heart} alt="" />
@@ -888,8 +898,7 @@ const MainNavbar = () => {
                     className="icons2"
                     ref={scope}
                     onClick={() => {
-                      // router.push(`/${lang}/cart`);
-                      router.push(`/cart`);
+                      router.push(`/${lang}/cart`);
                       // dispatch(clearCart());
                     }}
                   >

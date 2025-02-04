@@ -329,19 +329,16 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 <div className="linksWrapper">
                   <div className="footerTitle mb-4">Quick Links</div>
                   <ul>
-                    {/* <Link href={`/${lang}/why-us`}> */}
-                    <Link href={`/why-us`}>
+                    <Link href={`/${lang}/why-us`}>
                       <li>About Us</li>
                     </Link>
-                    {/* <Link href={`/${lang}/experiences`}> */}
-                    <Link href={`/experiences`}>
+                    <Link href={`/${lang}/experiences`}>
                       <li>Experiences</li>
                     </Link>
                     {/* <Link href={`/${lang}/merchandise`}>
                       <li>Merchandise</li>
                     </Link> */}
-                    {/* <Link href={`/${lang}/things-to-do`}> */}
-                    <Link href={`/things-to-do`}>
+                    <Link href={`/${lang}/things-to-do`}>
                       <li>Things To Do</li>
                     </Link>
                   </ul>
@@ -349,16 +346,13 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 <div className="linksWrapper">
                   <div className="footerTitle  mb-4">Company</div>
                   <ul>
-                    {/* <Link href={`/${lang}/contact-us`}> */}
-                    <Link href={`/contact-us`}>
+                    <Link href={`/${lang}/contact-us`}>
                       <li>Contact Us</li>
                     </Link>
-                    {/* <Link href={`/${lang}/blogs`}> */}
-                    <Link href={`/blogs`}>
+                    <Link href={`/${lang}/blogs`}>
                       <li>Blogs</li>
                     </Link>
-                    {/* <Link href={`/${lang}/faqs`}> */}
-                    <Link href={`/faqs`}>
+                    <Link href={`/${lang}/faqs`}>
                       <li>Faqs</li>
                     </Link>
                     {/* <Link>
@@ -420,8 +414,8 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 </div>
                 <p className="details">
                   By subscribing you agree to with our{" "}
-                  <Link href={`/privacy-policy`}>Privacy Policy</Link> and
-                  provide consent to receive updates from our company.
+                  <Link href={`/${lang}/privacy-policy`}>Privacy Policy</Link>{" "}
+                  and provide consent to receive updates from our company.
                 </p>
               </div>
             </Col>
@@ -462,10 +456,8 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 </a>
                 .
               </p>
-              {/* <Link href={`/${lang}/privacy-policy`}> */}
-              <Link href={`/privacy-policy`}>Privacy Policy</Link>
-              {/* <Link href={`/${lang}/terms-of-service`}> */}
-              <Link href={`/terms-of-service`}>Terms of Service</Link>
+              <Link href={`/${lang}/privacy-policy`}>Privacy Policy</Link>
+              <Link href={`/${lang}/terms-of-service`}>Terms of Service</Link>
             </div>
 
             <div className="social">
@@ -504,10 +496,8 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 <FaYoutube className="icon" size={20} />
               </a>
             </div>
-            {/* <Link href={`/${lang}/privacy-policy`}> */}
-            <Link href={`/privacy-policy`}>Privacy Policy</Link>
-            {/* <Link href={`/${lang}/terms-of-service`}> */}
-            <Link href={`/terms-of-service`}>Terms of Service</Link>
+            <Link href={`/${lang}/privacy-policy`}>Privacy Policy</Link>
+            <Link href={`/${lang}/terms-of-service`}>Terms of Service</Link>
             <p>
               © 2024 Designed with 💕in UAE by Prism Digital:{" "}
               <a href="https://www.prism-me.com/" target="__blank">

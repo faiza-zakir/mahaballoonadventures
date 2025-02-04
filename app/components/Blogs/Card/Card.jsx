@@ -26,8 +26,7 @@ function Card(props) {
           <div className="sec-title">{title?.en}</div>
           <p className="para mt-2">{short_des?.en}</p>
         </div>
-        {/* <Link href={`/${lang}/blog/${route}`}> */}
-        <Link href={`/blog/${route}`}>
+        <Link href={`/${lang}/blog/${route}`}>
           <button className="btnNl btnNl-secondary">Read More</button>
         </Link>
       </div>

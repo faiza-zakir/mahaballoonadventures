@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Lightbox from "yet-another-react-lightbox";
 import Slider from "react-slick";
@@ -16,8 +16,8 @@ const cert5 =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/more_details/MBA%20Certificate%20A4.webp5.webp";
 
 function Index() {
-  const [open, setOpen] = React.useState(false);
-  const [index, setIndex] = React.useState(0);
+  const [open, setOpen] = useState(false);
+  const [index, setIndex] = useState(0);
   const settings = {
     dots: false,
     arrows: false,
