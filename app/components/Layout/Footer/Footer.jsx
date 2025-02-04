@@ -338,7 +338,7 @@ These include routine maintenance of the equipment, the training of pilots, and 
                     {/* <Link href={`/${lang}/merchandise`}>
                       <li>Merchandise</li>
                     </Link> */}
-                    <Link href={`/${lang}/things-to-do`}>
+                    <Link href={`/${lang}/things-to-do-in-dubai`}>
                       <li>Things To Do</li>
                     </Link>
                   </ul>

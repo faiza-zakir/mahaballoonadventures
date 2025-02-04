@@ -765,9 +765,9 @@ const MainNavbar = () => {
               <Nav.Link
                 onClick={() => closeToggler()}
                 // as={Link}
-                href={`/${lang}/things-to-do`}
+                href={`/${lang}/things-to-do-in-dubai`}
                 className={`nav-item ${
-                  pathname === `/${lang}/things-to-do` && "active"
+                  pathname === `/${lang}/things-to-do-in-dubai` && "active"
                 }`}
               >
                 {lang == "ar"
