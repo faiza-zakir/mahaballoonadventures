@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import Accordion from "react-bootstrap/Accordion";
 import {
   FaFacebook,
@@ -16,13 +15,11 @@ import { toast } from "react-toastify";
 import { contactUs } from "../../../api/commonApi";
 import "./styles.scss";
 const logo = "https://d3gelo9cifr8ed.cloudfront.net/assets/Logo.png";
-function Footer(props) {
-  const { content } = props;
-  const { lang = "en" } = useParams();
-
+function Footer() {
+  const pathname = usePathname();
+  const locale = pathname.split("/")[1];
   // const location = useLocation();
   // let currenPath = location?.pathname?.split(/\/en|\//);
-  const pathname = usePathname();
   let currenPath = pathname?.split(/\/en|\//);
 
   const [subsEmail, setSubsEmail] = useState("");
@@ -181,7 +178,7 @@ On top of the thrill of soaring above the desert with Top Balloon Adventures UAE
 When you choose to go with Top Balloon Adventures UAE, you know it’s a team you can trust to deliver the best of safety, quality, and memorable experience every time you fly.
 </p>
     `,
-    [`things-to-do`]: `<strong>Explore Dubai’s Unique Activities</strong>
+    [`things-to-do-in-dubai`]: `<strong>Explore Dubai’s Unique Activities</strong>
     <p>There are so many things to do in Dubai, but very few things can beat a hot air balloon over a spectacular Dubai desert landscape. Dubai has a tonne of things to do, from luxury shopping and world-class dining to entertaining adventure activities, but a hot air balloon ride is meditative and exciting all in the same act. Undoubtedly one of the best things to do, it is a sunrise balloon ride over the vast dunes that makes a list of things to do, and the sunrise over the dunes, in such a breathtaking way, offers a peaceful beginning to the day and is something unbeatable.
 Dubai has so much to do. You can visit the city’s stunning skyline or its soaring culture. A hot air balloon ride over Dubai's desert is one of the coolest things to do, as it affords travellers to escape the bustle of a city and witness the peaceful side of the UAE. Among the things to do in Dubai, this is a must-do activity and a favourite bucket list activity, bringing a new view of the natural and architectural wonders of Dubai.
 Getting a hot air balloon ride is an adventure you will never forget and a good thing to put at the top of your things-to-do list. A perfect blend of thrill and tranquillity, it is one of the better options to choose from Dubai’s activities.
@@ -316,7 +313,7 @@ These include routine maintenance of the equipment, the training of pilots, and 
   };
   return (
     <>
-      <div className={`footer py-60 ${lang === "ar" ? "r_dir" : "l_dir"}`}>
+      <div className={`footer py-60 ${locale === "ar" ? "r_dir" : "l_dir"}`}>
         <div className="container">
           <Row>
             <Col xs={12} md={4} lg={2}>
@@ -329,16 +326,16 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 <div className="linksWrapper">
                   <div className="footerTitle mb-4">Quick Links</div>
                   <ul>
-                    <Link href={`/${lang}/why-us`}>
+                    <Link href={`/${locale}/why-us`}>
                       <li>About Us</li>
                     </Link>
-                    <Link href={`/${lang}/experiences`}>
+                    <Link href={`/${locale}/experiences`}>
                       <li>Experiences</li>
                     </Link>
-                    {/* <Link href={`/${lang}/merchandise`}>
+                    {/* <Link href={`/${locale}/merchandise`}>
                       <li>Merchandise</li>
                     </Link> */}
-                    <Link href={`/${lang}/things-to-do-in-dubai`}>
+                    <Link href={`/${locale}/things-to-do-in-dubai`}>
                       <li>Things To Do</li>
                     </Link>
                   </ul>
@@ -346,13 +343,13 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 <div className="linksWrapper">
                   <div className="footerTitle  mb-4">Company</div>
                   <ul>
-                    <Link href={`/${lang}/contact-us`}>
+                    <Link href={`/${locale}/contact-us`}>
                       <li>Contact Us</li>
                     </Link>
-                    <Link href={`/${lang}/blogs`}>
+                    <Link href={`/${locale}/blogs`}>
                       <li>Blogs</li>
                     </Link>
-                    <Link href={`/${lang}/faqs`}>
+                    <Link href={`/${locale}/faqs`}>
                       <li>Faqs</li>
                     </Link>
                     {/* <Link>
@@ -414,14 +411,14 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 </div>
                 <p className="details">
                   By subscribing you agree to with our{" "}
-                  <Link href={`/${lang}/privacy-policy`}>Privacy Policy</Link>{" "}
+                  <Link href={`/${locale}/privacy-policy`}>Privacy Policy</Link>{" "}
                   and provide consent to receive updates from our company.
                 </p>
               </div>
             </Col>
           </Row>
 
-          <div className={lang == "ar" ? "moreInfo arB" : "moreInfo"}>
+          <div className={locale == "ar" ? "moreInfo arB" : "moreInfo"}>
             <Accordion>
               <Accordion.Item eventKey="0">
                 <Accordion.Header as="p">More Information</Accordion.Header>
@@ -456,8 +453,8 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 </a>
                 .
               </p>
-              <Link href={`/${lang}/privacy-policy`}>Privacy Policy</Link>
-              <Link href={`/${lang}/terms-of-service`}>Terms of Service</Link>
+              <Link href={`/${locale}/privacy-policy`}>Privacy Policy</Link>
+              <Link href={`/${locale}/terms-of-service`}>Terms of Service</Link>
             </div>
 
             <div className="social">
@@ -496,8 +493,8 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 <FaYoutube className="icon" size={20} />
               </a>
             </div>
-            <Link href={`/${lang}/privacy-policy`}>Privacy Policy</Link>
-            <Link href={`/${lang}/terms-of-service`}>Terms of Service</Link>
+            <Link href={`/${locale}/privacy-policy`}>Privacy Policy</Link>
+            <Link href={`/${locale}/terms-of-service`}>Terms of Service</Link>
             <p>
               © 2024 Designed with 💕in UAE by Prism Digital:{" "}
               <a href="https://www.prism-me.com/" target="__blank">

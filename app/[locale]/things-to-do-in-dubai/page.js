@@ -1,12 +1,13 @@
 import PageContent from "./pageContent";
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }) {
+  const { locale } = params;
   return {
     title: "Best Things to Do in Dubai | Outdoor Activities | Maha Balloon",
     description:
       "Explore the Best Things To Do in Dubai! From the Burj Khalifa and Dubai Mall to Desert Safaris and Nightlife, Discover unforgettable Outdoor Activities.",
     alternates: {
-      canonical: "https://mahaballoonadventures.ae/things-to-do-in-dubai",
+      canonical: `https://mahaballoonadventures.ae/${locale}/things-to-do-in-dubai`,
     },
   };
 }

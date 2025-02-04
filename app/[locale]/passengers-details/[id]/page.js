@@ -1,13 +1,13 @@
 import PageContent from "./pageContent";
 
 export async function generateMetadata({ params }) {
-  const { id } = params;
+  const { id, locale } = params;
 
   return {
     title: "Maha Hot Air Balloons in Dubai",
     description: "Maha Hot Air Balloons in Dubai",
     alternates: {
-      canonical: `https://newedge-realty-next.vercel.app/passengers-details/${id}`,
+      canonical: `https://newedge-realty-next.vercel.app/${locale}/passengers-details/${id}`,
     },
   };
 }

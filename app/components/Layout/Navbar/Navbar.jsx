@@ -39,10 +39,10 @@ import "./style.scss";
 import { MdOutlineLanguage } from "react-icons/md";
 
 const MainNavbar = () => {
-  const pathname = usePathname(); // Fetch current pathname using App Router
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const router = useRouter(); // Router hook from next/navigation
-  const { lang, setLang } = useLanguage();
-  let { lang: NavLang = "en" } = useParams();
+  const { setLang } = useLanguage();
   const cartItems = useSelector((state) => state.cart.products);
   const UserData = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -73,11 +73,11 @@ const MainNavbar = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   if (NavLang == "en" || NavLang == "ar") {
-  //     setLang(NavLang);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (lang == "en" || lang == "ar") {
+      setLang(lang);
+    }
+  }, []);
 
   useEffect(() => {
     animate("span", { scale: [1, 2, 1] }, { duration: 0.5 });
@@ -178,8 +178,6 @@ const MainNavbar = () => {
 
   const handleLanguageChange = (value) => {
     console.log("🚀 ~ handleLanguageChange ~ value:", value);
-    // Set the language in context (setLang)
-    setLang(value);
     // Split the pathname and change the language part
     let paths = pathname.split("/");
     const langsData = ["en", "ar"];

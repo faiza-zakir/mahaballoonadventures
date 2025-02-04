@@ -1,11 +1,12 @@
 import PageContent from "./pageContent";
 
-export async function generateMetadata() {
+export async function generateMetadata({ params }) {
+  const { locale } = params;
   return {
     title: "Maha Hot Air Balloons | Get Your Aerial Adventure Ride",
     description: "Maha Hot Air Balloons | Get Your Aerial Adventure Ride",
     alternates: {
-      canonical: "https://mahaballoonadventures.ae/terms-of-service",
+      canonical: `https://mahaballoonadventures.ae/${locale}/terms-of-service`,
     },
   };
 }

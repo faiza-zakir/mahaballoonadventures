@@ -25,13 +25,9 @@ export async function generateMetadata() {
   };
 }
 
-export default function RootLayout({ children, params }) {
+export default function RootLayout({ children }) {
   return (
-    <html
-      lang={params.locale || "en"} // Default to 'en' if no locale is found
-      dir={params.locale === "ar" ? "rtl" : "ltr"}
-      className={roboto.variable}
-    >
+    <html lang="en" className={roboto.variable}>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

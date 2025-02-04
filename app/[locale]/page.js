@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { useParams } from "next/navigation";
 import Banner from "../components/Home/Banner/Banner";
 import FeaturedIn from "../components/Home/FeaturedIn/Index";
 import WhyUs from "../components/Home/WhyUs/Index";
@@ -24,8 +23,6 @@ function Home() {
     triggerOnce: true,
     delay: 3000,
   });
-
-  const { lang = "en" } = useParams();
 
   useEffect(() => {
     let UpdatedBlog = BlogListData?.filter((item) => item?.page == "home");
