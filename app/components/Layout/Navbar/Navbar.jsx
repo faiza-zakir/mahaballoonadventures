@@ -33,6 +33,7 @@ import useSize from "../../../utils/useSize";
 import { useAnimate } from "framer-motion";
 // import { clearCart } from "../store/cart";
 import { LogOutUser } from "../../../store/auth";
+import { GlobalLoader } from "../../../store/globalLoader";
 
 // scss
 import "./style.scss";
@@ -116,6 +117,8 @@ const MainNavbar = () => {
       return;
     }
 
+    dispatch(GlobalLoader(true));
+
     const elements = document.querySelectorAll(
       "*:not(script):not(style):not(meta)"
     );
@@ -186,6 +189,8 @@ const MainNavbar = () => {
       router.replace(appPath);
     } catch (error) {
       console.error("Translation Error:", error);
+    } finally {
+      dispatch(GlobalLoader(false)); // Hide loader when translation finishes
     }
   };
 

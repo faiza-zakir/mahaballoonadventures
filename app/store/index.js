@@ -8,6 +8,8 @@ import cartReducer from "../store/cart";
 import wishlistReducer from "../store/wishlist";
 import bookingReducer from "../store/booking";
 import authReducer from "../store/auth";
+import globalLoaderReducer from "../store/globalLoader";
+
 //
 const persistConfig = {
   key: "root",
@@ -20,6 +22,7 @@ const rootReducer = combineReducers({
   wishlist: wishlistReducer,
   booking: bookingReducer,
   auth: authReducer,
+  loader: globalLoaderReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
