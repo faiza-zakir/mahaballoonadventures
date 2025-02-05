@@ -107,11 +107,12 @@ const MainNavbar = () => {
     item: null,
   });
 
-  const translatePageContent = async (targetLanguage) => {
+  const translatePageContent = async (targetLanguage, appPath) => {
     console.log("🚀 ~ translatePageContent ~ targetLanguage:", targetLanguage);
+
     if (targetLanguage === "en") {
-      // router.push("/");
-      // router.push(`/${pathname}`);
+      // If the language is 'en', we reset to the default path
+      router.replace(appPath);
       return;
     }
 
@@ -121,7 +122,7 @@ const MainNavbar = () => {
     const textsToTranslate = [];
     const elementMap = [];
 
-    // Collect all text content
+    // Collect all text content from the page
     elements.forEach((el) => {
       if (
         el.childNodes.length === 1 &&
@@ -138,7 +139,7 @@ const MainNavbar = () => {
     if (textsToTranslate.length === 0) return;
 
     try {
-      // Split texts into chunks of 128 segments each
+      // Split the texts into chunks to avoid hitting API rate limits
       const chunkSize = 128;
       const textChunks = [];
       for (let i = 0; i < textsToTranslate.length; i += chunkSize) {
@@ -147,7 +148,9 @@ const MainNavbar = () => {
 
       const translations = [];
 
-      // Translate each chunk sequentially
+      // Translate each chunk sequentially with a delay between requests
+      const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
       for (const chunk of textChunks) {
         const response = await fetch(
           "https://translation.googleapis.com/language/translate/v2?key=AIzaSyBFPYrl8v_HRI1jm2nMHNtankZPdFGILPQ",
@@ -161,16 +164,26 @@ const MainNavbar = () => {
           }
         );
 
+        if (!response.ok) {
+          throw new Error(`API call failed: ${response.statusText}`);
+        }
+
         const data = await response.json();
         if (data.data && data.data.translations) {
           translations.push(...data.data.translations);
         }
+
+        // Delay to prevent hitting the API rate limit
+        await delay(1000); // 1-second delay
       }
 
-      // Update text content with translations
-      return translations.forEach((translation, index) => {
+      // Update text content with translated texts
+      translations.forEach((translation, index) => {
         elementMap[index].textContent = translation.translatedText;
       });
+
+      // Only navigate once all translations are done
+      router.replace(appPath);
     } catch (error) {
       console.error("Translation Error:", error);
     }
@@ -178,26 +191,132 @@ const MainNavbar = () => {
 
   const handleLanguageChange = async (value) => {
     console.log("🚀 ~ handleLanguageChange ~ value:", value);
-    // Split the pathname and change the language part
     let paths = pathname.split("/");
     const langsData = ["en", "ar"];
 
     if (langsData?.includes(paths?.[1])) {
-      // Change the language in the URL
+      // Change the language part in the URL
       let newPath = [...paths];
-      newPath[1] = value; // Set new language
-      let CombinePath = newPath.join("/");
-
-      // Navigate to the new path
-      router.push(CombinePath);
+      newPath[1] = value; // Update the language in the path
+      const CombinePath = newPath.join("/");
+      router.replace(CombinePath);
+      // Call the translation function and update the path
+      // await translatePageContent(value, CombinePath);
     } else {
-      // Prepend the selected language to the URL
-      router.push(`/${value}${pathname}`);
+      // Prepend the selected language to the URL if it's not in the path
+      const defpath = `/${value}${pathname}`;
+      router.replace(defpath);
+      // await translatePageContent(value, defpath);
     }
-    // Update content after language change
-    await translatePageContent(value);
+
+    // Optionally close any UI elements like dropdowns after language change
     setshowDropDownDesk(false);
   };
+
+  // useEffect to trigger translation on page load or language change
+  useEffect(() => {
+    // Make sure the translation happens after the page reload (or path change)
+    if (lang !== "en") {
+      translatePageContent(lang, pathname);
+    }
+  }, [pathname, lang]); // Re-run when the pathname or targetLanguage changes
+
+  // const translatePageContent = async (targetLanguage, appPath) => {
+  //   console.log("🚀 ~ translatePageContent ~ targetLanguage:", targetLanguage);
+  //   if (targetLanguage === "en") {
+  //     // router.push("/");
+  //     // router.push(`/${targetLanguage}/${pathname}`);
+  //     router.replace(appPath);
+  //     return;
+  //   }
+
+  //   const elements = document.querySelectorAll(
+  //     "*:not(script):not(style):not(meta)"
+  //   );
+  //   const textsToTranslate = [];
+  //   const elementMap = [];
+
+  //   // Collect all text content
+  //   elements.forEach((el) => {
+  //     if (
+  //       el.childNodes.length === 1 &&
+  //       el.childNodes[0].nodeType === Node.TEXT_NODE
+  //     ) {
+  //       const text = el.textContent.trim();
+  //       if (text) {
+  //         textsToTranslate.push(text);
+  //         elementMap.push(el);
+  //       }
+  //     }
+  //   });
+
+  //   if (textsToTranslate.length === 0) return;
+
+  //   try {
+  //     // Split texts into chunks of 128 segments each
+  //     const chunkSize = 128;
+  //     const textChunks = [];
+  //     for (let i = 0; i < textsToTranslate.length; i += chunkSize) {
+  //       textChunks.push(textsToTranslate.slice(i, i + chunkSize));
+  //     }
+
+  //     const translations = [];
+
+  //     // Translate each chunk sequentially
+  //     for (const chunk of textChunks) {
+  //       const response = await fetch(
+  //         "https://translation.googleapis.com/language/translate/v2?key=AIzaSyBFPYrl8v_HRI1jm2nMHNtankZPdFGILPQ",
+  //         {
+  //           method: "POST",
+  //           body: JSON.stringify({
+  //             q: chunk,
+  //             target: targetLanguage,
+  //           }),
+  //           headers: { "Content-Type": "application/json" },
+  //         }
+  //       );
+
+  //       const data = await response.json();
+  //       if (data.data && data.data.translations) {
+  //         translations.push(...data.data.translations);
+  //       }
+  //     }
+
+  //     // Update text content with translations
+  //     return translations.forEach((translation, index) => {
+  //       elementMap[index].textContent = translation.translatedText;
+  //       // console.log("appPath", appPath);
+  //       router.replace(appPath);
+  //     });
+  //   } catch (error) {
+  //     console.error("Translation Error:", error);
+  //   }
+  // };
+
+  // const handleLanguageChange = async (value) => {
+  //   console.log("🚀 ~ handleLanguageChange ~ value:", value);
+  //   // Split the pathname and change the language part
+  //   let paths = pathname.split("/");
+  //   const langsData = ["en", "ar"];
+
+  //   if (langsData?.includes(paths?.[1])) {
+  //     // Change the language in the URL
+  //     let newPath = [...paths];
+  //     newPath[1] = value; // Set new language
+  //     let CombinePath = newPath.join("/");
+  //     const resp = await translatePageContent(value, CombinePath);
+  //     // Navigate to the new path
+  //     // router.push(CombinePath);
+  //   } else {
+  //     // Prepend the selected language to the URL
+  //     const defpath = `/${value}${pathname}`;
+  //     const resp = await translatePageContent(value, defpath);
+  //     // router.push(`/${value}${pathname}`);
+  //   }
+  //   // Update content after language change
+  //   // await translatePageContent(value);
+  //   setshowDropDownDesk(false);
+  // };
 
   // const handleLanguageChange = async (value) => {
   //   console.log("🚀 ~ handleLanguageChange ~ value:", value);
