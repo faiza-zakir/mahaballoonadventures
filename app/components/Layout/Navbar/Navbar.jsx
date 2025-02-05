@@ -111,7 +111,7 @@ const MainNavbar = () => {
     console.log("🚀 ~ translatePageContent ~ targetLanguage:", targetLanguage);
     if (targetLanguage === "en") {
       // router.push("/");
-      router.push(`/${pathname}`);
+      // router.push(`/${pathname}`);
       return;
     }
 
@@ -176,7 +176,7 @@ const MainNavbar = () => {
     }
   };
 
-  const handleLanguageChange = (value) => {
+  const handleLanguageChange = async (value) => {
     console.log("🚀 ~ handleLanguageChange ~ value:", value);
     // Split the pathname and change the language part
     let paths = pathname.split("/");
@@ -194,7 +194,8 @@ const MainNavbar = () => {
       // Prepend the selected language to the URL
       router.push(`/${value}${pathname}`);
     }
-
+    // Update content after language change
+    await translatePageContent(value);
     setshowDropDownDesk(false);
   };
 
