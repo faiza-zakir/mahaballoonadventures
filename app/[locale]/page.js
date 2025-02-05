@@ -1,4 +1,4 @@
-import PageContent from "./PageContent";
+import PageContent from "./pageContent";
 
 export async function generateMetadata({ params }) {
   const { locale } = params;
