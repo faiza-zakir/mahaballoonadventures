@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mahaballoonadventures.vercel.app
+
+# Sitemaps
+Sitemap: https://mahaballoonadventures.vercel.app/sitemap.xml

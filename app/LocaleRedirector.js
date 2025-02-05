@@ -1,14 +1,16 @@
 "use client";
 
 import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
-const LocaleRedirector = ({ locale }) => {
+const LocaleRedirector = () => {
   const router = useRouter();
+  const pathname = usePathname();
+  const locale = pathname.split("/")[1];
 
   useEffect(() => {
     if (!locale) {
-      router.push("/en"); // Redirect to /en if no locale is present
+      router.replace("/en"); // Redirect to /en if no locale is present
     }
   }, [locale, router]);
 
