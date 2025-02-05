@@ -176,7 +176,7 @@ const MainNavbar = () => {
     }
   };
 
-  const handleLanguageChange = (value) => {
+  const handleLanguageChange = async(value) => {
     console.log("🚀 ~ handleLanguageChange ~ value:", value);
     // Split the pathname and change the language part
     let paths = pathname.split("/");
@@ -187,11 +187,12 @@ const MainNavbar = () => {
       let newPath = [...paths];
       newPath[1] = value; // Set new language
       let CombinePath = newPath.join("/");
-
+      await translatePageContent(value);
       // Navigate to the new path
       router.push(CombinePath);
     } else {
       // Prepend the selected language to the URL
+      await translatePageContent(value);
       router.push(`/${value}${pathname}`);
     }
 
