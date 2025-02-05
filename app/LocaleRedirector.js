@@ -10,7 +10,7 @@ const LocaleRedirector = () => {
 
   useEffect(() => {
     if (!locale) {
-      router.replace("/en"); // Redirect to /en if no locale is present
+      router.replace("/en"); // Redirect to /en if no local
     }
   }, [locale, router]);
 
