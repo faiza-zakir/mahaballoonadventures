@@ -6,6 +6,8 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./globals.scss";
 import "./index.css";
+import Providers from "./providers";
+import { LanguageProvider } from "./context/LanguageContext";
 
 // Load the Roboto font with specific weights
 const roboto = Roboto({
@@ -199,7 +201,9 @@ export default function RootLayout({ children }) {
           ></iframe>
         </noscript>
         <NextTopLoader color="#7ab342" showSpinner={false} />
-        {children}
+        <Providers>
+          <LanguageProvider>{children}</LanguageProvider>
+        </Providers>
       </body>
     </html>
   );
