@@ -47,6 +47,7 @@ import { usePathname } from "next/navigation";
 import { ToastContainer } from "react-toastify";
 import { Suspense, lazy } from "react";
 import "react-toastify/dist/ReactToastify.css";
+import "react-international-phone/style.css";
 import Loader from "../components/Common/Loader/Loader";
 
 const Navbar = lazy(() => import("../components/Layout/Navbar/Navbar"));
