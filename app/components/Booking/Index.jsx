@@ -10,7 +10,7 @@ import AddressForm from "./AddressForm/Index";
 import { Container } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
 import { useDispatch, useSelector } from "react-redux";
-import { setBooking, setPackage, setPackageId } from "../../store/booking";
+// import { setBooking, setPackage, setPackageId } from "../../store/booking";
 import { toast } from "react-toastify";
 // api
 import {
@@ -135,9 +135,9 @@ const Index = () => {
             console.log("packagesData: ", packagesData);
             console.log("packageSelected: ", packageSelected);
 
-            dispatch(setPackageId(packageSelected?.id));
-            dispatch(setPackage(packageSelected));
-            dispatch(setBooking(true));
+            // dispatch(setPackageId(packageSelected?.id));
+            // dispatch(setPackage(packageSelected));
+            // dispatch(setBooking(true));
           }
         }
       } catch (error) {
@@ -223,7 +223,7 @@ const Index = () => {
   }, [currentStep]);
 
   const handleClose = () => {
-    dispatch(setBooking(false));
+    // dispatch(setBooking(false));
     router.push("/");
   };
 
@@ -561,7 +561,7 @@ const Index = () => {
         setFieldsAdults([{}]);
         setFieldsChilds([{}]);
         settotalResp({});
-        dispatch(setBooking(false));
+        // dispatch(setBooking(false));
         window.location.assign(
           `${process.env.NEXT_PUBLIC_PAYMENTBASEURL}/?token=${response?.data?.cart?.data?.cartId}`
         );
@@ -590,7 +590,7 @@ const Index = () => {
         router.push("/");
         return;
       }
-      dispatch(setBooking(true));
+      // dispatch(setBooking(true));
     }
   }, [booking_dateQuery, adultsQuery, childQuery]);
 

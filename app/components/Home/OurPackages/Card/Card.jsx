@@ -4,11 +4,11 @@ import img1 from "../../../../assets/HomePage/Packages/card1.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  setBooking,
-  setPackageId,
-  setPackage,
-} from "../../../../store/booking";
+// import {
+//   setBooking,
+//   setPackageId,
+//   setPackage,
+// } from "../../../../store/booking";
 import { useDispatch } from "react-redux";
 function Card(
   {
@@ -79,9 +79,9 @@ function Card(
           className="btnNl btnNl-primary pds mrs"
           accordion
           onClick={() => {
-            dispatch(setBooking(true));
-            dispatch(setPackageId(id));
-            dispatch(setPackage(packageVal));
+            // dispatch(setBooking(true));
+            // dispatch(setPackageId(id));
+            // dispatch(setPackage(packageVal));
           }}
         >
           {" "}

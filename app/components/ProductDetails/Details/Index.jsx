@@ -9,7 +9,7 @@ import Tabs from "react-bootstrap/Tabs";
 import ReactStars from "react-rating-stars-component";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { FaPlus, FaMinus } from "react-icons/fa6";
-import useCart from "../Hook/useCart";
+// import useCart from "../Hook/useCart";
 
 import "./styles.scss";
 
@@ -22,7 +22,7 @@ function Index() {
   const [selected, setSelected] = useState(false);
   const [qty, setQty] = useState(1);
 
-  const { addItemstoCart } = useCart();
+  // const { addItemstoCart } = useCart();
 
   return (
     <div className="productDetailsk39dsk py-60">

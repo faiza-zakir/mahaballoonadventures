@@ -8,7 +8,7 @@ import "./styles.scss";
 import { toast } from "react-toastify";
 import useAuthApi from "../../../api/useAuthApi";
 import { useDispatch } from "react-redux";
-import { LoginUser, registerInfo } from "../../../store/auth";
+// import { LoginUser, registerInfo } from "../../../store/auth";
 import useZohoAPIs from "../../../api/Zoho/useZohoAPIs";
 import { useRouter } from "next/navigation";
 function Index(props) {
@@ -152,7 +152,7 @@ function Index(props) {
         token: response?.data?.token,
       };
 
-      dispatch(LoginUser(payload));
+      // dispatch(LoginUser(payload));
       setIsloadng(false);
       toast.success("Logged In  Successfull");
       setLogFormData({ email: "", password: "" });

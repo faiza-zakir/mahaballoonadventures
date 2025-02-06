@@ -3,11 +3,11 @@ import "./styles.scss";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import {
-  setBooking,
-  setPackage,
-  setPackageId,
-} from "../../../../store/booking";
+// import {
+//   setBooking,
+//   setPackage,
+//   setPackageId,
+// } from "../../../../store/booking";
 import { useDispatch } from "react-redux";
 function Card(props) {
   const {
@@ -71,9 +71,9 @@ function Card(props) {
           className="btnNl btnNl-primary pds mrs"
           accordion
           onClick={() => {
-            dispatch(setBooking(true));
-            dispatch(setPackageId(id));
-            dispatch(setPackage(packageVal));
+            // dispatch(setBooking(true));
+            // dispatch(setPackageId(id));
+            // dispatch(setPackage(packageVal));
           }}
         >
           {" "}

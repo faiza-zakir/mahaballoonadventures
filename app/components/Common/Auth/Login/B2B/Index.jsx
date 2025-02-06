@@ -5,7 +5,7 @@ import "./styles.scss";
 import useAuthApi from "../../../../../api/useAuthApi";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
-import { LoginUser } from "../../../../../store/auth";
+// import { LoginUser } from "../../../../../store/auth";
 
 function Index(props) {
   const [steps, setSetps] = useState(30);
@@ -44,7 +44,7 @@ function Index(props) {
         token: response?.data?.token,
       };
 
-      dispatch(LoginUser(payload));
+      // dispatch(LoginUser(payload));
       setIsloadng(false);
       toast.success("Logged In  Successfull");
       setLogFormData({ email: "", password: "" });

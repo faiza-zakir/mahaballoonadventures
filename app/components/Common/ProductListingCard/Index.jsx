@@ -4,14 +4,14 @@ import "./styles.scss";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useSelector, useDispatch } from "react-redux";
-import useCart from "../Hook/useCart";
+// import useCart from "../Hook/useCart";
 
 function Index(props) {
   const pathname = usePathname();
   const lang = pathname.split("/")[1];
   // const cart = useSelector((state) => state);
   const dispatch = useDispatch();
-  const { addItemstoCart } = useCart();
+  // const { addItemstoCart } = useCart();
 
   return (
     <div
@@ -35,7 +35,7 @@ function Index(props) {
         <div className="colors">{props?.product?.category}</div>
         <button
           className="btnNl btnNl-secondary w-100 mt-3"
-          onClick={() => addItemstoCart(props?.product)}
+          // onClick={() => addItemstoCart(props?.product)}
         >
           {" "}
           Add to cart

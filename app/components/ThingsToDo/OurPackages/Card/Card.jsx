@@ -3,7 +3,7 @@ import "./styles.scss";
 import { IoIosArrowDown } from "react-icons/io";
 import { usePathname } from "next/navigation";
 import { useDispatch } from "react-redux";
-import { setBooking } from "../../../../store/booking";
+// import { setBooking } from "../../../../store/booking";
 import ReactWhatsapp from "react-whatsapp";
 import { whatsappNo } from "../../../../config/general";
 function Card(props) {

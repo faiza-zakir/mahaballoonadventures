@@ -11,7 +11,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { toast } from "react-toastify";
 import useAuthApi from "../../../../../../api/useAuthApi";
 import { useDispatch, useSelector } from "react-redux";
-import { registerInfo } from "../../../../../../store/auth";
+// import { registerInfo } from "../../../../../../store/auth";
 import axios from "axios";
 import { useSearchParams } from "next/navigation";
 import { useRouter, usePathname } from "next/navigation";

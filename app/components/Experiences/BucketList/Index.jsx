@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useDispatch } from "react-redux";
-import { setBooking } from "../../../store/booking";
+// import { setBooking } from "../../../store/booking";
 import img1 from "../../../assets/New/Experience/Unique Hot Air Balloon.webp";
 import "./styles.scss";
 import { whatsappNo } from "../../../config/general";
@@ -33,7 +33,7 @@ function Index() {
                 <button
                   className="btnNl btnNl-primary pd43 bokNow"
                   onClick={() => {
-                    dispatch(setBooking(true));
+                    // dispatch(setBooking(true));
                   }}
                 >
                   Book Now

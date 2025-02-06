@@ -5,7 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import moment from "moment";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
-import { setBooking, setPackage, setPackageId } from "../../../store/booking";
+// import { setBooking, setPackage, setPackageId } from "../../../store/booking";
 import useSize from "../../../utils/useSize";
 import { IoCloseCircleSharp } from "react-icons/io5";
 import DatePicker from "react-date-picker";
@@ -88,8 +88,8 @@ function Index() {
     //   return;
     // }
 
-    dispatch(setPackageId(selectedPackageData?.id));
-    dispatch(setPackage(selectedPackageData));
+    // dispatch(setPackageId(selectedPackageData?.id));
+    // dispatch(setPackage(selectedPackageData));
     // Use router to update URL parameters
     const queryParams = new URLSearchParams({
       booking_date: dateValue,
@@ -353,7 +353,7 @@ function Index() {
                           return;
                         }
                         if (selectedPackage) {
-                          dispatch(setBooking(true));
+                          // dispatch(setBooking(true));
                           setPackagesSelectModal(false);
                           return;
                         }
