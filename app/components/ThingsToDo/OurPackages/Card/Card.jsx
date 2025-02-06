@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./styles.scss";
 import { IoIosArrowDown } from "react-icons/io";
 import { usePathname } from "next/navigation";
-import { useDispatch } from "react-redux";
+// import { useDispatch } from "react-redux";
 // import { setBooking } from "../../../../store/booking";
 import ReactWhatsapp from "react-whatsapp";
 import { whatsappNo } from "../../../../config/general";
@@ -23,7 +23,7 @@ function Card(props) {
   } = props;
   const pathname = usePathname();
   const lang = pathname.split("/")[1];
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
 
   return (
     <div
