@@ -1,6 +1,6 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-// import BookingField from "../../Common/BookingField/Index";
+import BookingField from "../../Common/BookingField/Index";
 import content from "./content";
 import "./styles.scss";
 
