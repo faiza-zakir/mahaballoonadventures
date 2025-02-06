@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { usePathname } from "next/navigation";
 // import img1 from "../assets/contact.jpg";
 import "./styles.scss";
 import Link from "next/link";
@@ -8,6 +9,8 @@ import { toast } from "react-toastify";
 const img1 = "https://d3gelo9cifr8ed.cloudfront.net/assets/contactUs.webp";
 
 const Index = () => {
+  const pathname = usePathname();
+  const lang = pathname?.split("/")?.[1] || "en"; // Ensure locale extraction is safe
   const [formData, setFormData] = useState({});
   const [checkTerms, setCheckTerms] = useState(false);
   const [isLoaidng, setIsLoading] = useState(false);
@@ -134,7 +137,8 @@ const Index = () => {
                   }}
                 />
                 <label htmlFor="terms">
-                  I accept the <Link href={"/terms-of-service"}>Terms </Link>
+                  I accept the{" "}
+                  <Link href={`/${lang}/terms-of-service`}>Terms</Link>
                 </label>
               </div>
               <button
