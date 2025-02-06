@@ -1,12 +1,12 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-// import { useDispatch } from "react-redux";
-// import { setBooking } from "../../../../store/booking";
+import { useDispatch } from "react-redux";
+import { setBooking } from "../../../../store/booking";
 import img1 from "../../../../assets/New/Experience/Unique Hot Air Balloon.webp";
 import "./styles.scss";
 function Index(props) {
   const { ExtraDetails } = props;
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   return (
     <div className="PackageDetails303232">

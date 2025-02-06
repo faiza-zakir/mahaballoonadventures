@@ -4,7 +4,7 @@ import { IoMdClose } from "react-icons/io";
 import { RiErrorWarningFill } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import { useDispatch } from "react-redux";
-// import { setBooking } from "../../../store/booking";
+import { setBooking } from "../../../store/booking";
 import "./styles.scss";
 
 function Index(props) {

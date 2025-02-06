@@ -14,7 +14,7 @@ function Banner() {
             <h1 className="bannerTitle MObiled93">{content?.title?.en}</h1>
             <p className="desktopD3">{content?.description?.en}</p>
             <p className="MObiled93">{content?.description_mbl?.en}</p>
-            {/* <BookingField /> */}
+            <BookingField />
           </div>
         </div>
       </Container>

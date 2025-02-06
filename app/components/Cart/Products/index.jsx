@@ -5,12 +5,12 @@ import { useSelector } from "react-redux";
 import { FaPlus, FaMinus } from "react-icons/fa6";
 import "./styles.scss";
 import { useRouter } from "next/navigation";
-// import useCart from "../../../Hook/useCart";
+import useCart from "../../../Hook/useCart";
 
 const Index = () => {
   const cartItems = useSelector((state) => state.cart.products);
   const router = useRouter();
-  // const { clearItemsCart, removeItemsCart } = useCart();
+  const { clearItemsCart, removeItemsCart } = useCart();
 
   return (
     <div className="ProductsPge939d9">
@@ -24,7 +24,7 @@ const Index = () => {
                   className="btn-remove"
                   accordion
                   onClick={() => {
-                    // removeItemsCart(item?.id);
+                    removeItemsCart(item?.id);
                   }}
                 >
                   <MdCancel size={25} />
@@ -64,7 +64,7 @@ const Index = () => {
           <button
             className="btnNl btnNl-primary"
             onClick={() => {
-              // clearItemsCart();
+              clearItemsCart();
             }}
           >
             Clear Cart

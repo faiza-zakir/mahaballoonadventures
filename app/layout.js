@@ -202,9 +202,7 @@ export default function RootLayout({ children }) {
         </noscript>
         <NextTopLoader color="#7ab342" showSpinner={false} />
         {/* <LanguageProvider> */}
-        {/* <Providers> */}
-        {children}
-        {/* </Providers> */}
+        <Providers>{children}</Providers>
         {/* </LanguageProvider> */}
       </body>
     </html>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-// import { setBooking } from "../../../store/booking";
+import { setBooking } from "../../../store/booking";
 
 import "./styles.scss";
 import { toast } from "react-toastify";

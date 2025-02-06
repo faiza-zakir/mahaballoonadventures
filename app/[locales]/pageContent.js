@@ -36,11 +36,11 @@ function PageContent() {
       <div ref={ref} style={{ minHeight: "2px" }}></div>
       <>
         <WhyUs />
-        {/* <OurPackages /> */}
+        <OurPackages />
         <GiftOffer
           title={"Gift an Unforgettable Hot Air Balloon Adventure Today !!"}
         />
-        {/* <FlightOptions /> */}
+        <FlightOptions />
         <Testimonial />
         {/* <Merchandise /> */}
         <FaqsComm

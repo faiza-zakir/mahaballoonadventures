@@ -2,12 +2,11 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Products from "./Products/index";
 import { FaHeart } from "react-icons/fa";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import "./styles.scss";
 import { useRouter } from "next/navigation";
 const Index = () => {
-  const wishlistItems = [];
-  // const wishlistItems = useSelector((state) => state.wishlist.products);
+  const wishlistItems = useSelector((state) => state.wishlist.products);
   const router = useRouter();
 
   return (
