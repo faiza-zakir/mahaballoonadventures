@@ -27,7 +27,7 @@ export default function ClientWrapper({ children }) {
         theme="light"
       />
       <Suspense fallback={<Loader />}>
-        <Navbar />
+        {/* <Navbar /> */}
         <main className={locale === "ar" ? "r_dir" : "l_dir"}>{children}</main>
         <Footer />
       </Suspense>
