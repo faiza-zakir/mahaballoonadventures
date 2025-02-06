@@ -53,7 +53,7 @@ function Index() {
                 <button
                   // className="btnNl-secondary Desktopd"
                   className="btnNl-secondary "
-                  onClick={() => router.push(`/${lang}/why-us`)}
+                  onClick={() => router.push(`/${lang}/why-choose-us`)}
                 >
                   Learn More
                 </button>

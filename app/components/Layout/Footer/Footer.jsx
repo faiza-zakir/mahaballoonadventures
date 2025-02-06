@@ -118,7 +118,7 @@ If you’re after a full-day itinerary of awesome adventure activities in Dubai 
 </p>
                     
                   `,
-    [`why-us`]: ` <strong>Your Trusted Partner for Balloon Adventures</strong>
+    [`why-choose-us`]: ` <strong>Your Trusted Partner for Balloon Adventures</strong>
     <p>Why us for your next hot air balloon experience? Why Us, however, is one of the places that stands out in the adventure scene in Dubai: offering premium, safe, and expertly guided hot air balloon rides revealing Dubai’s beauty. It’s why we are the trusted choice for aerial adventures, with our commitment to top-quality service, so passengers arrive at our doorstep for a smooth and enjoyable experience.
 Why we stand out as a leader in hot air balloon rides is because we put safety, customer satisfaction, and most importantly, that ultimate viewing experience. All the detail is looked after by our team of certified, experienced pilots who take care of your departure to arrival. Choosing us means you also get to pay less for well-maintained equipment, meticulous planning, and a memorable adventure that showcases just how stunning Dubai’s scenery is.
 Best Hot Air Ballooning in Dubai’s competitive ballooning city, why do we consistently rate and be the provider of choice for its service excellence? Our customers at any time pick us because they know they are with the best, and we are proud of the good service we provide. The answer to why we are here is clear: We combine experience, quality, and dedication to making memories that you won't soon forget.
@@ -326,7 +326,7 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 <div className="linksWrapper">
                   <div className="footerTitle mb-4">Quick Links</div>
                   <ul>
-                    <Link href={`/${locale}/why-us`}>
+                    <Link href={`/${locale}/why-choose-us`}>
                       <li>About Us</li>
                     </Link>
                     <Link href={`/${locale}/experiences`}>

@@ -17,7 +17,7 @@ export async function GET() {
   const staticRoutes = [
     { path: "/", lastmod: "2025-02-04" },
     { path: "/en", lastmod: "2025-02-04" },
-    { path: "/en/why-us", lastmod: "2025-02-04" },
+    { path: "/en/why-choose-us", lastmod: "2025-02-04" },
     { path: "/en/experiences", lastmod: "2025-02-04" },
     { path: "/en/things-to-do-in-dubai", lastmod: "2025-02-04" },
     { path: "/en/testimonial", lastmod: "2025-02-04" },
@@ -32,7 +32,7 @@ export async function GET() {
     { path: "/en/b2b", lastmod: "2025-02-04" },
     { path: "/en/b2c", lastmod: "2025-02-04" },
     { path: "/ar", lastmod: "2025-02-04" },
-    { path: "/ar/why-us", lastmod: "2025-02-04" },
+    { path: "/ar/why-choose-us", lastmod: "2025-02-04" },
     { path: "/ar/experiences", lastmod: "2025-02-04" },
     { path: "/ar/things-to-do-in-dubai", lastmod: "2025-02-04" },
     { path: "/ar/testimonial", lastmod: "2025-02-04" },

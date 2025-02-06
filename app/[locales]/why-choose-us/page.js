@@ -7,7 +7,7 @@ export async function generateMetadata({ params }) {
     description:
       "Discover why Maha Balloon Adventures is the top choice for hot air balloon rides in Dubai. Experience unmatched service, breathtaking views, and memories.",
     alternates: {
-      canonical: `https://mahaballoonadventures.ae/${locale}/why-us`,
+      canonical: `https://mahaballoonadventures.ae/${locale}/why-choose-us`,
     },
   };
 }

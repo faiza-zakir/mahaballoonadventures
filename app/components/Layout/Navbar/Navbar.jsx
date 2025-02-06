@@ -639,12 +639,12 @@ const MainNavbar = () => {
               <Nav.Link
                 onClick={() => closeToggler()}
                 // as={Link}
-                href={`/${lang}/why-us`}
+                href={`/${lang}/why-choose-us`}
                 className={`nav-item ${
-                  pathname === `/${lang}/why-us` && "active"
+                  pathname === `/${lang}/why-choose-us` && "active"
                 }`}
               >
-                {lang == "ar" ? "Why Us" : "Why Us"}
+                {lang == "ar" ? "Why Choose Us" : "Why Choose Us"}
               </Nav.Link>
               <Nav.Link
                 onClick={() => closeToggler()}
