@@ -596,7 +596,7 @@ const MainNavbar = () => {
                             <Dropdown.Item
                               onClick={() => dispatch(LogOutUser())}
                               className={
-                                lang === "en"
+                                lang === "ar"
                                   ? "langItem link_Itemsk"
                                   : "langItem link_Itemsk"
                               }
@@ -994,7 +994,7 @@ const MainNavbar = () => {
                               <Dropdown.Item
                                 onClick={() => dispatch(LogOutUser())}
                                 className={
-                                  lang === "en"
+                                  lang === "ar"
                                     ? "langItem link_Itemsk"
                                     : "langItem link_Itemsk"
                                 }
