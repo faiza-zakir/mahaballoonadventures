@@ -156,7 +156,7 @@ const MainNavbar = () => {
 
       for (const chunk of textChunks) {
         const response = await fetch(
-          "https://translation.googleapis.com/language/translate/v2?key=AIzaSyBFPYrl8v_HRI1jm2nMHNtankZPdFGILPQ",
+          "https://translation.googleapis.com/language/translate/v2?key=AIzaSyAwsu7qVMZhfwjpQfnw1GMAmrmiZlfcYBQ",
           {
             method: "POST",
             body: JSON.stringify({
