@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import blogData from "../Db/blogs.js";
 
-const SITE_URL = "https://mahaballoonadventures.vercel.app"; // Change to your actual domain
+const SITE_URL = "https://mahaballoonadventures.ae"; // Change to your actual domain
 const LOCALES = ["en", "ar"]; // Define supported languages
 
 export async function GET() {
