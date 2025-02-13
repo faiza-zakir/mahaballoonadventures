@@ -4,10 +4,10 @@ import { ToastContainer } from "react-toastify";
 import { Suspense, lazy } from "react";
 import "react-toastify/dist/ReactToastify.css";
 import "react-international-phone/style.css";
-import Loader from "../components/Common/Loader/Loader";
+import Loader from "./components/Common/Loader/Loader";
 
-const Navbar = lazy(() => import("../components/Layout/Navbar/Navbar"));
-const Footer = lazy(() => import("../components/Layout/Footer/Footer"));
+const Navbar = lazy(() => import("./components/Layout/Navbar/Navbar"));
+const Footer = lazy(() => import("./components/Layout/Footer/Footer"));
 
 export default function ClientWrapper({ children }) {
   const pathname = usePathname();
