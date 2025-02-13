@@ -41,7 +41,7 @@ import { MdOutlineLanguage } from "react-icons/md";
 
 const MainNavbar = () => {
   const pathname = usePathname();
-  const lang = pathname.split("/")[1];
+  const lang = pathname.split("/")[1] || "en";
   const router = useRouter(); // Router hook from next/navigation
   const { setLang } = useLanguage();
   const cartItems = useSelector((state) => state.cart.products);
