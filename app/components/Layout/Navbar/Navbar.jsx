@@ -80,9 +80,9 @@ const MainNavbar = () => {
     }
   }, []);
 
-  useEffect(() => {
-    animate("span", { scale: [1, 2, 1] }, { duration: 0.5 });
-  }, [cartItems?.length]);
+  // useEffect(() => {
+  //   animate("span", { scale: [1, 2, 1] }, { duration: 0.5 });
+  // }, [cartItems?.length]);
 
   const searchParams = useSearchParams();
   const userRef = searchParams.get("referral");
@@ -107,6 +107,84 @@ const MainNavbar = () => {
     section: "experiences",
     item: null,
   });
+
+  // const translatePageContent = async (targetLanguage, appPath) => {
+  //   console.log("🚀 ~ translatePageContent ~ targetLanguage:", targetLanguage);
+
+  //   if (targetLanguage === "en") {
+  //     router.replace(appPath);
+  //     return;
+  //   }
+
+  //   dispatch(GlobalLoader(true));
+
+  //   const elements = document.querySelectorAll(
+  //     "*:not(script):not(style):not(meta)"
+  //   );
+  //   const textsToTranslate = [];
+  //   const elementMap = [];
+
+  //   elements.forEach((el) => {
+  //     if (
+  //       el.childNodes.length === 1 &&
+  //       el.childNodes[0].nodeType === Node.TEXT_NODE
+  //     ) {
+  //       const text = el.textContent.trim();
+  //       if (text) {
+  //         textsToTranslate.push(text);
+  //         elementMap.push(el);
+  //       }
+  //     }
+  //   });
+
+  //   if (textsToTranslate.length === 0) {
+  //     dispatch(GlobalLoader(false));
+  //     return;
+  //   }
+
+  //   try {
+  //     const chunkSize = 128;
+  //     const textChunks = [];
+  //     for (let i = 0; i < textsToTranslate.length; i += chunkSize) {
+  //       textChunks.push(textsToTranslate.slice(i, i + chunkSize));
+  //     }
+
+  //     const translations = [];
+  //     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  //     for (const chunk of textChunks) {
+  //       const response = await fetch(
+  //         "https://translation.googleapis.com/language/translate/v2?key=AIzaSyAwsu7qVMZhfwjpQfnw1GMAmrmiZlfcYBQ",
+  //         {
+  //           method: "POST",
+  //           body: JSON.stringify({ text: chunk, targetLanguage }),
+  //           headers: { "Content-Type": "application/json" },
+  //         }
+  //       );
+
+  //       if (!response.ok) {
+  //         throw new Error(`API call failed: ${response.statusText}`);
+  //       }
+
+  //       const data = await response.json();
+  //       if (data.translations) {
+  //         translations.push(...data.translations);
+  //       }
+
+  //       await delay(1000);
+  //     }
+
+  //     translations.forEach((translation, index) => {
+  //       elementMap[index].textContent = translation.translatedText;
+  //     });
+
+  //     router.replace(appPath);
+  //   } catch (error) {
+  //     console.error("Translation Error:", error);
+  //   } finally {
+  //     dispatch(GlobalLoader(false));
+  //   }
+  // };
 
   const translatePageContent = async (targetLanguage, appPath) => {
     console.log("🚀 ~ translatePageContent ~ targetLanguage:", targetLanguage);
@@ -534,17 +612,16 @@ const MainNavbar = () => {
                   ) : null}
                 </Dropdown> */}
 
-                <div
+                {/* <div
                   className="icons2"
                   onClick={() => {
                     router.push(`/${lang}/wishlist`);
                   }}
                 >
                   <span>0</span>
-                  {/* <img className="icns" src={heart} alt="" /> */}
                   <FaRegHeart size={20} />
-                </div>
-                <div
+                </div> */}
+                {/* <div
                   ref={scope}
                   className=" icons2"
                   onClick={() => {
@@ -553,9 +630,8 @@ const MainNavbar = () => {
                   }}
                 >
                   <span>{cartItems?.length}</span>
-                  {/* <img className="icns" src={cart} alt="" /> */}
                   <IoCartOutline size={25} />
-                </div>
+                </div> */}
                 <div
                   className="icons1"
                   onClick={(e) => {
@@ -945,14 +1021,14 @@ const MainNavbar = () => {
                 {/* //# Desktop Nav Icons */}
 
                 <div className="iconsWrapper">
-                  <div
+                  {/* <div
                     className="icons1"
                     onClick={() => {
                       router.push(`/${lang}/wishlist`);
                     }}
                   >
                     <img className="icns" src={heart} alt="" />
-                  </div>
+                  </div> */}
                   <div
                     className="icons1"
                     onClick={(e) => {
@@ -1017,7 +1093,7 @@ const MainNavbar = () => {
                       <img className="icns" src={person} alt="" />
                     )}
                   </div>
-                  <div
+                  {/* <div
                     className="icons2"
                     ref={scope}
                     onClick={() => {
@@ -1027,7 +1103,7 @@ const MainNavbar = () => {
                   >
                     <span>{cartItems?.length}</span>
                     <img className="icns" src={cart} alt="" />
-                  </div>
+                  </div> */}
                 </div>
                 <div className="btnWrapper">
                   <Nav>
