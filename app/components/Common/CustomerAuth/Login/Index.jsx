@@ -13,7 +13,7 @@ function Index(props) {
   const pathname = usePathname();
   const lang = pathname.split("/")[1];
   return (
-    <div className="LoginCustomer32">
+    <div className="LoginCustomer32" dir={lang == "ar" ? "rtl" : "ltr"}>
       <Container>
         <Row className="gy-3">
           <Col lg={6}>
@@ -24,7 +24,7 @@ function Index(props) {
                   : "Welcome to Maha Balloon Adventures Dubai!"}
               </div>
               <p className="form-details mt-2">
-              {lang == "ar"
+                {lang == "ar"
                   ? "يرجى تسجيل الدخول إلى حسابك للحصول على عروض رائعة، تخفيضات ومزايا أخرى. يمكنك تحقيق الدخل المتبقي عن طريق الاشتراك في أفضل برنامج إحالة وتسويق تابع مع أفضل شركة مغامرات منطاد الهواء الساخن في الشرق الأوسط."
                   : "Please sign in to your account to get fantastic offers, discounts, and other benefits. You can make residual income by signing up to the best referral and affiliate marketing program with the best hot air balloon adventure company in the Middle East."}
               </p>
