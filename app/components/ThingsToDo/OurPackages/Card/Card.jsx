@@ -37,9 +37,18 @@ function Card(props) {
       <div className="detials39">
         <div className="sec-title mt-4">{title}</div>
         <div className="tag-line mt-2">
-          {price_adult ? <>ADULTS: AED {price_adult}</> : "PRICE ON REQUEST"} /
-          {"  "}
-          CHILD: {price_child ? <> AED {price_child}</> : "NA"}
+          {price_adult ? (
+            <>
+              {lang == "ar" ? "الكبار: درهم" : "ADULTS: AED"} {price_adult}
+            </>
+          ) : lang == "ar" ? (
+            "السعر عند الطلب"
+          ) : (
+            "PRICE ON REQUEST"
+          )}{" "}
+          /{"  "}
+          {lang == "ar" ? "الطفل: درهم" : "CHILD: AED"}{" "}
+          {price_child ? <>{price_child}</> : "NA"}
         </div>
         <p className="para">{short_details}</p>
       </div>
@@ -63,7 +72,8 @@ function Card(props) {
                 active == id ? "activeCard" : ""
               } d-flex justify-content-between align-items-center`}
             >
-              View Details <IoIosArrowDown className="iconsvg" size={16} />
+              {lang == "ar" ? "عرض التفاصيل" : "View Details"}{" "}
+              <IoIosArrowDown className="iconsvg" size={16} />
             </button>
           ) : null}
           <ReactWhatsapp
@@ -71,7 +81,7 @@ function Card(props) {
             number={whatsappNo}
             message={` Hi There,   I am interested in the  ${title} package. Please get in touch with me to send me a customized quote.`}
           >
-            Reserve
+            {lang == "ar" ? "احتياطي" : "Reserve"}
           </ReactWhatsapp>
         </div>
       ) : (
@@ -93,7 +103,8 @@ function Card(props) {
                 active == id ? "activeCard" : ""
               } w-100 d-flex justify-content-between align-items-center`}
             >
-              View Details <IoIosArrowDown className="iconsvg" size={32} />
+              {lang == "ar" ? "عرض التفاصيل" : "View Details"}{" "}
+              <IoIosArrowDown className="iconsvg" size={32} />
             </button>
           ) : null}
         </div>

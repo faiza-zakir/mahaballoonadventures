@@ -1,29 +1,29 @@
-.AboutpkCard32 {
+.pkCard32 {
   // max-width: 400px;
-  padding-bottom: 20px;
-  padding-inline-end: 40px;
+  margin-inline-end: 40px;
   @media (max-width: 560px) {
-    padding-inline-end: 10px;
+    margin-inline-end: 10px;
+    padding-bottom: 20px;
   }
   .detailsSec {
-    min-height: 280px;
+    // min-height: 280px;
   }
   .btnNl-primary-j {
     background-color: var(--themePrimary);
     color: var(--themeSecondary);
     border-radius: 50px;
     padding: 14px 24px;
-
     border: 1px solid var(--themePrimary);
     transition: ease-in-out 0.3s;
   }
-
+  p {
+    margin-bottom: 0;
+  }
   .btnNl-secondary-j {
     background-color: transparent;
     color: #000;
     border-radius: 50px;
     padding: 14px 24px;
-
     border: 1px solid var(--themePrimary);
     transition: ease-in-out 0.3s;
   }
@@ -61,10 +61,13 @@
       object-fit: cover;
     }
   }
-  .mrs {
-    margin-inline-end: 16px;
+  .bds {
+    font-weight: 600;
   }
   .pds {
     padding: 12px 24px;
+  }
+  .mrs {
+    margin-inline-end: 16px;
   }
 }

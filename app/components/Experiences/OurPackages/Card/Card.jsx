@@ -1,60 +1,82 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import "./styles.scss";
+import img1 from "../../../../assets/HomePage/Packages/card1.jpg";
 import { IoIosArrowDown } from "react-icons/io";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   setBooking,
-  setPackage,
   setPackageId,
+  setPackage,
 } from "../../../../store/booking";
 import { useDispatch } from "react-redux";
-function Card(props) {
-  const {
-    featured,
+function Card(
+  {
+    featured = true,
     package_image,
+    thumb,
     title,
     price_adult,
     price_child,
     short_detail,
     itineraries,
+    duration,
+    location,
+    bookNow,
     id,
     active,
     setActive,
     setExtraDetails,
+    PrevArrow,
+    NextArrow,
     packageVal,
-  } = props;
+  },
+  props
+) {
   const pathname = usePathname();
   const lang = pathname.split("/")[1];
   const dispatch = useDispatch();
   const [DetailsList, setDetailsList] = useState([]);
-
   return (
-    <div
-      className={`AboutpkCard32 ${lang == "ar" ? "r_dir" : "l_dir"}`}
-      {...props}
-    >
+    <div className={`pkCard32 ${lang == "ar" ? "r_dir" : "l_dir"}`} {...props}>
       <div className="ImgThumb">
         {featured && <div className="featured">Featured</div>}
-        <img src={package_image} alt="" />
+        <img src={package_image ? package_image : img1} alt={title} />
+        {/* <img src={img1} alt="" /> */}
+
+        {/* <img src={thumb} alt="" /> */}
       </div>
       <div className="detailsSec">
-        <h4 className="sec-title mt-4">{title}</h4>
+        <h4 className="card-title mt-4">{title}</h4>
         <div className="tag-line mt-2">
-          {" "}
-          {price_adult ? <> ADULTS: AED {price_adult}</> : "PRICE ON REQUEST"} /
-          {"  "}
-          {price_child && <>CHILD: AED {price_child}</>}
+          {price_adult ? (
+            <>
+              {lang == "ar" ? "الكبار: درهم" : "ADULTS: AED"} {price_adult}
+            </>
+          ) : lang == "ar" ? (
+            "السعر عند الطلب"
+          ) : (
+            "PRICE ON REQUEST"
+          )}{" "}
+          /{"  "}
+          {price_child && (
+            <>
+              {lang == "ar" ? "الطفل: درهم" : "CHILD: AED"}
+              {price_child}
+            </>
+          )}
         </div>
         <p className="para mt-2">{short_detail}</p>
         <div className="time mt-1">
-          <p className="para bds">Time</p>
-          <p className="para">45 - 60 Minutes</p>
+          <p className="para bds">{lang == "ar" ? "وقت" : "Time"}</p>
+          <p className="para">{duration}</p>
         </div>
         <div className="mt-1">
-          <p className="para bds">Location</p>
-          <p className="para">Margham Dubai, United Arab Emirates</p>
-          <Link href={`/compare-packages?compare1=${id}`}>Compare</Link>
+          <p className="para bds">{lang == "ar" ? "موقع" : "Location"}</p>
+          <p className="para">{location}</p>
+          <Link href={`/${lang}/compare-packages?compare1=${id}`}>
+            {lang == "ar" ? "يقارن" : "Compare"}
+          </Link>
         </div>
       </div>
       {active == id ? (
@@ -76,8 +98,7 @@ function Card(props) {
             dispatch(setPackage(packageVal));
           }}
         >
-          {" "}
-          Book Now
+          {lang == "ar" ? "احجز الآن" : "Book Now"}
         </button>
         {itineraries?.length > 0 && (
           <button
@@ -90,15 +111,21 @@ function Card(props) {
                 return;
               }
               setActive(id);
-              // setExtraDetails(itineraries);
               setDetailsList(itineraries);
+              // setExtraDetails(itineraries);
             }}
             className={`btnNl ${
               active == id ? "btnNl-primary" : "btnNl-secondary"
             } pds `}
           >
-            View Details
-            {/* <IoIosArrowDown className="iconsvg" size={32} /> */}
+            {active == id
+              ? lang == "ar"
+                ? "إخفاء التفاصيل"
+                : "Hide Details"
+              : lang == "ar"
+              ? "عرض التفاصيل"
+              : "View Details"}
+            {/* <IoIosArrowDown className="iconsvg" size={16} /> */}
           </button>
         )}
       </div>

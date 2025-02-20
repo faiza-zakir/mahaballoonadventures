@@ -78,24 +78,30 @@ let experiencesData = {
       id: 10,
       thumb: package1,
       featured: false,
-      title: "MAHA CLASSIC PACKAGE",
+      title: { en: "MAHA CLASSIC PACKAGE", ar: "باقة مها الكلاسيكية" },
       price_adult: "1050",
       price_child: "1000",
       bookNow: true,
-      short_detail:
-        "Experience breathtaking beauty in the Dubai desert with our Classic Hot Air Balloon Package. Enjoy stunning panoramic views as you gently ascend into the sky at an accessible, affordable price.",
+      short_detail: {
+        en: "Experience breathtaking beauty in the Dubai desert with our Classic Hot Air Balloon Package. Enjoy stunning panoramic views as you gently ascend into the sky at an accessible, affordable price.",
+        ar: "استمتع بجمال الصحراء الخلاب في دبي مع باقة المنطاد الكلاسيكية. تمتع بإطلالات بانورامية رائعة وأنت تحلق بلطف في السماء بسعر مناسب ومتاح للجميع.",
+      },
       itineraries: [
         {
           feature_img: unlimitedRefreshment,
-          activity: "Unlimited Refreshment",
-          details:
-            "Stay refreshed with unlimited beverages throughout your adventure.",
+          activity: { en: "Unlimited Refreshment", ar: "مشروبات غير محدودة" },
+          details: {
+            en: "Stay refreshed with unlimited beverages throughout your adventure.",
+            ar: "استمتع بالمشروبات المنعشة غير المحدودة طوال مغامرتك.",
+          },
         },
         {
           feature_img: pickAndDrop,
-          activity: "Pick up & drop off",
-          details:
-            "Enjoy convenient pick-up and drop-off services to make your experience hassle-free.",
+          activity: { en: "Pick up & drop off", ar: "الاستقبال والتوصيل" },
+          details: {
+            en: "Enjoy convenient pick-up and drop-off services to make your experience hassle-free.",
+            ar: "استمتع بخدمة التوصيل والاستقبال المريحة لجعل تجربتك خالية من المتاعب.",
+          },
         },
       ],
     },
@@ -103,38 +109,58 @@ let experiencesData = {
       id: 9,
       thumb: package2,
       featured: true,
-      title: "MAHA MAJESTIC PACKAGE",
+      title: { en: "MAHA MAJESTIC PACKAGE", ar: "باقة مها الفاخرة" },
       price_adult: "1149",
       price_child: "1099",
       bookNow: true,
-      short_detail:
-        "Elevate your adventure with our Deluxe Package. Enjoy exclusive extras and luxurious touches as you float gently over the stunning Dubai desert at sunrise, ensuring a memorable, sophisticated journey.",
+      short_detail: {
+        en: "Elevate your adventure with our Deluxe Package. Enjoy exclusive extras and luxurious touches as you float gently over the stunning Dubai desert at sunrise, ensuring a memorable, sophisticated journey.",
+        ar: "ارفع مستوى مغامرتك مع باقتنا الفاخرة. استمتع بإضافات حصرية ولمسات فاخرة بينما تحلق برفق فوق صحراء دبي الخلابة عند شروق الشمس، مما يضمن رحلة راقية لا تُنسى.",
+      },
       itineraries: [
         {
           feature_img: pickAndDrop,
-          activity:
-            "Pick up & drop off (Sharing) Private Vehicle (Extra cost )",
-          details:
-            "Enjoy convenient pick-up and drop-off services to make your experience hassle-free.",
+          activity: {
+            en: "Pick up & drop off (Sharing) Private Vehicle (Extra cost )",
+            ar: "الاستقبال والتوصيل (مشترك) مركبة خاصة (بتكلفة إضافية)",
+          },
+          details: {
+            en: "Enjoy convenient pick-up and drop-off services to make your experience hassle-free.",
+            ar: "استمتع بخدمة التوصيل والاستقبال المريحة لجعل تجربتك خالية من المتاعب.",
+          },
         },
         {
           feature_img: unlimitedRefreshment,
-          activity:
-            "Unlimited Refreshment, Gourmet Breakfast at the camp after the ride",
-          details:
-            "Stay refreshed with unlimited beverages throughout your adventure.",
+          activity: {
+            en: "Unlimited Refreshment, Gourmet Breakfast at the camp after the ride",
+            ar: "مشروبات غير محدودة، إفطار فاخر في المخيم بعد الرحلة",
+          },
+          details: {
+            en: "Stay refreshed with unlimited beverages throughout your adventure.",
+            ar: "استمتع بالمشروبات المنعشة غير المحدودة طوال مغامرتك.",
+          },
         },
         {
           feature_img: flightDuration,
-          activity: "Flight duration 45-60 minutes",
-          details:
-            "Enjoy a breathtaking flight that lasts between 45 to 60 minutes, offering stunning aerial views.",
+          activity: {
+            en: "Flight duration 45-60 minutes",
+            ar: "مدة الطيران 45-60 دقيقة",
+          },
+          details: {
+            en: "Enjoy a breathtaking flight that lasts between 45 to 60 minutes, offering stunning aerial views.",
+            ar: "استمتع برحلة جوية خلابة تدوم بين 45 إلى 60 دقيقة، مع إطلالات جوية مذهلة.",
+          },
         },
         {
           feature_img: CertificatDtl,
-          activity: "Flying Experience Certificate signed by the Pilot",
-          details:
-            " Receive a personalized flying experience certificate signed by your pilot as a cherished memento.",
+          activity: {
+            en: "Flying Experience Certificate signed by the Pilot",
+            ar: "شهادة تجربة الطيران موقعة من الطيار",
+          },
+          details: {
+            en: "Receive a personalized flying experience certificate signed by your pilot as a cherished memento.",
+            ar: "احصل على شهادة تجربة الطيران موقعة من الطيار كتذكار مميز.",
+          },
         },
       ],
     },
@@ -142,235 +168,77 @@ let experiencesData = {
       id: 8,
       thumb: package4,
       featured: true,
-      title: "MAHA ROYAL PACKAGE",
+      title: { en: "MAHA ROYAL PACKAGE", ar: "باقة مها الملكية" },
       price_adult: "1349",
       price_child: "1299",
       bookNow: true,
-
-      short_detail:
-        "Enjoy a complete desert experience with pick-up and drop-off from Dubai. Start with unlimited refreshments before an unforgettable 45-60 minute hot air balloon flight, followed by a signed flight certificate.",
+      short_detail: {
+        en: "Enjoy a complete desert experience with pick-up and drop-off from Dubai. Start with unlimited refreshments before an unforgettable 45-60 minute hot air balloon flight, followed by a signed flight certificate.",
+        ar: "استمتع بتجربة صحراوية متكاملة مع الاستقبال والتوصيل من دبي. ابدأ بمشروبات غير محدودة قبل رحلة منطاد لا تُنسى تدوم 45-60 دقيقة، متبوعة بشهادة طيران موقعة.",
+      },
       itineraries: [
         {
           feature_img: pickAndDrop,
-          activity:
-            "Pick up & drop off (Sharing) Private Vehicle (Extra cost )",
-          details:
-            "Enjoy convenient pick-up and drop-off services to make your experience hassle-free.",
+          activity: {
+            en: "Pick up & drop off (Sharing) Private Vehicle (Extra cost )",
+            ar: "الاستقبال والتوصيل (مشترك) مركبة خاصة (بتكلفة إضافية)",
+          },
+          details: {
+            en: "Enjoy convenient pick-up and drop-off services to make your experience hassle-free.",
+            ar: "استمتع بخدمة التوصيل والاستقبال المريحة لجعل تجربتك خالية من المتاعب.",
+          },
         },
         {
           feature_img: unlimitedRefreshment,
-          activity:
-            "Unlimited Refreshment, Gourmet Breakfast at the camp after the ride",
-          details:
-            "Stay refreshed with unlimited beverages throughout your adventure.",
+          activity: {
+            en: "Unlimited Refreshment, Gourmet Breakfast at the camp after the ride",
+            ar: "مشروبات غير محدودة، إفطار فاخر في المخيم بعد الرحلة",
+          },
+          details: {
+            en: "Stay refreshed with unlimited beverages throughout your adventure.",
+            ar: "استمتع بالمشروبات المنعشة غير المحدودة طوال مغامرتك.",
+          },
         },
         {
           feature_img: camelAndHorseRide,
-          activity: "Camel & Horse ride | Quad biking, Dune Bashing",
-          details:
-            "Experience the thrill of camel and horse rides, quad biking, and exhilarating dune bashing.",
+          activity: {
+            en: "Camel & Horse ride | Quad biking, Dune Bashing",
+            ar: "ركوب الجمال والخيول | ركوب الدراجات الرباعية والتزلج على الرمال",
+          },
+          details: {
+            en: "Experience the thrill of camel and horse rides, quad biking, and exhilarating dune bashing.",
+            ar: "استمتع بتجربة مشوقة من ركوب الجمال والخيول، ركوب الدراجات الرباعية، والانزلاق فوق الكثبان الرملية.",
+          },
         },
         {
           feature_img: photoWIthFelcone,
-          activity: "Photo with Falcon",
-          details:
-            "Capture a memorable moment with a majestic falcon for a unique keepsake.",
+          activity: { en: "Photo with Falcon", ar: "التصوير مع الصقر" },
+          details: {
+            en: "Capture a memorable moment with a majestic falcon for a unique keepsake.",
+            ar: "التقط لحظة لا تُنسى مع صقر مهيب كتذكار فريد.",
+          },
         },
         {
           feature_img: flightDuration,
-          activity: "Flight duration 45-60 minutes",
-          details:
-            "Enjoy a breathtaking flight that lasts between 45 to 60 minutes, offering stunning aerial views.",
+          activity: {
+            en: "Flight duration 45-60 minutes",
+            ar: "مدة الطيران 45-60 دقيقة",
+          },
+          details: {
+            en: "Enjoy a breathtaking flight that lasts between 45 to 60 minutes, offering stunning aerial views.",
+            ar: "استمتع برحلة جوية خلابة تدوم بين 45 إلى 60 دقيقة، مع إطلالات جوية مذهلة.",
+          },
         },
         {
           feature_img: CertificatDtl,
-          activity: "Flying Experience Certificate signed by the Pilot",
-          details:
-            " Receive a personalized flying experience certificate signed by your pilot as a cherished memento.",
-        },
-      ],
-    },
-    {
-      id: 1,
-      thumb: package2,
-      featured: true,
-      title: "MAHA TWILIGHT OVERNIGHT",
-      price_adult: "",
-      price_child: "",
-      bookNow: true,
-      short_detail:
-        "The Maha Overnight Desert Adventure offers an all-inclusive experience, featuring dune bashing, live entertainment, a BBQ dinner, and overnight camp stay before a hot air balloon ride at sunrise.",
-      itineraries: [
-        {
-          feature_img: PrivateVhe,
-          activity: "Pick up & drop off",
-          details:
-            "Enjoy convenient pick-up and drop-off services to make your experience hassle-free.",
-        },
-        {
-          feature_img: unlimitedRefreshment,
-          activity: "Unlimited Refreshment",
-          details:
-            "Stay refreshed with unlimited beverages throughout your adventure.",
-        },
-        {
-          feature_img: camelAndHorseRide,
-          activity:
-            "Whole day activities including Short Camel Ride, Sand Boarding, Henna Painting, Dune Bashing Camp entertainment shows",
-          details:
-            "Immerse yourself in a variety of activities, from camel rides to henna painting and dune bashing.",
-        },
-        {
-          feature_img: culturalEntertainment,
-          activity: "Live Entertainment",
-          details:
-            "Enjoy live entertainment at the Base camp including fire show, Belly dancing show and other live entertainers while sipping on bevvis from across the world as well as hubbly bubbly and other refreshments.",
-        },
-        {
-          feature_img: culturalEntertainment,
-          activity: "Buffet Barbeque Dinner and soft drinks",
-          details:
-            "Delight in a scrumptious buffet barbeque dinner accompanied by refreshing soft drinks.",
-        },
-        {
-          feature_img: OverNightStay,
-          activity: "Overnight stay at the camp",
-          details:
-            "Extend your adventure with an unforgettable overnight stay at our beautiful camp.",
-        },
-        {
-          feature_img: unlimitedRefreshment,
-          activity: "Gourmet Buffet  Breakfast",
-          details:
-            "Enjoy a hearty buffet breakfast to fuel your day after a night under the stars.",
-        },
-        {
-          feature_img: flightDuration,
-          activity: "Flight duration 45-60 minutes",
-          details:
-            "Enjoy a breathtaking flight that lasts between 45 to 60 minutes, offering stunning aerial views.",
-        },
-        {
-          feature_img: CertificatDt2,
-          activity: "Flying Experience Certificate signed by the Pilot",
-          details:
-            "Receive a personalized flying experience certificate signed by your pilot as a cherished memento.",
-        },
-      ],
-    },
-    {
-      id: 2,
-      thumb: package3,
-      featured: true,
-      title: "CELESTIAL PRIVATE ROMANCE",
-      price_adult: "",
-      price_child: "",
-      bookNow: true,
-      short_detail:
-        "Elevate your proposal to new heights with this unforgettable hot air balloon ride over the Dubai desert. Experience a magical sunrise ride, pop the question, and enjoy a delightful breakfast together.",
-      itineraries: [
-        {
-          feature_img: PerfectPurposal,
-          activity: "Perfect Proposal Setting",
-          details:
-            "The perfect setting for proposals, key milestones, and anniversaries.",
-        },
-        {
-          feature_img: RomanticGateway,
-          activity: "A Romantic Getaway",
-          details:
-            "Book the entire balloon exclusively for you and your partner, with a gourmet romantic meal, bubbly, cake, and memorabilia.",
-        },
-        {
-          feature_img: earlyReservation,
-          activity: "Early Reservations recommended",
-          details:
-            "Capture every moment with a professional photo and video shoot.",
-        },
-      ],
-    },
-    {
-      id: 3,
-      thumb: package3,
-      featured: true,
-      title: "GROUP BOOKING",
-      price_adult: "",
-      price_child: "",
-      bookNow: true,
-      short_detail:
-        "Enjoy exclusive group rates, tailored packages, and personalized service:We offer tailored arrangements for all group types, ensuring a unique and personalized experience. Whether for family, friends, or colleagues.",
-      itineraries: [
-        {
-          feature_img: GroupBooking,
-          activity: "Special event",
-          details:
-            "Get your group of 10 or more together for birthdays, reunions, or any special event!",
-        },
-        {
-          feature_img: Photograph,
-          activity: "Photoshoot to Capture the Memories",
-          details:
-            "Enjoy exclusive rates, customized cakes, and fun props with a professional photoshoot to capture the memories.",
-        },
-        {
-          feature_img: PersonalizedPkg,
-          activity: "Personalized packages",
-          details:
-            "Personalized packages tailored to make your celebration unforgettable.",
-        },
-
-        {
-          feature_img: earlyReservation,
-          activity: "Early Reservations recommended",
-          details: "",
-          // "Capture every moment with a professional photo and video shoot.",
-        },
-      ],
-    },
-    {
-      id: 4,
-      thumb: package3,
-      featured: true,
-      title: "CORPORATE EVENT",
-      price_adult: "",
-      price_child: "",
-      bookNow: true,
-      short_detail:
-        "CORPORATE EVENT Take your corporate event to new heights. 4000 feet above sea level to be exact! Let your next corporate adventure be the best one yet for your friends ",
-      itineraries: [
-        {
-          feature_img: flightDuration,
-          activity: "",
-          details: "Celebrate Baby Showers",
-        },
-        {
-          feature_img: culturalEntertainment,
-          activity: "",
-          details: "Kitty parties",
-        },
-        {
-          feature_img: culturalEntertainment,
-          activity: "",
-          details: "Birthday celebration anniversaries",
-        },
-      ],
-    },
-    {
-      id: 5,
-      thumb: package3,
-      featured: true,
-      title: "CELEBRATORY OCCASIONS",
-      price_adult: "",
-      price_child: "",
-      bookNow: true,
-      short_detail:
-        "Celebrate your special milestones with hot air balloon rides for birthdays, anniversaries, graduations, engagements, weddings, baby showers, retirements, and Overnight New Year celebrations!",
-      itineraries: [
-        {
-          feature_img: flightDuration,
-          activity: "",
-          details:
-            "Celebrate your special milestones with hot air balloon rides for birthdays, anniversaries, graduations, engagements, weddings, baby showers, retirements, and Overnight New Year celebrations!",
+          activity: {
+            en: "Flying Experience Certificate signed by the Pilot",
+            ar: "شهادة تجربة الطيران موقعة من الطيار",
+          },
+          details: {
+            en: "Receive a personalized flying experience certificate signed by your pilot as a cherished memento.",
+            ar: "احصل على شهادة تجربة الطيران موقعة من الطيار كتذكار مميز.",
+          },
         },
       ],
     },
@@ -378,86 +246,179 @@ let experiencesData = {
   timeLine: [
     {
       thumb: timeline1,
-      title: { en: "Afternoon Pick-Up & Desert Adventure", ar: "" },
+      title: {
+        en: "Afternoon Pick-Up & Desert Adventure",
+        ar: "الاستقبال بعد الظهر ومغامرة في الصحراء",
+      },
       disc: {
         en: "Start your journey with an afternoon pick-up from your hotel or residence in Dubai. Enjoy thrilling dune bashing, camel rides, sandboarding, and henna painting at the desert camp. All this is done with a welcome drink, live entertainment shows, and a buffet barbeque dinner. At the desert camp, enjoy thrilling dune bashing, camel rides, sandboarding, and henna painting. Enjoy a welcome drink and live entertainment shows with a buffet barbeque dinner.",
-        ar: "",
+        ar: "ابدأ رحلتك مع الاستقبال بعد الظهر من فندقك أو مكان إقامتك في دبي. استمتع بتجربة مشوقة في الصحراء تشمل التزلج على الرمال، ركوب الجمال، والتزيين بالحناء داخل المخيم الصحراوي. كل ذلك مع مشروب ترحيبي، عروض ترفيهية مباشرة، وعشاء مشوي فاخر على طراز البوفيه.",
       },
     },
     {
       thumb: timeline2,
-
-      title: { en: "Overnight Stay at the Desert Camp", ar: "" },
+      title: {
+        en: "Overnight Stay at the Desert Camp",
+        ar: "إقامة ليلية في المخيم الصحراوي",
+      },
       disc: {
         en: "After an exciting evening, relax with an overnight stay under the stars at the camp, surrounded by the serene desert landscape.",
-        ar: "",
+        ar: "بعد أمسية مليئة بالمغامرات، استرخِ مع إقامة ليلية تحت السماء المرصعة بالنجوم في المخيم، وسط أجواء الصحراء الهادئة.",
       },
     },
     {
       thumb: timeline3,
-
-      title: { en: "Early Morning Pick-Up for Hot Air Balloon Ride", ar: "" },
+      title: {
+        en: "Early Morning Pick-Up for Hot Air Balloon Ride",
+        ar: "الاستقبال فجراً لرحلة منطاد الهواء الساخن",
+      },
       disc: {
         en: "Wake up early for a 4:00 AM pick-up, heading to the hot air balloon location. Enjoy unlimited refreshments before the flight.",
-        ar: "",
+        ar: "استيقظ مبكرًا للاستقبال الساعة 4:00 فجراً والتوجه إلى موقع منطاد الهواء الساخن. استمتع بالمشروبات المنعشة غير المحدودة قبل الإقلاع.",
       },
     },
     {
       thumb: timeline4,
-      title: { en: "Hot Air Balloon Ride & Gourmet Breakfast", ar: "" },
+      title: {
+        en: "Hot Air Balloon Ride & Gourmet Breakfast",
+        ar: "رحلة منطاد الهواء الساخن وإفطار فاخر",
+      },
       disc: {
         en: "Take to the skies for a 45-60 minute flight over the desert, followed by a gourmet breakfast at the camp. Receive a flying experience certificate signed by the pilot before drop-off.",
-        ar: "",
+        ar: "حلّق في السماء لمدة 45-60 دقيقة فوق الصحراء، ثم استمتع بإفطار فاخر في المخيم. ستحصل على شهادة تجربة الطيران موقعة من الطيار قبل العودة.",
       },
     },
   ],
+  // timeLine: [
+  //   {
+  //     thumb: timeline1,
+  //     title: { en: "Afternoon Pick-Up & Desert Adventure", ar: "" },
+  //     disc: {
+  //       en: "Start your journey with an afternoon pick-up from your hotel or residence in Dubai. Enjoy thrilling dune bashing, camel rides, sandboarding, and henna painting at the desert camp. All this is done with a welcome drink, live entertainment shows, and a buffet barbeque dinner. At the desert camp, enjoy thrilling dune bashing, camel rides, sandboarding, and henna painting. Enjoy a welcome drink and live entertainment shows with a buffet barbeque dinner.",
+  //       ar: "",
+  //     },
+  //   },
+  //   {
+  //     thumb: timeline2,
+
+  //     title: { en: "Overnight Stay at the Desert Camp", ar: "" },
+  //     disc: {
+  //       en: "After an exciting evening, relax with an overnight stay under the stars at the camp, surrounded by the serene desert landscape.",
+  //       ar: "",
+  //     },
+  //   },
+  //   {
+  //     thumb: timeline3,
+
+  //     title: { en: "Early Morning Pick-Up for Hot Air Balloon Ride", ar: "" },
+  //     disc: {
+  //       en: "Wake up early for a 4:00 AM pick-up, heading to the hot air balloon location. Enjoy unlimited refreshments before the flight.",
+  //       ar: "",
+  //     },
+  //   },
+  //   {
+  //     thumb: timeline4,
+  //     title: { en: "Hot Air Balloon Ride & Gourmet Breakfast", ar: "" },
+  //     disc: {
+  //       en: "Take to the skies for a 45-60 minute flight over the desert, followed by a gourmet breakfast at the camp. Receive a flying experience certificate signed by the pilot before drop-off.",
+  //       ar: "",
+  //     },
+  //   },
+  // ],
   additionalServices: [
     {
       id: 33,
-      title: { en: "Flight Video", ar: "" },
-      price: { en: "From AED 250", ar: "" },
+      title: { en: "Flight Video", ar: "فيديو الرحلة" },
+      price: { en: "From AED 250", ar: "ابتداءً من 250 درهم" },
       thumb: additionalS2,
       thumb_title:
-        "Balloon flight dubai	| Adventure Activities dubai  |Maha Balloon Adventures",
+        "رحلة منطاد في دبي | أنشطة المغامرات في دبي | مها منطاد للمغامرات",
       thumb_desc:
-        "Enjoy a thrilling balloon flight video over the Arabian Desert in Dubai with Maha Balloon Adventures, capturing stunning scenery.",
+        "استمتع برحلة منطاد مثيرة فوق صحراء دبي مع مها منطاد للمغامرات، والتقط مشاهد خلابة.",
       detail: {
         en: "Take your memories with you by purchasing an edited digital copy of your flight (download link sent via email or WhatsApp).",
-        ar: "",
+        ar: "احتفظ بذكرياتك من خلال شراء نسخة رقمية معدلة من رحلتك (يتم إرسال رابط التنزيل عبر البريد الإلكتروني أو الواتساب).",
       },
       services: [],
     },
     {
       id: 34,
-      title: { en: "Celebration Package", ar: "" },
-      price: { en: "From AED 300", ar: "" },
+      title: { en: "Celebration Package", ar: "باقة الاحتفال" },
+      price: { en: "From AED 300", ar: "ابتداءً من 300 درهم" },
       thumb: additionalS3,
       thumb_title:
-        "Hot air balloon uae | Celebration in Dubai | Maha Balloon Adventures",
+        "منطاد الهواء الساخن في الإمارات | احتفالات في دبي | مها منطاد للمغامرات",
       thumb_desc:
-        "Celebrate over the Hot air balloon in Dubai with Maha Balloon Adventures, offering spectacular views and unforgettable experiences.",
+        "احتفل فوق منطاد الهواء الساخن في دبي مع مها منطاد للمغامرات، واستمتع بمناظر خلابة وتجربة لا تُنسى.",
       detail: {
         en: "Celebrate life’s special moments with a breathtaking experience in the sky. Whether it's a birthday, anniversary, proposal, or milestone event, make lasting memories with a unique adventure that turns every occasion into an unforgettable journey.",
-        ar: "",
+        ar: "احتفل بلحظات حياتك الخاصة مع تجربة ساحرة في السماء. سواء كان عيد ميلاد، ذكرى سنوية، عرض زواج، أو مناسبة مميزة، اصنع ذكريات تدوم مع مغامرة فريدة تجعل كل مناسبة تجربة لا تُنسى.",
       },
       services: [],
     },
     {
       id: 35,
-      title: { en: "Private transfer", ar: "" },
-      price: { en: "From AED 600-800", ar: "" },
+      title: { en: "Private transfer", ar: "نقل خاص" },
+      price: { en: "From AED 600-800", ar: "ابتداءً من 600-800 درهم" },
       thumb: pickAndDrop,
       thumb_title:
-        "Private Hot Air Balloon Rides | Private transfer all over Dubai |Maha Balloon Adventures",
+        "رحلات منطاد الهواء الساخن الخاصة | نقل خاص في دبي | مها منطاد للمغامرات",
       thumb_desc:
-        "Experience private hot air balloon rides with convenient pick-up and drop-off across Dubai for a seamless Arabian Desert adventure. ",
+        "استمتع برحلة منطاد خاصة مع خدمة التوصيل من وإلى جميع أنحاء دبي لتجربة سلسة في صحراء العرب.",
       detail: {
-        en: "(In City AED 600 for Private 4x4 vehicle for pick up and drop off within Dubai city. AED 800 for pick-ups outside Dubai City- Jebel Ali, Bab Al Shams, and Sharjah). Please contact us for pick up from other Emirates",
-        ar: "",
+        en: "(In City AED 600 for Private 4x4 vehicle for pick up and drop off within Dubai city. AED 800 for pick-ups outside Dubai City- Jebel Ali, Bab Al Shams, and Sharjah). Please contact us for pick up from other Emirates.",
+        ar: "(داخل المدينة: 600 درهم للمركبة الخاصة 4x4 لنقل خاص داخل مدينة دبي. خارج دبي: 800 درهم لمناطق جبل علي، باب الشمس، والشارقة). يرجى التواصل معنا للاستفسار عن النقل من إمارات أخرى.",
       },
       services: [],
     },
   ],
+  // additionalServices: [
+  //   {
+  //     id: 33,
+  //     title: { en: "Flight Video", ar: "" },
+  //     price: { en: "From AED 250", ar: "" },
+  //     thumb: additionalS2,
+  //     thumb_title:
+  //       "Balloon flight dubai	| Adventure Activities dubai  |Maha Balloon Adventures",
+  //     thumb_desc:
+  //       "Enjoy a thrilling balloon flight video over the Arabian Desert in Dubai with Maha Balloon Adventures, capturing stunning scenery.",
+  //     detail: {
+  //       en: "Take your memories with you by purchasing an edited digital copy of your flight (download link sent via email or WhatsApp).",
+  //       ar: "",
+  //     },
+  //     services: [],
+  //   },
+  //   {
+  //     id: 34,
+  //     title: { en: "Celebration Package", ar: "" },
+  //     price: { en: "From AED 300", ar: "" },
+  //     thumb: additionalS3,
+  //     thumb_title:
+  //       "Hot air balloon uae | Celebration in Dubai | Maha Balloon Adventures",
+  //     thumb_desc:
+  //       "Celebrate over the Hot air balloon in Dubai with Maha Balloon Adventures, offering spectacular views and unforgettable experiences.",
+  //     detail: {
+  //       en: "Celebrate life’s special moments with a breathtaking experience in the sky. Whether it's a birthday, anniversary, proposal, or milestone event, make lasting memories with a unique adventure that turns every occasion into an unforgettable journey.",
+  //       ar: "",
+  //     },
+  //     services: [],
+  //   },
+  //   {
+  //     id: 35,
+  //     title: { en: "Private transfer", ar: "" },
+  //     price: { en: "From AED 600-800", ar: "" },
+  //     thumb: pickAndDrop,
+  //     thumb_title:
+  //       "Private Hot Air Balloon Rides | Private transfer all over Dubai |Maha Balloon Adventures",
+  //     thumb_desc:
+  //       "Experience private hot air balloon rides with convenient pick-up and drop-off across Dubai for a seamless Arabian Desert adventure. ",
+  //     detail: {
+  //       en: "(In City AED 600 for Private 4x4 vehicle for pick up and drop off within Dubai city. AED 800 for pick-ups outside Dubai City- Jebel Ali, Bab Al Shams, and Sharjah). Please contact us for pick up from other Emirates",
+  //       ar: "",
+  //     },
+  //     services: [],
+  //   },
+  // ],
   faqsList: [
     {
       id: 0,

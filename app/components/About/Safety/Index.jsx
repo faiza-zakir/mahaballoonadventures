@@ -12,7 +12,7 @@ function Index(props) {
       <Container>
         <div className="heading">
           <h4 className="tag-line mb-3">Safety Measures</h4>
-          <h5 className="main-title">{props?.content?.title?.en}</h5>
+          <h5 className="main-title">{props?.content?.title?.[lang]}</h5>
         </div>
         <Row className="gy-3">
           <Col md={6} lg>
@@ -23,9 +23,9 @@ function Index(props) {
                   <Accordion defaultActiveKey="0" flush>
                     <Accordion.Item eventKey="0">
                       <Accordion.Header>
-                        <h5 className="title">{item?.title?.en}</h5>
+                        <h5 className="title">{item?.title?.[lang]}</h5>
                       </Accordion.Header>
-                      <Accordion.Body>{item?.detail?.en}</Accordion.Body>
+                      <Accordion.Body>{item?.detail?.[lang]}</Accordion.Body>
                     </Accordion.Item>
                   </Accordion>
                 </div>
@@ -54,9 +54,9 @@ function Index(props) {
                   <Accordion defaultActiveKey="0" flush>
                     <Accordion.Item eventKey="0">
                       <Accordion.Header>
-                        <h5 className="title">{item?.title?.en}</h5>
+                        <h5 className="title">{item?.title?.[lang]}</h5>
                       </Accordion.Header>
-                      <Accordion.Body>{item?.detail?.en}</Accordion.Body>
+                      <Accordion.Body>{item?.detail?.[lang]}</Accordion.Body>
                     </Accordion.Item>
                   </Accordion>
                 </div>

@@ -157,12 +157,12 @@ excitement, and breathtaking beauty.`,
       <Container>
         <Row className="gy-3 mb-2">
           <Col xs={12} lg={6}>
-            <h2 className="main-title">{props?.content?.extra.title.en} </h2>
+            <h2 className="main-title">{props?.content?.extra.title?.[lang]} </h2>
           </Col>
           <Col xs={12} lg={6}>
             <div className="details">
-              <h3 className="title"> {props?.content?.extra.subtitle.en}</h3>
-              <p>{props?.content?.extra.details.en}</p>
+              <h3 className="title"> {props?.content?.extra.subtitle?.[lang]}</h3>
+              <p>{props?.content?.extra.details?.[lang]}</p>
             </div>
 
             {/* <div className="BrandsList desktop3"> */}

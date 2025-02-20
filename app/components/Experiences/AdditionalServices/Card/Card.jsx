@@ -40,16 +40,16 @@ function Card(
         />
       </div>
       <div className="CardDIdi">
-        <div className="sec-title mt-4">{title?.en}</div>
-        <div className="tag-line mt-2">{price?.en}</div>
-        <p className="para mt-2">{detail?.en}</p>
+        <div className="sec-title mt-4">{title?.[lang]}</div>
+        <div className="tag-line mt-2">{price?.[lang]}</div>
+        <p className="para mt-2">{detail?.[lang]}</p>
       </div>
       <ReactWhatsapp
         className="Wtp btnNl btnNl-primary mt-2"
         number={whatsappNo}
-        message={` Hi There,   I am interested in the  ${title?.en} Service. Please get in touch with me to send me a quote.`}
+        message={` Hi There,   I am interested in the  ${title?.[lang]} Service. Please get in touch with me to send me a quote.`}
       >
-        Contact us
+        {lang == "ar" ? "اتصل بنا" : "Contact us"}
       </ReactWhatsapp>
       {/* <button className={`btnNl btnNl-primary mt-2`}>Contact us</button> */}
       {/* <button

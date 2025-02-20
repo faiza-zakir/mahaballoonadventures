@@ -88,7 +88,11 @@ function Index(props) {
       <Container>
         <h3 className="tag-line mb-3">
           {" "}
-          {props?.subTitle ? props?.subTitle : "Blogs"}
+          {props?.subTitle
+            ? props?.subTitle
+            : lang == "ar"
+            ? "مدونات"
+            : "Blogs"}
         </h3>
 
         <h4 className="main-title mb-3 ">

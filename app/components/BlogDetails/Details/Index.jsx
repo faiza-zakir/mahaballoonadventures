@@ -37,10 +37,10 @@ function Index() {
         <div className="blogDetaildsk3i py-60">
           <Container>
             <div className="blogType">
-              <div className="category">{blogDetail?.category?.en}</div>
-              <div className="readTime">{blogDetail?.readTime?.en}</div>
+              <div className="category">{blogDetail?.category?.[lang]}</div>
+              <div className="readTime">{blogDetail?.readTime?.[lang]}</div>
             </div>
-            <div className="main-title">{blogDetail?.title?.en}</div>
+            <div className="main-title">{blogDetail?.title?.[lang]}</div>
 
             <div className="main-img">
               <img src={blogDetail?.featured_img} alt="blog Featured" />
@@ -50,11 +50,13 @@ function Index() {
                 <div className="blogInfo">
                   <div className="blogAuth">
                     <div className="title">Written by</div>
-                    <div className="name">{blogDetail?.author}</div>
+                    <div className="name">{blogDetail?.author?.[lang]}</div>
                   </div>
                   <div className="blogDate">
                     <div className="title">Published on</div>
-                    <div className="name">{blogDetail?.publish_date}</div>
+                    <div className="name">
+                      {blogDetail?.publish_date?.[lang]}
+                    </div>
                   </div>
                 </div>
               </Col>
@@ -76,8 +78,8 @@ function Index() {
                   </div>
                   <LinkedinShareButton
                     url={window.location.href}
-                    title={blogDetail?.title?.en}
-                    summary={blogDetail?.short_des?.en}
+                    title={blogDetail?.title?.[lang]}
+                    summary={blogDetail?.short_des?.[lang]}
                     source={window.location.href}
                   >
                     <div className="social-item">
@@ -86,7 +88,7 @@ function Index() {
                   </LinkedinShareButton>
                   <TwitterShareButton
                     url={window.location.href}
-                    title={blogDetail?.title?.en}
+                    title={blogDetail?.title?.[lang]}
                     hashtag="#MahaHotAirBalloons"
                   >
                     <div className="social-item">
@@ -109,7 +111,7 @@ function Index() {
               <div
                 className="BlogDetailsk"
                 dangerouslySetInnerHTML={{
-                  __html: blogDetail?.description?.en,
+                  __html: blogDetail?.description?.[lang],
                 }}
               />
               {/* 
@@ -125,7 +127,7 @@ function Index() {
               <div
                 className="BlogDetailsk"
                 dangerouslySetInnerHTML={{
-                  __html: blogDetail?.more_description?.en,
+                  __html: blogDetail?.more_description?.[lang],
                 }}
               />
             </div>

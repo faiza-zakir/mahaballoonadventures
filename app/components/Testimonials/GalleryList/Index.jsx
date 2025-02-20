@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Col, Container, Row,Form } from "react-bootstrap";
-// 
+import { Col, Container, Row, Form } from "react-bootstrap";
+//
 const playIcon =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/icons/playbutton.png";
 const testimonial1 =
@@ -41,8 +41,12 @@ const testimonial18 =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Homepage/russian+girl.jpg";
 const testimonial19 =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Homepage/russian+man+.jpg";
-  const testimonial20 =
+const testimonial20 =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Homepage/chinies_.png";
+const testimonial21 =
+  "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Homepage/IMG_3897.PNG";
+const testimonial22 =
+  "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Homepage/IMG_3898.PNG";
 
 // import ModalVideo from "react-modal-video";
 import { IoIosCloseCircle } from "react-icons/io";
@@ -203,20 +207,37 @@ const Index = () => {
       language: "chinese",
       videoUrl: "https://d3gelo9cifr8ed.cloudfront.net/Chinese+Male+1.mp4",
     },
+    {
+      thumb: testimonial21,
+      col_lg: 4,
+      language: "chinese",
+      videoUrl: "https://d3gelo9cifr8ed.cloudfront.net/Chinese+Female+1.mp4",
+    },
+    {
+      thumb: testimonial22,
+      col_lg: 4,
+      language: "chinese",
+      videoUrl: "https://d3gelo9cifr8ed.cloudfront.net/Chinese+Female+2.mp4",
+    },
   ];
 
-  const filteredGalleryList = selectedLanguage === "all"
-    ? galleryList
-    : galleryList.filter(item => item.language === selectedLanguage);
+  const filteredGalleryList =
+    selectedLanguage === "all"
+      ? galleryList
+      : galleryList.filter((item) => item.language === selectedLanguage);
 
-  const uniqueLanguages = [...new Set(galleryList.map(item => item.language))];
+  const uniqueLanguages = [
+    ...new Set(galleryList.map((item) => item.language)),
+  ];
 
   return (
     <div className="testimonials393KD0 py-60">
       <Container>
         <Row className="align-items-center text-center text-lg-start">
           <Col xs={12} md={8} className="mb-2 mb-md-0">
-            <div className="main-title">See what our Happy Customers Have to Say!</div>
+            <div className="main-title">
+              See what our Happy Customers Have to Say!
+            </div>
           </Col>
           <Col xs={12} md={4}>
             <div className="sliderArrows d-flex justify-content-center justify-content-md-end">
@@ -276,11 +297,7 @@ const Index = () => {
               preload="metadata"
               ref={videoRef}
             >
-              <source
-                poster={videoPoster}
-                src={videoLink}
-                type="video/mp4"
-              />
+              <source poster={videoPoster} src={videoLink} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
           </div>

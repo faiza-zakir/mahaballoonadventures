@@ -74,8 +74,14 @@ let blogs = [
   //   },
   {
     page: "home",
-    author: "Admin Smith",
-    publish_date: "14 September 2024",
+    author: {
+      en: "Admin Smith",
+      ar: "أدمين سميث",
+    },
+    publish_date: {
+      en: "14 September 2024",
+      ar: "14 سبتمبر 2024",
+    },
     title: {
       en: "Hot Air Balloon vs. Helicopter: Which Dubai Adventure Is Right for You?",
       ar: "المنطاد مقابل الهليكوبتر: أي مغامرة في دبي تناسبك؟",
@@ -177,8 +183,14 @@ let blogs = [
   //   },
   {
     page: "home",
-    author: "أدمين سميث",
-    publish_date: "14 سبتمبر 2024",
+    author: {
+      en: "Admin Smith",
+      ar: "أدمين سميث",
+    },
+    publish_date: {
+      en: "14 September 2024",
+      ar: "14 سبتمبر 2024",
+    },
     title: {
       en: "Why a Hot Air Balloon Ride is the Best Way to See Dubai’s Desert",
       ar: "لماذا تعد رحلة المنطاد أفضل طريقة لرؤية صحراء دبي",
@@ -292,8 +304,14 @@ let blogs = [
   //   },
   {
     page: "home",
-    author: "أدمين سميث",
-    publish_date: "14 سبتمبر 2024",
+    author: {
+      en: "Admin Smith",
+      ar: "أدمين سميث",
+    },
+    publish_date: {
+      en: "14 September 2024",
+      ar: "14 سبتمبر 2024",
+    },
     title: {
       en: "Best Time of Year for Hot Air Balloon Rides in Dubai",
       ar: "أفضل وقت في السنة لرحلات المنطاد في دبي",
@@ -320,8 +338,47 @@ let blogs = [
     },
     gallery: ["mainImg", "mainImg", "mainImg"],
     more_description: {
-      en: "<h4>Winter (November to March): The Prime Time</h4><p>If you have waited for quite a while to find the perfect balance of cool temperatures, clear skies, and serene conditions, winter is the best season for hot air balloon rides in Dubai...</p>",
-      ar: "<h4>الشتاء (نوفمبر إلى مارس): الوقت المثالي</h4><p>إذا كنت قد انتظرت طويلاً للعثور على التوازن المثالي بين درجات الحرارة الباردة والسماء الصافية والأجواء الهادئة، فإن الشتاء هو أفضل موسم لرحلات المنطاد في دبي...</p>",
+      en: `<h4>Winter (November to March): The Prime Time</h4>
+        <p>If you have waited for quite a while to find the perfect balance of cool temperatures, clear skies, and serene conditions, winter is the best season for hot air balloon rides in Dubai. Why is ballooning in Dubai during winter the perfect choice? Because the average temperature during these months is between 4°C (40°F) at night and 26°C (79°F) during the day, which creates quite a pleasant climate for outdoor activities.</p>
+        <h4>Cool, Crisp Air and Stunning Views</h4>
+        <p>One of the key reasons why winter is so perfect for ballooning is the cool, crisp air that allows the balloons to ascend smoothly and safely. Often professionals host rides in the mornings with a gentle breeze, clear skies, and low humidity. In addition, the calm weather also reduces the likelihood of cancellations, and while you are at the top, the views are simply immaculate because you get great visibility of Dubai’s sprawling desert and city skyline.</p>
+        <h4>Timing Your Ride</h4>
+        <p>In case you are still wondering about when to ride a hot air balloon in Dubai, always choose the morning shifts. Most hot air balloon rides in Dubai start at dawn during the cooler morning temperatures. During winter, the sunrise starts typically between 6:30 AM to 7:00 AM, so you will experience the awe-inspiring sight of the desert waking up beneath you while you bask early in the morning light.</p>
+        <h4>Spring (April to Early May): A Mild But Quick Transition</h4>
+        <p>Dubai’s desert temperatures are still favorable for hot air ballooning enthusiasts during spring. April and early May offer relatively mild temperatures for hot air ballooning as compared to winters. Although this time is a transitional period where the heat starts to intensify, you can opt for early morning flights instead of the midday ones to still enjoy hot air ballooning.</p>
+        <h4>Bright Skies with a Touch of Warmth</h4>
+        <p>If you search for Dubai outdoor activities' best season, spring would probably top the list. Why? Because spring mornings in Dubai mean clear blue skies. However, the warmth may shift as the day progresses. During the early months, the views remain stunning, and when you go for hot air ballooning, you will have the opportunity to experience the desert’s shifting colors at sunrise. However, many balloon operators start scaling back operations during this time as the heat increases, so we would suggest you plan ahead.</p>
+        <h4>Catch it Before the Heat Wave.</h4>
+        <p>If you are planning a spring balloon ride, aim for early to mid-April for the best experience. The temperatures will still be manageable, and you will get to enjoy Dubai’s famous desert landscape without the scorching summer sun.</p>
+        <h4>Summer (June to September): Too Hot to Handle</h4>
+        <p>Don’t even confuse yourself with “when to ride a hot air balloon in Dubai: summer vs winter” because Dubai’s summer months can be extremely challenging for outdoor activities, and this holds true for hot air ballooning. Temperatures regularly soar above 40°C (104°F), with extreme humidity levels and scorching desert conditions. As a result, most operators close their ballooning services from June through September due to the safety risks posed by the heat.</p>
+        <h4>A Big No for Hot Air Ballooning</h4>
+        <p>During these months, the air is too hot and unstable for safe balloon flights. The intense sun creates thermal currents that make flying a hot air balloon unsafe. Even if the views are still spectacular, the physical discomfort and risks far outweigh the rewards. Therefore, it’s best to avoid planning your balloon adventure during this period.</p>
+        <h4>Autumn (October to Early November): The Favorable Weather Makes a Comeback</h4>
+        <p>As summer fades and the temperatures begin to drop, hot air balloon operators start offering rides again in late October. This is when the weather becomes milder, with early morning temperatures falling back into the comfortable range of 20°C to 30°C (68°F to 86°F). This time can be a fantastic window to enjoy hot air balloon rides because the desert is still quiet before the peak tourist season kicks in, and you will enjoy fewer crowds, and the morning air is fresh, with brilliant sunrises casting warm hues over the dunes.</p>
+        <h4>Book Early</h4>
+        <p>Since October and early November are just before the peak season, it’s a good time to book your ride early, so you don’t miss out on this adrenaline-pumping yet surreal adventure. Great advice, right!? Also don’t forget to bring a camera with you because you will capture every moment of how the world looks from the top.
+  </p>
+  <h4>Conclusion</h4>
+  <p>If now you know everything about Dubai weather for hot air ballooning, the next thing you need to do is find a trusted operator. Opt for professionals who know what they are doing and have a proven track record in hosting successful hot air balloon flights. Apart from competitive prices, also look into the safety aspect, and we assure you, your hot air ballooning experience will be truly one for the books!</p>
+  <p>Looking for a reliable hot air ballooning operator for your aerial adventure in Dubai? Book your ride today with Maha Balloon Adventures today!</p>
+
+        `,
+      ar: `
+      <h4>الشتاء (من نوفمبر إلى مارس): الوقت المثالي</h4><p>إذا كنت تنتظر طويلاً للعثور على التوازن المثالي بين درجات الحرارة الباردة، السماء الصافية، والظروف الهادئة، فإن الشتاء هو أفضل موسم لركوب المنطاد في دبي. متوسط درجات الحرارة خلال هذه الأشهر يتراوح بين 4 درجات مئوية ليلاً و26 درجة مئوية خلال النهار، مما يجعل المناخ لطيفًا للغاية للأنشطة الخارجية.</p>
+      <h4>هواء بارد ومناظر خلابة</h4>
+      <p>من الأسباب الرئيسية التي تجعل الشتاء مثالياً لركوب المنطاد هو الهواء البارد والمنعش الذي يسمح للبالونات بالارتفاع بسلاسة وأمان. غالباً ما تُنظم الرحلات في الصباح الباكر حيث تكون الرياح هادئة، السماء صافية، والرطوبة منخفضة.</p>
+      <h4>توقيت رحلتك</h4>
+      <p>أفضل وقت للقيام برحلة المنطاد هو عند شروق الشمس، حيث تبدأ الرحلات عادةً بين الساعة 6:30 إلى 7:00 صباحاً، مما يمنحك فرصة مذهلة لمشاهدة الصحراء وهي تستيقظ تحت أشعة الشمس الأولى.</p>
+      <h4>الربيع (أبريل إلى أوائل مايو): انتقال معتدل</h4>
+      <p>تظل درجات الحرارة في صحراء دبي ملائمة لركوب المنطاد خلال فصل الربيع، حيث يوفر شهرا أبريل وأوائل مايو درجات حرارة أقل حدة مقارنة بالصيف. ومع ذلك، قد تبدأ درجات الحرارة في الارتفاع تدريجياً، لذا من الأفضل اختيار الرحلات الصباحية المبكرة.</p>
+      <h4>الصيف (يونيو إلى سبتمبر): حرارة لا تطاق</h4>
+      <p>فصل الصيف في دبي يكون شديد الحرارة مع درجات حرارة تتجاوز 40 درجة مئوية، مما يجعل ركوب المنطاد غير آمن بسبب التيارات الهوائية الساخنة. لهذا السبب، تتوقف معظم شركات تشغيل المناطيد عن تقديم الرحلات خلال هذا الموسم.</p>
+      <h4>الخريف (أكتوبر إلى أوائل نوفمبر): عودة الطقس المثالي</h4>
+      <p>مع انحسار حرارة الصيف، تبدأ درجات الحرارة في الانخفاض مرة أخرى، مما يجعل الخريف فترة رائعة لركوب المنطاد. تنخفض درجات الحرارة الصباحية إلى مستويات مريحة، مما يمنحك تجربة رائعة فوق الكثبان الرملية الهادئة.</p>
+      <h4>الخلاصة</h4>
+      <p>الآن بعد أن تعرفت على أفضل الأوقات لركوب المنطاد في دبي، تأكد من اختيار مشغل موثوق لضمان تجربة آمنة لا تُنسى. لا تنسَ حجز رحلتك مبكرًا والاستمتاع بمغامرة جوية مذهلة!</p>"
+  `,
     },
     seo: {
       meta_title: {
@@ -412,42 +469,74 @@ let blogs = [
   //   },
   {
     page: "home",
-    author: "أدمين سميث",
-    publish_date: "14 سبتمبر 2024",
+    author: {
+      en: "Admin Smith",
+      ar: "أدمين سميث",
+    },
+    publish_date: {
+      en: "14 September 2024",
+      ar: "14 سبتمبر 2024",
+    },
     title: {
       en: "What to Expect on Your First Hot Air Balloon Adventure in Dubai",
-      ar: "ما الذي تتوقعه في مغامرتك الأولى بالمنطاد الهوائي في دبي",
+      ar: "ما يمكن توقعه في أول مغامرة منطاد هوائي في دبي",
     },
     route: "what-to-expect-on-your-first-hot-air-balloon-adventure-in-dubai",
     short_des: {
       en: "Imagine floating over the golden sand dunes of Dubai and soaking in the breathtaking views from above. Sounds like a lifetime experience, right? Indeed, it is! If you are an adventure seeker and want to indulge in thrilling activities",
-      ar: "تخيل أن تحلق فوق الكثبان الرملية الذهبية في دبي وتستمتع بالمشاهد الخلابة من الأعلى. يبدو وكأنه تجربة تدوم مدى الحياة، أليس كذلك؟ بالفعل، إنها كذلك! إذا كنت من عشاق المغامرة وترغب في خوض أنشطة مثيرة",
+      ar: "تخيل أنك تحلق فوق الكثبان الرملية الذهبية في دبي وتستمتع بالمناظر الخلابة من الأعلى. يبدو وكأنه تجربة العمر، أليس كذلك؟ بالتأكيد! إذا كنت من عشاق المغامرة وترغب في الانغماس في أنشطة مثيرة",
     },
     category: {
       en: "category",
-      ar: "فئة",
+      ar: "الفئة",
     },
     readTime: { en: "6 min read", ar: "قراءة لمدة 6 دقائق" },
     featured_img: FeaturedBlog4,
     thumb: blog4,
     banner: "",
     description: {
-      en: "<p>Imagine floating over the golden sand dunes...</p>",
-      ar: "<p>تخيل أن تحلق فوق الكثبان الرملية الذهبية في دبي...</p>",
+      en: `
+        <p>Imagine floating over the golden sand dunes...</p>
+      `,
+      ar: `
+        <p>تخيل أنك تحلق فوق الكثبان الرملية...</p>
+      `,
     },
     gallery: [mainImg, mainImg, mainImg],
     more_description: {
-      en: "<h4>#2 A Sunrise Like Never Before</h4><p>If you start your hot air balloon flight...</p>",
-      ar: "<h4>#2 شروق شمس لا مثيل له</h4><p>إذا بدأت رحلة المنطاد الهوائي الخاصة بك...</p>",
+      en: `
+        <h4>#2 A Sunrise Like Never Before</h4>
+        <p>If you start your hot air balloon flight in Dubai desert early in the morning, you will be able to capture some magical moments...</p>
+        <h4>#3 A Peaceful Escape</h4>
+        <p>Want to take time off from the chaos, hustle, and bustle of the city and spend some peaceful moments?...</p>
+        <h4>#4 Wildlife Encounters</h4>
+        <p>When you decide to go for the Dubai desert balloon adventure, there is a chance that you might cross something off your bucket list...</p>
+        <h4>#5 Safety Assurance</h4>
+        <p>Scared about your first hot air balloon ride in Dubai? Well, you don’t have to as you will be in the hands of trained and certified experts...</p>
+        <h4>#6 An Unforgettable Experience</h4>
+        <p>Whether you are a nature lover or a thrill enthusiast, the hot air balloon tour in Dubai is sure to captivate all your senses...</p>
+      `,
+      ar: `
+        <h4>#2 شروق الشمس كما لم تره من قبل</h4>
+        <p>إذا بدأت رحلة منطاد الهواء الساخن في صحراء دبي في الصباح الباكر، ستتمكن من التقاط لحظات سحرية...</p>
+        <h4>#3 هروب هادئ</h4>
+        <p>هل ترغب في الابتعاد عن ضوضاء المدينة وقضاء بعض اللحظات الهادئة؟...</p>
+        <h4>#4 لقاءات مع الحياة البرية</h4>
+        <p>عند خوض مغامرة منطاد الهواء الساخن في صحراء دبي، قد تحظى بفرصة فريدة لرؤية بعض سكان الصحراء...</p>
+        <h4>#5 ضمان السلامة</h4>
+        <p>هل تشعر بالخوف من رحلتك الأولى في منطاد الهواء الساخن في دبي؟ لا داعي لذلك، فأنت في أيدٍ مدربة وذات خبرة...</p>
+        <h4>#6 تجربة لا تُنسى</h4>
+        <p>سواء كنت من محبي الطبيعة أو من عشاق المغامرة، فإن رحلة منطاد الهواء الساخن في دبي ستأسر جميع حواسك...</p>
+      `,
     },
     seo: {
-      meta_title: "First-Time Hot Air Balloon Tips | Dubai Adventure Guide",
-      meta_description:
-        "New to hot air ballooning? Learn what to expect on your first Dubai adventure. From preparation to breathtaking views, here’s your complete guide.",
-      ar: {
-        meta_title: "نصائح لأول رحلة منطاد هوائي | دليل مغامرات دبي",
-        meta_description:
-          "هل أنت جديد في تجربة المنطاد الهوائي؟ اكتشف ما الذي تتوقعه في مغامرتك الأولى في دبي. من التحضير إلى المناظر الخلابة، إليك دليلك الكامل.",
+      meta_title: {
+        en: "First-Time Hot Air Balloon Tips | Dubai Adventure Guide",
+        ar: "نصائح لأول مرة في منطاد الهواء | دليل مغامرات دبي",
+      },
+      meta_description: {
+        en: "New to hot air ballooning? Learn what to expect...",
+        ar: "جديد في ركوب المنطاد الهوائي؟ تعرف على ما يمكن توقعه...",
       },
       schema_markup: "",
     },
