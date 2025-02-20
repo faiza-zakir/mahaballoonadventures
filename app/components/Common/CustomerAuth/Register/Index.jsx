@@ -4,6 +4,7 @@ import Image from "next/image";
 // import thumb from "../../../../assets/HomePage/testimonial.jpg";
 import "./styles.scss";
 import { PhoneInput } from "react-international-phone";
+import { usePathname } from "next/navigation";
 function Index(props) {
   const {
     handleChange,
@@ -12,7 +13,8 @@ function Index(props) {
     isRegisterSending,
     setFormData,
   } = props;
-
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   return (
     <div className="RegisterCustomer32">
       <Container>
@@ -20,14 +22,14 @@ function Index(props) {
           <Col lg={6}>
             <div className="formWrapper">
               <div className="form-title">
-                Welcome to Maha Balloon Adventures Dubai!
+                {lang == "ar"
+                  ? "مغامرات مها بالون: أفضل مشغل منطاد الهواء الساخن في دبي"
+                  : "Welcome to Maha Balloon Adventures Dubai!"}
               </div>
               <p className="form-details mt-2">
-                Please sign in to your account to get fantastic offers,
-                discounts, and other benefits. You can make residual income by
-                signing up to the best referral and affiliate marketing program
-                with the best hot air balloon adventure company in
-                the Middle East.
+                {lang == "ar"
+                  ? "يرجى تسجيل الدخول إلى حسابك للحصول على عروض رائعة، تخفيضات ومزايا أخرى. يمكنك تحقيق الدخل المتبقي عن طريق الاشتراك في أفضل برنامج إحالة وتسويق تابع مع أفضل شركة مغامرات منطاد الهواء الساخن في الشرق الأوسط."
+                  : "Please sign in to your account to get fantastic offers, discounts, and other benefits. You can make residual income by signing up to the best referral and affiliate marketing program with the best hot air balloon adventure company in the Middle East."}
               </p>
               <div className="ReGisterForm mt-2">
                 <div className="regFormWrapper">

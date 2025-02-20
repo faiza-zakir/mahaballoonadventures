@@ -7,8 +7,11 @@ import social2 from "../../../../assets/icons/facebook.svg";
 import social3 from "../../../../assets/icons/linkedin_symbol.svg.svg";
 import social4 from "../../../../assets/icons/or.svg";
 import "./styles.scss";
+import { usePathname } from "next/navigation";
 function Index(props) {
   const { handleChange, handleSubmit, isLoading, setForgotPassword } = props;
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   return (
     <div className="LoginCustomer32">
       <Container>
@@ -16,14 +19,14 @@ function Index(props) {
           <Col lg={6}>
             <div className="formWrapper">
               <div className="form-title">
-                Welcome to Maha Balloon Adventures Dubai!
+                {lang == "ar"
+                  ? "مغامرات مها بالون: أفضل مشغل منطاد الهواء الساخن في دبي"
+                  : "Welcome to Maha Balloon Adventures Dubai!"}
               </div>
               <p className="form-details mt-2">
-                Please sign in to your account to get fantastic offers,
-                discounts, and other benefits. You can make residual income by
-                signing up to the best referral and affiliate marketing program
-                with the best hot air balloon adventure company in
-                the Middle East.
+              {lang == "ar"
+                  ? "يرجى تسجيل الدخول إلى حسابك للحصول على عروض رائعة، تخفيضات ومزايا أخرى. يمكنك تحقيق الدخل المتبقي عن طريق الاشتراك في أفضل برنامج إحالة وتسويق تابع مع أفضل شركة مغامرات منطاد الهواء الساخن في الشرق الأوسط."
+                  : "Please sign in to your account to get fantastic offers, discounts, and other benefits. You can make residual income by signing up to the best referral and affiliate marketing program with the best hot air balloon adventure company in the Middle East."}
               </p>
               <div className="loginform mt-2">
                 <div className="form_group mt-4">

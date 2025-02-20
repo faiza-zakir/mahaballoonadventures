@@ -6,8 +6,11 @@ import useAuthApi from "../../../../../api/useAuthApi";
 import { toast } from "react-toastify";
 import { useDispatch } from "react-redux";
 import { LoginUser } from "../../../../../store/auth";
+import { usePathname } from "next/navigation";
 
 function Index(props) {
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const [steps, setSetps] = useState(30);
   const [LogFormData, setLogFormData] = useState({ email: "", password: "" });
   const [isLoading, setIsloadng] = useState(false);
@@ -64,7 +67,9 @@ function Index(props) {
           <Col lg={6}>
             <div className="formWrapper">
               <div className="form-title">
-                Welcome to Maha Balloon Adventures Dubai!
+                {lang == "ar"
+                  ? "مغامرات مها بالون: أفضل مشغل منطاد الهواء الساخن في دبي"
+                  : "Welcome to Maha Balloon Adventures Dubai!"}
               </div>
               <p className="form-details">
                 Please sign in to your account to get fantastic offers,
