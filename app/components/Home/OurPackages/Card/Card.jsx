@@ -74,10 +74,9 @@ function Card(
         <div className="mt-1">
           <p className="para bds">{lang == "ar" ? "موقع" : "Location"}</p>
           <p className="para">{location}</p>
-          <Link href={`/compare-packages?compare1=${id}`}>
+          <Link href={`/${lang}/compare-packages?compare1=${id}`}>
             {lang == "ar" ? "يقارن" : "Compare"}
           </Link>
-          {/* <Link href={`/${lang}/compare-packages?compare1=${id}`}>Compare</Link> */}
         </div>
       </div>
       {active == id ? (
