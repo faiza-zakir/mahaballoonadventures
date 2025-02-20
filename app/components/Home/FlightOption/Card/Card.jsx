@@ -49,23 +49,35 @@ function Card(props) {
             {price_adult ? (
               <>
                 {" "}
-                ADULTS: AED
+                {lang == "ar" ? "الكبار: درهم" : "ADULTS: AED"}
                 {price_adult}
               </>
+            ) : lang == "ar" ? (
+              "السعر عند الطلب"
             ) : (
               "PRICE ON REQUEST"
             )}{" "}
             /{"  "}
-            {price_child && <>CHILD: AED {price_child}</>}
+            {price_child && (
+              <>
+                {lang == "ar" ? "الطفل: درهم" : "CHILD: AED"} {price_child}
+              </>
+            )}
           </div>
           <p className="para mt-2">{short_detail}</p>
           <div className="time mt-1">
-            <p className="para bds">Time</p>
-            <p className="para">45 - 60 Minutes</p>
+            <p className="para bds">{lang == "ar" ? "وقت" : "Time"}</p>
+            <p className="para">
+              {lang == "ar" ? "45 - 60 دقيقة" : "45 - 60 Minutes"}
+            </p>
           </div>
           <div className="mt-1">
-            <p className="para bds">Location</p>
-            <p className="para">Margham Dubai, United Arab Emirates</p>
+            <p className="para bds">{lang == "ar" ? "موقع" : "Location"}</p>
+            <p className="para">
+              {lang == "ar"
+                ? "مرغم دبي، الإمارات العربية المتحدة"
+                : "Margham Dubai, United Arab Emirates"}
+            </p>
           </div>
         </div>
         {active == id ? (
@@ -104,7 +116,7 @@ function Card(props) {
                 // dispatch(setBooking(true));
               }}
             >
-              Get a Quote
+              {lang == "ar" ? "احصل على عرض أسعار" : "Get a Quote"}
             </button>
           </ReactWhatsapp>
           <button
@@ -125,7 +137,13 @@ function Card(props) {
             } pds`}
           >
             {" "}
-            {active == id ? "Hide Details" : "View Details"}
+            {active == id
+              ? lang == "ar"
+                ? "إخفاء التفاصيل"
+                : "Hide Details"
+              : lang == "ar"
+              ? "عرض التفاصيل"
+              : "View Details"}
           </button>
         </div>
       </div>

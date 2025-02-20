@@ -1,25 +1,5 @@
 //thumb
-const imgt1 =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/HomePage/testimonial.jpg";
 // New Images
-const timeline1 =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Experience/step1.webp";
-const timeline2 =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Experience/step2.webp";
-const timeline3 =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Experience/step3.webp";
-const timeline4 =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Experience/step4.webp";
-
-const additionalS1 =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Experience/private transfer.webp";
-const additionalS2 =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Experience/flight video.webp";
-const additionalS3 =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Experience/celebration.webp";
-
-const package1 =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Homepage/Explore Our Packages1.webp";
 const package2 =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Homepage/Explore Our Packages2.webp";
 const package22 =
@@ -30,18 +10,6 @@ const package4 =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/New/Homepage/Explore Our Packages4.webp";
 
 // New Packages
-const PrivateVhe =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/more_details/Private Vehicle can be booked for an Extra cost.webp";
-const CertificatDt2 =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/more_details/MBA Certificate A4.webp2.webp";
-const camelAndHorseRide =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/ExplorePackages/CamelandHorseRide.webp";
-const unlimitedRefreshment =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/more_details/Unlimited Refreshment -Tea_Coffee & water at the take-off location.webp";
-const OverNightStay =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/ExplorePackages/OverNightStay.webp";
-const gourmetBreakfast =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/ExplorePackages/GourmetBreakfast.webp";
 const flightDuration =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/ExplorePackages/FlightDuration.webp";
 const PerfectPurposal =
@@ -58,20 +26,6 @@ const GroupBooking =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/more_details/Group_Booking.webp";
 const PersonalizedPkg =
   "https://d3gelo9cifr8ed.cloudfront.net/assets/more_details/PersonalizedPkg.webp";
-
-// More Packages
-const photoWIthFelcone =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/ExplorePackages/photoWIthFelcone.webp";
-const Piolet =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/ExplorePackages/Piolet.webp";
-const sandboarding =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/ExplorePackages/sandboarding.webp";
-// nt
-const pickAndDrop =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/more_details/Pick up & Drop Off (Sharing Basis) from Hotel_Residence within Dubai City.webp";
-
-const CertificatDtl =
-  "https://d3gelo9cifr8ed.cloudfront.net/assets/more_details/MBA Certificate A4.webp1.webp";
 
 let ourPackages = [
   {

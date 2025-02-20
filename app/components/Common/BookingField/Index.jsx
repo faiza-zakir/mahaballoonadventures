@@ -11,7 +11,7 @@ import { IoCloseCircleSharp } from "react-icons/io5";
 import DatePicker from "react-date-picker";
 import CalenderCom from "./Calender/index";
 import { fetchPackagesData } from "../../../api/commonApi";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import "./styles.scss";
 
@@ -21,6 +21,8 @@ const clock = "https://d3gelo9cifr8ed.cloudfront.net/assets/icons/clock.png";
 const ticket = "https://d3gelo9cifr8ed.cloudfront.net/assets/icons/ticket.png";
 
 function Index() {
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const [packagesSelectModal, setPackagesSelectModal] = useState(false);
   const [selectedPackage, setSelectedPackage] = useState("");
   const [isSearch, setIsSearch] = useState(false);
@@ -143,7 +145,7 @@ function Index() {
                 <img src={calender} alt="dates" />
               </div>
               <div className="details" ref={wrapperRef}>
-                <div className="field">Date</div>
+                <div className="field">{lang == "ar" ? "تاريخ" : "Date"}</div>
                 {openDatePicker ? (
                   <div className="dateNoewdk">
                     <CalenderCom
@@ -167,7 +169,9 @@ function Index() {
                 <img src={clock} alt="packages" />
               </div>
               <div className="details">
-                <div className="field">Package Type</div>
+                <div className="field">
+                  {lang == "ar" ? "نوع الحزمة" : "Package Type"}
+                </div>
                 <div className="value">
                   <select
                     className="PackagesSelect"
@@ -177,7 +181,7 @@ function Index() {
                     defaultValue={selectedPackage}
                   >
                     <option value="" disabled selected>
-                      Select a Package
+                      {lang == "ar" ? "حدد الحزمة" : "Select a Package"}
                     </option>
                     {packagesData?.map((item, i) => (
                       <option value={item?.id} key={i}>
@@ -194,9 +198,11 @@ function Index() {
                 <img src={ticket} alt="dates" />
               </div>
               <div className="details">
-                <div className="field">Guests</div>
+                <div className="field">
+                  {lang == "ar" ? "الضيوف" : "Guests"}
+                </div>
                 <div className="value">
-                  Adult{" "}
+                  {lang == "ar" ? "الكبار" : "Adult"}{" "}
                   <input
                     tooltip={"Adult"}
                     className="guest_amt"
@@ -216,7 +222,7 @@ function Index() {
                       }));
                     }}
                   />{" "}
-                  ~ Child{" "}
+                  ~ {lang == "ar" ? "طفل" : "Child"}{" "}
                   <input
                     className="guest_amt"
                     type="number"
@@ -304,7 +310,9 @@ function Index() {
               <Modal.Body>
                 <Row className="gy-3">
                   <Col xs={12}>
-                    <div className="sec-title">Select a Package</div>
+                    <div className="sec-title">
+                      {lang == "ar" ? "حدد الحزمة" : "Select a Package"}
+                    </div>
                   </Col>
                   <Col xs={12}>
                     <div className="form_group">
@@ -317,27 +325,43 @@ function Index() {
                         defaultValue={selectedPackage}
                       >
                         <option value="" disabled selected>
-                          Select a Packages
+                          {lang == "ar" ? "حدد الحزمة" : "Select a Package"}
                         </option>
                         <option value="MAHA CLASSIC PACKAGE">
-                          MAHA CLASSIC PACKAGE
+                          {lang == "ar"
+                            ? "باقة مها الكلاسيكية"
+                            : "MAHA CLASSIC PACKAGE"}
                         </option>
                         <option value="MAHA MAJESTIC PACKAGE">
-                          MAHA MAJESTIC PACKAGE
+                          {lang == "ar"
+                            ? "باقة مها ماجستيك"
+                            : "MAHA MAJESTIC PACKAGE"}
                         </option>
                         <option value="MAHA ROYAL PACKAGE">
-                          MAHA ROYAL PACKAGE
+                          {lang == "ar"
+                            ? "باقة مها الملكية"
+                            : "MAHA ROYAL PACKAGE"}
                         </option>
                         <option value="MAHA TWILIGHT OVERNIGHT">
-                          MAHA TWILIGHT OVERNIGHT
+                          {lang == "ar"
+                            ? "مها الشفق بين عشية وضحاها"
+                            : "MAHA TWILIGHT OVERNIGHT"}
                         </option>
                         <option value="CELESTIAL PRIVATE ROMANCE">
-                          CELESTIAL PRIVATE ROMANCE
+                          {lang == "ar"
+                            ? "الرومانسية السماوية الخاصة"
+                            : "CELESTIAL PRIVATE ROMANCE"}
                         </option>
-                        <option value="GROUP BOOKING">GROUP BOOKING</option>
-                        <option value="CORPORATE EVENT">CORPORATE EVENT</option>
+                        <option value="GROUP BOOKING">
+                          {lang == "ar" ? "الحجز الجماعي" : "GROUP BOOKING"}
+                        </option>
+                        <option value="CORPORATE EVENT">
+                          {lang == "ar" ? "حدث الشركات" : "CORPORATE EVENT"}
+                        </option>
                         <option value="CELEBRATORY OCCASIONS">
-                          CELEBRATORY OCCASIONS
+                          {lang == "ar"
+                            ? "المناسبات الاحتفالية"
+                            : "CELEBRATORY OCCASIONS"}
                         </option>
                       </select>
                     </div>
@@ -348,7 +372,9 @@ function Index() {
                       onClick={() => {
                         if (!selectedPackage) {
                           toast.info(
-                            "Please Select a Package to Start Booking"
+                            lang == "ar"
+                              ? "برجاء تحديد الباقة لبدء الحجز"
+                              : "Please Select a Package to Start Booking"
                           );
                           return;
                         }

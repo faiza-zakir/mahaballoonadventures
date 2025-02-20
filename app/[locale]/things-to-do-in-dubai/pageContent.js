@@ -1,4 +1,5 @@
 "use client";
+import { usePathname } from "next/navigation";
 import CommBanner from "../../components/Common/Banner/Index";
 import GiftOffer from "../../components/Common/GiftOffer/Index";
 import FaqsComm from "../../components/Common/Faqs/Index";
@@ -11,6 +12,8 @@ const banner =
   "https://res.cloudinary.com/dpuuse7d9/image/upload/v1738578623/gdvjfcoaaxynakaajjvy.webp";
 
 function PageContent() {
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   return (
     <>
       <CommBanner
@@ -39,7 +42,7 @@ function PageContent() {
       />
       <GiftOffer />
       <FaqsComm content={content?.faqsList} />
-      <BlogsComm />
+      <BlogsComm lang={lang} />
     </>
   );
 }

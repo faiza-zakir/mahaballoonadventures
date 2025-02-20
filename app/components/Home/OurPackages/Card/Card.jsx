@@ -49,19 +49,34 @@ function Card(
       <div className="detailsSec">
         <h4 className="card-title mt-4">{title}</h4>
         <div className="tag-line mt-2">
-          {price_adult ? <> ADULTS: AED {price_adult}</> : "PRICE ON REQUEST"} /
-          {"  "}
-          {price_child && <>CHILD: AED {price_child}</>}
+          {price_adult ? (
+            <>
+              {lang == "ar" ? "الكبار: درهم" : "ADULTS: AED"} {price_adult}
+            </>
+          ) : lang == "ar" ? (
+            "السعر عند الطلب"
+          ) : (
+            "PRICE ON REQUEST"
+          )}{" "}
+          /{"  "}
+          {price_child && (
+            <>
+              {lang == "ar" ? "الطفل: درهم" : "CHILD: AED"}
+              {price_child}
+            </>
+          )}
         </div>
         <p className="para mt-2">{short_detail}</p>
         <div className="time mt-1">
-          <p className="para bds">Time</p>
+          <p className="para bds">{lang == "ar" ? "وقت" : "Time"}</p>
           <p className="para">{duration}</p>
         </div>
         <div className="mt-1">
-          <p className="para bds">Location</p>
+          <p className="para bds">{lang == "ar" ? "موقع" : "Location"}</p>
           <p className="para">{location}</p>
-          <Link href={`/compare-packages?compare1=${id}`}>Compare</Link>
+          <Link href={`/compare-packages?compare1=${id}`}>
+            {lang == "ar" ? "يقارن" : "Compare"}
+          </Link>
           {/* <Link href={`/${lang}/compare-packages?compare1=${id}`}>Compare</Link> */}
         </div>
       </div>
@@ -84,8 +99,7 @@ function Card(
             dispatch(setPackage(packageVal));
           }}
         >
-          {" "}
-          Book Now
+          {lang == "ar" ? "احجز الآن" : "Book Now"}
         </button>
         {itineraries?.length > 0 && (
           <button
@@ -105,7 +119,13 @@ function Card(
               active == id ? "btnNl-primary" : "btnNl-secondary"
             } pds `}
           >
-            {active == id ? "Hide Details" : "View Details"}
+            {active == id
+              ? lang == "ar"
+                ? "إخفاء التفاصيل"
+                : "Hide Details"
+              : lang == "ar"
+              ? "عرض التفاصيل"
+              : "View Details"}
             {/* <IoIosArrowDown className="iconsvg" size={16} /> */}
           </button>
         )}

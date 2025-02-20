@@ -18,21 +18,20 @@ function Card(props) {
           <img src={thumb} alt="blog_thumbnail" />
         </div>
         <div className="blogType">
-          <div className="category">{category?.en}</div>
-          <div className="readTime">{readTime?.en}</div>
+          <div className="category">{category?.[lang]}</div>
+          <div className="readTime">{readTime?.[lang]}</div>
         </div>
         <div className="details mt-3">
-          <div className="sec-title">{title?.en}</div>
+          <div className="sec-title">{title?.[lang]}</div>
 
-          <p className="para mt-2">{short_des?.en}</p>
+          <p className="para mt-2">{short_des?.[lang]}</p>
         </div>
 
         <button
           className="btnNl btnNl-secondary"
-          // onClick={() => router.push(`/${lang}/blog/${route}`)}
-          onClick={() => router.push(`/blog/${route}`)}
+          onClick={() => router.push(`/${lang}/blog/${route}`)}
         >
-          Read More
+          {lang == "ar" ? "اقرأ المزيد" : "Read More"}
         </button>
       </div>
     </div>

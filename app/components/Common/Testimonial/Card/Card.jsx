@@ -3,7 +3,6 @@ import { FaPlay } from "react-icons/fa";
 import { usePathname } from "next/navigation";
 import ReactStars from "react-rating-stars-component";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
-
 import "./styles.scss";
 
 function Card(props) {
@@ -54,6 +53,7 @@ function Card(props) {
 
           <div
             className="PlayButton"
+            style={{ transform: `rotate(${lang == "ar" && "180deg"})` }}
             onClick={() => {
               if (!props?.videoUrl) {
                 setVideoType("");

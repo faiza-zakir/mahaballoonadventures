@@ -397,7 +397,11 @@ These include routine maintenance of the equipment, the training of pilots, and 
                 <div className="form">
                   <input
                     type="email"
-                    placeholder="Enter your email"
+                    placeholder={
+                      locale == "ar"
+                        ? "أدخل بريدك الإلكتروني"
+                        : "Enter your email"
+                    }
                     value={subsEmail}
                     onChange={(e) => setSubsEmail(e.target.value)}
                   />
@@ -410,9 +414,13 @@ These include routine maintenance of the equipment, the training of pilots, and 
                   </button>
                 </div>
                 <p className="details">
-                  By subscribing you agree to with our{" "}
+                  {locale == "ar"
+                    ? "بالاشتراك فإنك توافق على لدينا"
+                    : "By subscribing you agree to with our"}{" "}
                   <Link href={`/${locale}/privacy-policy`}>Privacy Policy</Link>{" "}
-                  and provide consent to receive updates from our company.
+                  {locale == "ar"
+                    ? "وتقديم الموافقة لتلقي التحديثات من شركتنا."
+                    : "and provide consent to receive updates from our company."}
                 </p>
               </div>
             </Col>
@@ -447,7 +455,9 @@ These include routine maintenance of the equipment, the training of pilots, and 
           <div className="copyRight desktop">
             <div className="details">
               <p>
-                © 2024 Designed with 💕in UAE by Prism Digital:{" "}
+                {locale == "ar"
+                  ? "© 2024 تم التصميم مع 💕in UAE بواسطة Prism Digital"
+                  : "© 2024 Designed with 💕in UAE by Prism Digital:"}{" "}
                 <a href="https://www.prism-me.com/" target="__blank">
                   Digital Marketing Agency Dubai
                 </a>
@@ -496,9 +506,14 @@ These include routine maintenance of the equipment, the training of pilots, and 
             <Link href={`/${locale}/privacy-policy`}>Privacy Policy</Link>
             <Link href={`/${locale}/terms-of-service`}>Terms of Service</Link>
             <p>
-              © 2024 Designed with 💕in UAE by Prism Digital:{" "}
+              {locale == "ar"
+                ? "© 2024 تم التصميم مع 💕in UAE بواسطة Prism Digital"
+                : "© 2024 Designed with 💕in UAE by Prism Digital:"}
+              :{" "}
               <a href="https://www.prism-me.com/" target="__blank">
-                Digital Marketing Agency Dubai
+                {locale == "ar"
+                  ? "وكالة التسويق الرقمي دبي"
+                  : "Digital Marketing Agency Dubai"}
               </a>
               .
             </p>

@@ -12,6 +12,417 @@ import { fetchPackagesData } from "../../../api/commonApi";
 // css
 import "./styles.scss";
 
+let packagesArabic = [
+  {
+    id: 1,
+    title: "الحزمة الكلاسيكية",
+    route: "maha-classic-package",
+    price_adult: "1200",
+    price_child: "1150",
+    short_detail:
+      "استمتع بالجمال الأخاذ في صحراء دبي مع باقة منطاد الهواء الساخن الكلاسيكية. استمتع بالمناظر البانورامية المذهلة وأنت تصعد بلطف إلى السماء بسعر في متناول الجميع.",
+    location: "مرغم دبي، الإمارات العربية المتحدة",
+    package_image:
+      "https://res.cloudinary.com/dmcknuzk4/image/upload/v1728814574/xisitklqxcezlx3ynmq9.webp",
+    slug: null,
+    duration: "45 - 60 دقيقة",
+    seo: {},
+    featured: "",
+    createdAt: "2024-10-13T06:40:54.000Z",
+    updatedAt: "2025-01-16T08:20:09.000Z",
+    itineraries: [
+      {
+        id: 1,
+        packageId: 1,
+        activity:
+          "النقل والتوصيل (على أساس المشاركة) من الفندق/الإقامة داخل مدينة دبي.",
+        details: "ابق منتعشًا مع مشروبات غير محدودة طوال مغامرتك",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815396/q0kxuavmjcgr8volaonu.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 2,
+        packageId: 1,
+        activity: "مرطبات غير محدودة - شاي/قهوة ومياه في موقع الإقلاع.",
+        details:
+          "استمتع بخدمات الاستقبال والتوصيل المريحة لتجعل تجربتك خالية من المتاعب.",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815624/tmypegmdbcvnroxirfep.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 13,
+        packageId: 1,
+        activity: "مدة الرحلة 45-60 دقيقة",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 14,
+        packageId: 1,
+        activity: "شهادة خبرة طيران موقعة من الطيار.",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "حزمة مهيبة",
+    route: "maha-majestic-package",
+    price_adult: "1300",
+    price_child: "1250",
+    short_detail:
+      "ارفع مستوى مغامرتك مع باقتنا الفاخرة. استمتع بإضافات حصرية ولمسات فاخرة وأنت تطفو بلطف فوق صحراء دبي المذهلة عند شروق الشمس، مما يضمن لك رحلة راقية لا تُنسى.",
+    location: "مرغم دبي، الإمارات العربية المتحدة",
+    package_image:
+      "https://res.cloudinary.com/dmcknuzk4/image/upload/v1731048600/ff0p3dorlebgcdzdj3vn.webp",
+    slug: null,
+    duration: "45 - 60 دقيقة",
+    seo: {},
+    featured: "",
+    createdAt: "2024-10-13T06:46:34.000Z",
+    updatedAt: "2024-12-18T13:47:45.000Z",
+    itineraries: [
+      {
+        id: 3,
+        packageId: 2,
+        activity:
+          "النقل والتوصيل (على أساس المشاركة) من الفندق/الإقامة داخل مدينة دبي.",
+        details:
+          "استمتع بخدمات الاستقبال والتوصيل المريحة لتجعل تجربتك خالية من المتاعب.",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815624/tmypegmdbcvnroxirfep.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 4,
+        packageId: 2,
+        activity: "مرطبات غير محدودة - شاي/قهوة ومياه قبل الإقلاع",
+        details: "ابق منتعشًا مع مشروبات غير محدودة طوال مغامرتك.",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815396/q0kxuavmjcgr8volaonu.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-25T11:49:20.000Z",
+      },
+      {
+        id: 5,
+        packageId: 2,
+        activity: "الإفطار الذواقة في المخيم بعد الرحلة",
+        details:
+          "استمتع برحلة تحبس الأنفاس تستمر ما بين 45 إلى 60 دقيقة، وتتمتع بمناظر جوية خلابة.",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815820/oznlc4fdoo1dzmcofjtf.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 6,
+        packageId: 2,
+        activity: "ركوب الجمال (حوالي 10 دقائق)",
+        details:
+          "احصل على شهادة خبرة طيران شخصية موقعة من الطيار الخاص بك كتذكار عزيز.",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815950/o5uxx3xycer6a9nqilyq.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 15,
+        packageId: 2,
+        activity: "الصورة مع فالكون",
+        details: "",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815950/o5uxx3xycer6a9nqilyq.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 16,
+        packageId: 2,
+        activity: "مدة الرحلة 45-60 دقيقة",
+        details: "",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815950/o5uxx3xycer6a9nqilyq.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 17,
+        packageId: 2,
+        activity: "شهادة خبرة طيران موقعة من الطيار",
+        details: "",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815950/o5uxx3xycer6a9nqilyq.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "الحزمة الملكية",
+    route: "maha-royal-package",
+    price_adult: "1550",
+    price_child: "1450",
+    short_detail:
+      "استمتع بتجربة صحراوية كاملة مع خدمة الاستقبال والتوصيل من دبي. ابدأ بمرطبات غير محدودة قبل رحلة لا تُنسى لمدة 45-60 دقيقة بمنطاد الهواء الساخن، تليها شهادة طيران موقعة.",
+    location: "مرغم دبي، الإمارات العربية المتحدة",
+    package_image:
+      "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815199/fh25knkp1mxu2h0nxceo.webp",
+    slug: null,
+    duration: "45 - 60 دقيقة",
+    seo: {},
+    featured: "",
+    createdAt: "2024-10-13T06:48:16.000Z",
+    updatedAt: "2025-01-16T08:20:49.000Z",
+    itineraries: [
+      {
+        id: 7,
+        packageId: 3,
+        activity:
+          "النقل والتوصيل (على أساس المشاركة) من الفندق/الإقامة داخل مدينة دبي.",
+        details: "",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815624/tmypegmdbcvnroxirfep.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 8,
+        packageId: 3,
+        activity: "مرطبات غير محدودة - شاي/قهوة ومياه في موقع الإقلاع",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 9,
+        packageId: 3,
+        activity:
+          "ركوب الجمال والحصان | ركوب الدراجات الرباعية، وقيادة الكثبان الرملية",
+        details:
+          "استمتع بتجربة ركوب الجمال والخيول المثيرة وركوب الدراجات الرباعية والقيادة المبهجة على الكثبان الرملية.",
+        feature_img:
+          "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728816161/p7wq9stnamdl2ipom69y.webp",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 10,
+        packageId: 3,
+        activity: "بوفيه إفطار شهي في المخيم بعد الرحلة",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 11,
+        packageId: 3,
+        activity: "ركوب الجمال (حوالي 5-10 دقائق)",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 12,
+        packageId: 3,
+        activity: "ركوب الدراجات الرباعية (حوالي 10-15 دقيقة)",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 18,
+        packageId: 3,
+        activity: "القيادة على الكثبان الرملية (حوالي 15-20 دقيقة)",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 19,
+        packageId: 3,
+        activity: "الصورة مع فالكون",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 20,
+        packageId: 3,
+        activity: "مدة الرحلة 45-60 دقيقة",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 21,
+        packageId: 3,
+        activity: "شهادة خبرة طيران موقعة من الطيار",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "حزمة الشفق طوال الليل",
+    route: "maha-twilight-ballooning-overnight-package",
+    price_adult: "1799",
+    price_child: "1599",
+    short_detail:
+      "استمتع بسحر صحراء دبي مع مغامرتنا الحصرية لرحلات السفاري الليلية الفريدة التي تجمع بين إثارة التحليق فوق المناظر الطبيعية المذهلة وإقامة ليلية فاخرة تحت النجوم.",
+    location: "مرغم دبي، الإمارات العربية المتحدة",
+    package_image:
+      "http://res.cloudinary.com/dmcknuzk4/image/upload/v1728815090/az3qoi32vwjukzbairio.webp",
+    slug: null,
+    duration: "45 - 60 دقيقة",
+    seo: {},
+    featured: "",
+    createdAt: "2024-10-13T06:48:16.000Z",
+    updatedAt: "2024-10-13T06:48:16.000Z",
+    itineraries: [
+      {
+        id: 22,
+        packageId: 5,
+        activity: "الاستقبال والتوصيل (خاص) من الفندق/الإقامة داخل مدينة دبي.",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 23,
+        packageId: 5,
+        activity:
+          "سيتم النقل في اليوم الأول من الفندق/الإقامة داخل مدينة دبي في حوالي الساعة 03:00 ظهرًا حتى 03:30 ظهرًا",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 24,
+        packageId: 5,
+        activity: "القيادة على الكثبان الرملية (حوالي 20 دقيقة)",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 25,
+        packageId: 5,
+        activity: "في المخيم، مشروب ترحيبي (شاي/قهوة/تمر، حلويات عربية)",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 26,
+        packageId: 5,
+        activity: "ركوب الجمل القصير، صورة مع الصقر، رسم الحناء.",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 27,
+        packageId: 5,
+        activity: "عروض المخيم الترفيهية: رقص شرقي، رقص التنورة، عرض النار",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 28,
+        packageId: 5,
+        activity: "بوفيه عشاء مشويات ومشروبات غازية ومياه غير محدودة",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 29,
+        packageId: 5,
+        activity: "المبيت في المخيم",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 30,
+        packageId: 5,
+        activity:
+          "النقل في صباح اليوم التالي من المخيم حوالي الساعة 04:00 صباحًا متجهًا إلى موقع منطاد الهواء الساخن",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 31,
+        packageId: 5,
+        activity: "مرطبات غير محدودة - شاي/قهوة ومياه في موقع الإقلاع",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 32,
+        packageId: 5,
+        activity: "إفطار شهي في معسكر منطاد الهواء الساخن بعد الرحلة",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 33,
+        packageId: 5,
+        activity: "مدة الرحلة 45-60 دقيقة",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+      {
+        id: 34,
+        packageId: 5,
+        activity: "شهادة خبرة طيران موقعة من الطيار",
+        details: "",
+        feature_img: "",
+        createdAt: "2024-10-13T07:29:59.000Z",
+        updatedAt: "2024-10-13T07:29:59.000Z",
+      },
+    ],
+  },
+];
+
 function Index() {
   const pathname = usePathname();
   const lang = pathname.split("/")[1];
@@ -25,22 +436,26 @@ function Index() {
   const { width } = useWindowSize();
 
   useEffect(() => {
-    const fetchPackageListData = async () => {
-      try {
-        setIsLoading(true); // Show the loader
-        const { data } = await fetchPackagesData();
-        if (Array.isArray(data)) {
-          setPackagesData(data);
+    if (lang == "ar") {
+      setPackagesData(packagesArabic);
+    } else {
+      const fetchPackageListData = async () => {
+        try {
+          setIsLoading(true); // Show the loader
+          const { data } = await fetchPackagesData();
+          if (Array.isArray(data)) {
+            setPackagesData(data);
+          }
+        } catch (error) {
+          console.error("Error fetching Data:", error);
+        } finally {
+          setIsLoading(false); // Hide the loader
         }
-      } catch (error) {
-        console.error("Error fetching Data:", error);
-      } finally {
-        setIsLoading(false); // Hide the loader
-      }
-    };
+      };
 
-    fetchPackageListData();
-  }, []);
+      fetchPackageListData();
+    }
+  }, [packagesArabic]);
 
   const settings = {
     dots: false,
@@ -82,124 +497,6 @@ function Index() {
     ],
   };
 
-  // let cardDatacTC = [
-  //   {
-  //     id: 1,
-  //     thumb: package1,
-  //     featured: true,
-  //     title: "MAHA CLASSIC PACKAGE",
-  //     price_adult: "1050",
-  //     price_child: "1000",
-  //     bookNow: true,
-  //     short_detail:
-  //       "Experience breathtaking beauty in the Dubai desert with our Classic Hot Air Balloon Package. Enjoy stunning panoramic views as you gently ascend into the sky at an accessible, affordable price.",
-  //     itineraries: [
-  //       {
-  //         feature_img: unlimitedRefreshment,
-  //         activity: "Unlimited Refreshment",
-  //         details:
-  //           "Stay refreshed with unlimited beverages throughout your adventure.",
-  //       },
-  //       {
-  //         feature_img: pickAndDrop,
-  //         activity: "Pick up & drop off",
-  //         details:
-  //           "Enjoy convenient pick-up and drop-off services to make your experience hassle-free.",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 2,
-  //     thumb: package2,
-  //     featured: true,
-  //     title: "MAHA MAJESTIC PACKAGE",
-  //     price_adult: "1149",
-  //     price_child: "1099",
-  //     bookNow: true,
-  //     short_detail:
-  //       "Elevate your adventure with our Deluxe Package. Enjoy exclusive extras and luxurious touches as you float gently over the stunning Dubai desert at sunrise, ensuring a memorable, sophisticated journey.",
-  //     itineraries: [
-  //       {
-  //         feature_img: pickAndDrop,
-  //         activity:
-  //           "Pick up & drop off (Sharing) Private Vehicle (Extra cost )",
-  //         details:
-  //           "Enjoy convenient pick-up and drop-off services to make your experience hassle-free.",
-  //       },
-  //       {
-  //         feature_img: unlimitedRefreshment,
-  //         activity:
-  //           "Unlimited Refreshment, Gourmet Breakfast at the camp after the ride",
-  //         details:
-  //           "Stay refreshed with unlimited beverages throughout your adventure.",
-  //       },
-  //       {
-  //         feature_img: flightDuration,
-  //         activity: "Flight duration 45-60 minutes",
-  //         details:
-  //           "Enjoy a breathtaking flight that lasts between 45 to 60 minutes, offering stunning aerial views.",
-  //       },
-  //       {
-  //         feature_img: CertificatDtl,
-  //         activity: "Flying Experience Certificate signed by the Pilot",
-  //         details:
-  //           " Receive a personalized flying experience certificate signed by your pilot as a cherished memento.",
-  //       },
-  //     ],
-  //   },
-  //   {
-  //     id: 3,
-  //     thumb: package4,
-  //     featured: true,
-  //     title: "MAHA ROYAL PACKAGE",
-  //     price_adult: "1349",
-  //     price_child: "1299",
-  //     bookNow: true,
-  //     short_detail:
-  //       "Enjoy a complete desert experience with pick-up and drop-off from Dubai. Start with unlimited refreshments before an unforgettable 45-60 minute hot air balloon flight, followed by a signed flight certificate.",
-  //     itineraries: [
-  //       {
-  //         feature_img: pickAndDrop,
-  //         activity:
-  //           "Pick up & drop off (Sharing) Private Vehicle (Extra cost )",
-  //         details:
-  //           "Enjoy convenient pick-up and drop-off services to make your experience hassle-free.",
-  //       },
-  //       {
-  //         feature_img: unlimitedRefreshment,
-  //         activity:
-  //           "Unlimited Refreshment, Gourmet Breakfast at the camp after the ride",
-  //         details:
-  //           "Stay refreshed with unlimited beverages throughout your adventure.",
-  //       },
-  //       {
-  //         feature_img: camelAndHorseRide,
-  //         activity: "Camel & Horse ride | Quad biking, Dune Bashing",
-  //         details:
-  //           "Experience the thrill of camel and horse rides, quad biking, and exhilarating dune bashing.",
-  //       },
-  //       {
-  //         feature_img: photoWIthFelcone,
-  //         activity: "Photo with Falcon",
-  //         details:
-  //           "Capture a memorable moment with a majestic falcon for a unique keepsake.",
-  //       },
-  //       {
-  //         feature_img: flightDuration,
-  //         activity: "Flight duration 45-60 minutes",
-  //         details:
-  //           "Enjoy a breathtaking flight that lasts between 45 to 60 minutes, offering stunning aerial views.",
-  //       },
-  //       {
-  //         feature_img: CertificatDtl,
-  //         activity: "Flying Experience Certificate signed by the Pilot",
-  //         details:
-  //           " Receive a personalized flying experience certificate signed by your pilot as a cherished memento.",
-  //       },
-  //     ],
-  //   },
-  // ];
-
   const nextSlide = () => {
     if (sliderRef.current) {
       sliderRef.current.slickNext();
@@ -238,7 +535,9 @@ function Index() {
     <div className="OurPackagesk312 py-60">
       <Container>
         <h2 className="tag-line mb-3">
-          Choose From The Best Hot Air Balloon Packages in Dubai{" "}
+          {lang == "ar"
+            ? "اختر من بين أفضل باقات منطاد الهواء الساخن في دبي"
+            : "Choose From The Best Hot Air Balloon Packages in Dubai"}
         </h2>
         <Row>
           <Col md={12} lg={10}>

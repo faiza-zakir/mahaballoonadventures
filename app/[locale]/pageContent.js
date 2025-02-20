@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useInView } from "react-intersection-observer";
 import Banner from "../components/Home/Banner/Banner";
 import FeaturedIn from "../components/Home/FeaturedIn/Index";
@@ -15,6 +16,8 @@ import BlogsComm from "../components/Common/Blogs/Index";
 import BlogListData from "../Db/blogs";
 import HomeContent from "../Db/Home";
 function PageContent() {
+  const pathname = usePathname();
+  const lang = pathname.split("/")[1];
   const [BlogsData, setBlogsData] = useState([]);
 
   const { ref, inView, entry } = useInView({
@@ -48,9 +51,18 @@ function PageContent() {
           title={"Frequently Asked Questions about Hot Air Balloons in UAE"}
         />
         <BlogsComm
+        lang={lang}
           blogData={BlogsData}
-          subTitle={"Tourist Guides on Things To Do In Dubai UAE"}
-          title={"Blogs about things to do in Dubai"}
+          subTitle={
+            lang == "ar"
+              ? "مرشدون سياحيون حول الأشياء التي يجب القيام بها في دبي، الإمارات العربية المتحدة"
+              : "Tourist Guides on Things To Do In Dubai UAE"
+          }
+          title={
+            lang == "ar"
+              ? "مدونات عن الأشياء التي يمكنك القيام بها في دبي"
+              : "Blogs about things to do in Dubai"
+          }
         />
       </>
     </>

@@ -9,7 +9,7 @@ import useWindowSize from "../../../Hook/useWindowSize";
 
 import "./styles.scss";
 function Index(props) {
-  const { blogData } = props;
+  const { blogData, lang } = props;
   const settings = {
     dots: false,
     arrows: false,
@@ -94,6 +94,8 @@ function Index(props) {
         <h4 className="main-title mb-3 ">
           {props?.title
             ? props?.title
+            : lang == "ar"
+            ? "مرشدون سياحيون حول الأشياء التي يجب القيام بها في دبي، الإمارات العربية المتحدة"
             : "Tourist Guides on Things To Do In Dubai UAE"}
         </h4>
 
