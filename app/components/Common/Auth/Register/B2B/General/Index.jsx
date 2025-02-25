@@ -391,7 +391,7 @@ function Index(props) {
   }, []);
 
   return (
-    <div className="generalB2BForm323d">
+    <div className="generalB2BForm323d" dir={lang == "ar" ? "rtl" : "ltr"}>
       <Container>
         {Selectedb2bType ? (
           <div className="FormsWrappper">
@@ -406,6 +406,7 @@ function Index(props) {
               <>
                 {formNext == 1 ? (
                   <RegisterForm
+                    lang={lang}
                     Currentb2bType={Currentb2bType}
                     title={formTile?.[Currentb2bType]}
                     setFormNext={setFormNext}
@@ -416,6 +417,7 @@ function Index(props) {
                   />
                 ) : formNext == 2 ? (
                   <EmailVerify
+                    lang={lang}
                     setFormNext={setFormNext}
                     title={"Email Verification"}
                     handleOTPChange={handleOTPChange}
@@ -433,7 +435,7 @@ function Index(props) {
                       setFormNext(formNext - 1);
                     }}
                   >
-                    Back
+                    {lang == "ar" ? "خلف" : "Back"}
                   </button>
                   {formNext == 2 ? (
                     <>
@@ -462,7 +464,7 @@ function Index(props) {
                             setFormNext(formNext + 1);
                           }}
                         >
-                          Next
+                          {lang == "ar" ? "التالي" : "Next"}
                         </button>
                       ) : (
                         <button
@@ -503,7 +505,7 @@ function Index(props) {
                             setFormNext(formNext + 1);
                           }}
                         >
-                          Next
+                          {lang == "ar" ? "التالي" : "Next"}
                         </button>
                       ) : (
                         <button
@@ -524,6 +526,7 @@ function Index(props) {
               <>
                 <div className="Step2FOrms">
                   <CreatorForm
+                    lang={lang}
                     title={formTile?.[Currentb2bType]}
                     socailLinks={socailLinks}
                     setSoicalLinks={setSoicalLinks}
@@ -546,7 +549,7 @@ function Index(props) {
                       //   setFormNext(formNext - 1);
                     }}
                   >
-                    Back
+                    {lang == "ar" ? "خلف" : "Back"}
                   </button>
                   <button
                     className="btnNl btnNl-primary"
@@ -567,7 +570,7 @@ function Index(props) {
                       }));
                     }}
                   >
-                    Next
+                    {lang == "ar" ? "التالي" : "Next"}
                   </button>
                 </div>
               </>
@@ -611,7 +614,7 @@ function Index(props) {
                         //   setFormNext(formNext - 1);
                       }}
                     >
-                      Back
+                      {lang == "ar" ? "خلف" : "Back"}
                     </button>
                   )}
 
@@ -656,7 +659,7 @@ function Index(props) {
                       //   setFormNext(formNext - 1);
                     }}
                   >
-                    Back
+                    {lang == "ar" ? "خلف" : "Back"}
                   </button>
                   <button
                     className="btnNl btnNl-primary"
@@ -665,7 +668,13 @@ function Index(props) {
                       handleIDUploadsSubmit(e);
                     }}
                   >
-                    {isIdUploading ? "Uploading..." : "Create Account"}
+                    {isIdUploading
+                      ? lang == "ar"
+                        ? "جارٍ التحميل..."
+                        : "Uploading..."
+                      : lang == "ar"
+                      ? "إنشاء حساب"
+                      : "Create Account"}
                   </button>
                 </div>
               </>
@@ -700,7 +709,7 @@ function Index(props) {
                       setCurrentb2bType("company");
                     }}
                   >
-                    B2B Company
+                    {lang == "ar" ? "شركة B2B" : "B2B Company"}
                   </button>
                   <button
                     className={
@@ -713,7 +722,9 @@ function Index(props) {
                       setCurrentb2bType("creator");
                     }}
                   >
-                    Content Creator / Influencer
+                    {lang == "ar"
+                      ? "منشئ المحتوى / المؤثر"
+                      : "Content Creator / Influencer"}
                   </button>
                   <button
                     className={
@@ -726,7 +737,7 @@ function Index(props) {
                       setCurrentb2bType("individual");
                     }}
                   >
-                    B2B Individual
+                    {lang == "ar" ? "الأفراد B2B" : "B2B Individual"}
                   </button>
                   <div className="BtnWrapper mt-4">
                     <button
@@ -735,7 +746,7 @@ function Index(props) {
                         props?.setlogIn(true);
                       }}
                     >
-                      Back
+                      {lang == "ar" ? "خلف" : "Back"}
                     </button>
                     <button
                       className="btnNl btnNl-primary"
@@ -745,7 +756,7 @@ function Index(props) {
                         // setSteps({ current: 2, total: 2, progress: 100 });
                       }}
                     >
-                      Next
+                      {lang == "ar" ? "التالي" : "Next"}
                     </button>
                   </div>
                 </div>

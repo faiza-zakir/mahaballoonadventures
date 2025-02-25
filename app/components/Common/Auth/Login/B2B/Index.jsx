@@ -61,7 +61,7 @@ function Index(props) {
     // }
   };
   return (
-    <div className="LoginB2Bdk003">
+    <div className="LoginB2Bdk003" dir={lang == "ar" ? "rtl" : "ltr"}>
       <Container>
         <Row className="gy-3">
           <Col lg={6}>
@@ -72,15 +72,15 @@ function Index(props) {
                   : "Welcome to Maha Balloon Adventures Dubai!"}
               </div>
               <p className="form-details">
-                Please sign in to your account to get fantastic offers,
-                discounts, and other benefits. You can make residual income by
-                signing up to the best referral and affiliate marketing program
-                with the best hot air balloon adventure company in
-                the Middle East.
+                {lang == "ar"
+                  ? "يرجى تسجيل الدخول إلى حسابك للحصول على عروض وخصومات رائعة ومزايا أخرى. يمكنك تحقيق دخل متبقي من خلال الاشتراك في أفضل برنامج إحالة وتسويق تابع مع أفضل شركة لمغامرات منطاد الهواء الساخن في الشرق الأوسط."
+                  : "Please sign in to your account to get fantastic offers, discounts, and other benefits. You can make residual income by signing up to the best referral and affiliate marketing program with the best hot air balloon adventure company in the Middle East."}
               </p>
               <div className="loginform mt-2">
                 <div className="form_group mt-4">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">
+                    {lang == "ar" ? "بريد إلكتروني" : "Email"}
+                  </label>
                   <input
                     className="inputField"
                     name="email"
@@ -91,9 +91,11 @@ function Index(props) {
                 </div>
                 <div className="form_group mt-4">
                   <div className="password">
-                    <label htmlFor="email">Password</label>
+                    <label htmlFor="email">
+                      {lang == "ar" ? "كلمة المرور" : "Password"}
+                    </label>
                     <span onClick={() => props?.setForgotPassword(true)}>
-                      Forget Password?
+                      {lang == "ar" ? "نسيت كلمة المرور؟" : `Forget Password?`}
                     </span>
                   </div>
                   <input
@@ -110,7 +112,7 @@ function Index(props) {
                       props.setlogIn(false);
                     }}
                   >
-                    Create Account
+                    {lang == "ar" ? "إنشاء حساب" : "Create Account"}
                   </button>
                   <button
                     className="btnNl btnNl-primary"
@@ -121,7 +123,13 @@ function Index(props) {
                       handleSubmit(e);
                     }}
                   >
-                    {isLoading ? "Logging..." : "Login"}
+                    {isLoading
+                      ? lang == "ar"
+                        ? "تسجيل..."
+                        : "Logging..."
+                      : lang == "ar"
+                      ? "تسجيل الدخول"
+                      : "Login"}
                   </button>
                 </div>
               </div>

@@ -11,12 +11,15 @@ function Index(props) {
     formData,
     RegisterComplete,
     setFormData,
+    lang,
   } = props;
 
   return (
     <div className="registerForm3232d">
       {RegisterComplete ? (
-        <div className="form-title mb-3">Registration Successfull</div>
+        <div className="form-title mb-3">
+          {lang == "ar" ? "التسجيل ناجح" : "Registration Successfull"}
+        </div>
       ) : null}
 
       <div className="form-title mb-1">{props?.title}</div>
@@ -30,7 +33,9 @@ function Index(props) {
           {Currentb2bType == "company" ? (
             <Col md={12}>
               <div className="form_group mt-4">
-                <label htmlFor="first_name">Company Name</label>
+                <label htmlFor="first_name">
+                  {lang == "ar" ? "اسم الشركة" : "Company Name"}
+                </label>
                 <input
                   className="inputField"
                   name="company_name"
@@ -45,7 +50,9 @@ function Index(props) {
           ) : null}
           <Col lg={6}>
             <div className="form_group mt-4">
-              <label htmlFor="first_name">First Name</label>
+              <label htmlFor="first_name">
+                {lang == "ar" ? "الاسم الأول" : "First Name"}
+              </label>
               <input
                 className="inputField"
                 name="first_name"
@@ -59,7 +66,9 @@ function Index(props) {
           </Col>
           <Col lg={6}>
             <div className="form_group mt-4">
-              <label htmlFor="last_name">Last Name</label>
+              <label htmlFor="last_name">
+                {lang == "ar" ? "اسم العائلة" : "Last Name"}
+              </label>
               <input
                 className="inputField"
                 name="last_name"
@@ -73,7 +82,9 @@ function Index(props) {
           </Col>
           <Col lg={6}>
             <div className="form_group mt-4">
-              <label htmlFor="email">Email</label>
+              <label htmlFor="email">
+                {lang == "ar" ? "بريد إلكتروني" : "Email"}
+              </label>
               <input
                 className="inputField"
                 name="email"
@@ -87,7 +98,9 @@ function Index(props) {
           </Col>
           <Col lg={6}>
             <div className="form_group form_groupPhone mt-4">
-              <label htmlFor="Mobile">Mobile Number</label>
+              <label htmlFor="Mobile">
+                {lang == "ar" ? "رقم الهاتف المحمول" : "Mobile Number"}
+              </label>
               <PhoneInput
                 defaultCountry="ae"
                 value={formData?.phone}
@@ -112,7 +125,9 @@ function Index(props) {
           </Col>
           <Col lg={12}>
             <div className="form_group mt-4">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">
+                {lang == "ar" ? "كلمة المرور" : "Password"}
+              </label>
               <input
                 className="inputField"
                 name="password"
@@ -125,7 +140,9 @@ function Index(props) {
           </Col>
           <Col lg={12}>
             <div className="form_group mt-4">
-              <label htmlFor="vrify_password">Verify Password</label>
+              <label htmlFor="vrify_password">
+                {lang == "ar" ? "التحقق من كلمة المرور" : "Verify Password"}
+              </label>
               <input
                 className="inputField"
                 name="vrify_password"

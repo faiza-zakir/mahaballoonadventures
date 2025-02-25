@@ -1,7 +1,7 @@
 import React from "react";
 
 function Index(props) {
-  const { handleOTPChange } = props;
+  const { handleOTPChange, lang } = props;
   return (
     <div className="emailVerity939">
       <div className="form-title mb-3">{props?.title}</div>
@@ -11,7 +11,9 @@ function Index(props) {
       </p> */}
       <div className="emailVerify">
         <div className="form_group mt-4">
-          <label htmlFor="enteredOtp">Enter Code</label>
+          <label htmlFor="enteredOtp">
+            {lang == "ar" ? "أدخل الرمز" : "Enter Code"}
+          </label>
           <input
             className="inputField"
             name="enteredOtp"

@@ -3,7 +3,7 @@ import "./styles.scss";
 import { Col, Row } from "react-bootstrap";
 
 function Index(props) {
-  const { socailLinks, setSoicalLinks } = props;
+  const { socailLinks, setSoicalLinks, lang } = props;
 
   let InFIelds = [
     {
@@ -96,8 +96,9 @@ function Index(props) {
     <div className="CreatorForm233l">
       <div className="form-title mb-3">{props?.title}</div>
       <p className="para mb-3">
-        Please share all your social media channels so that we can register you
-        on our platform easily
+        {lang == "ar"
+          ? "يرجى مشاركة جميع قنوات التواصل الاجتماعي الخاصة بك حتى نتمكن من تسجيلك على منصتنا بسهولة"
+          : "Please share all your social media channels so that we can register you on our platform easily"}
       </p>
       <div className="regFormWrapper">
         <Row>
