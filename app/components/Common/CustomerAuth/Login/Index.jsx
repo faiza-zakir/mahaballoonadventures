@@ -30,7 +30,9 @@ function Index(props) {
               </p>
               <div className="loginform mt-2">
                 <div className="form_group mt-4">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">
+                    {lang == "ar" ? "بريد إلكتروني" : "Email"}
+                  </label>
                   <input
                     className="inputField"
                     name="email"
@@ -41,9 +43,11 @@ function Index(props) {
                 </div>
                 <div className="form_group mt-4">
                   <div className="password">
-                    <label htmlFor="email">Password</label>
+                    <label htmlFor="email">
+                      {lang == "ar" ? "كلمة المرور" : "Password"}
+                    </label>
                     <span onClick={() => setForgotPassword(true)}>
-                      Forget Password?
+                      {lang == "ar" ? "نسيت كلمة المرور؟" : `Forget Password?`}
                     </span>
                   </div>
                   <input
@@ -63,7 +67,13 @@ function Index(props) {
                       handleSubmit(e);
                     }}
                   >
-                    {isLoading ? "Logging..." : "Login"}
+                    {isLoading
+                      ? lang == "ar"
+                        ? "تسجيل..."
+                        : "Logging..."
+                      : lang == "ar"
+                      ? "تسجيل الدخول"
+                      : "Login"}
                   </button>
                   <button
                     className="btnNl btnNl-secondary"
@@ -71,7 +81,7 @@ function Index(props) {
                       props.setlogIn(false);
                     }}
                   >
-                    Create Account
+                    {lang == "ar" ? "إنشاء حساب" : "Create Account"}
                   </button>
                 </div>
                 <div className="SoicalWrapper">
