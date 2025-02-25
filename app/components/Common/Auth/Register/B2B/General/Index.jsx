@@ -27,9 +27,9 @@ function Index(props) {
   const registerData = useSelector((state) => state.auth);
   const router = useRouter();
   const [formTile, setFormTitle] = useState({
-    creator: "Content Creator Registration",
-    individual: "B2B Individual Registration",
-    company: "B2B Company Registration",
+    creator: { en: "Content Creator Registration", ar: "تسجيل منشئ المحتوى" },
+    individual: { en: "B2B Individual Registration", ar: "التسجيل الفردي B2B" },
+    company: { en: "B2B Company Registration", ar: "تسجيل شركة B2B" },
   });
 
   // api
@@ -398,7 +398,7 @@ function Index(props) {
             <div className="progSteps mb-3">
               <StepProgress Step={steps?.progress} />
               <div className="currentStep">
-                Step{steps?.current}/{steps?.total}
+                {lang == "ar" ? "خطوة" : "Step"} {steps?.current}/{steps?.total}
               </div>
             </div>
             {/* step 1 */}
@@ -408,7 +408,7 @@ function Index(props) {
                   <RegisterForm
                     lang={lang}
                     Currentb2bType={Currentb2bType}
-                    title={formTile?.[Currentb2bType]}
+                    title={formTile?.[Currentb2bType]?.[lang]}
                     setFormNext={setFormNext}
                     formData={RegisterformData}
                     setFormData={setRegisterFormData}
@@ -419,7 +419,11 @@ function Index(props) {
                   <EmailVerify
                     lang={lang}
                     setFormNext={setFormNext}
-                    title={"Email Verification"}
+                    title={
+                      lang == "ar"
+                        ? "التحقق من البريد الإلكتروني"
+                        : "Email Verification"
+                    }
                     handleOTPChange={handleOTPChange}
                   />
                 ) : null}
@@ -474,7 +478,13 @@ function Index(props) {
                             await handleOTPSubmit(e);
                           }}
                         >
-                          {isOTPSending ? "Verifying..." : "Verify"}
+                          {isOTPSending
+                            ? lang == "ar"
+                              ? "جارٍ التحقق..."
+                              : "Verifying..."
+                            : lang == "ar"
+                            ? "يؤكد"
+                            : "Verify"}
                         </button>
                       )}
                     </>
@@ -515,7 +525,13 @@ function Index(props) {
                             await handleRegisterSubmit(e);
                           }}
                         >
-                          {isRegisterSending ? "Sending..." : "Register"}
+                          {isRegisterSending
+                            ? lang == "ar"
+                              ? "إرسال..."
+                              : "Sending..."
+                            : lang == "ar"
+                            ? "يسجل"
+                            : "Register"}
                         </button>
                       )}
                     </>
@@ -527,7 +543,7 @@ function Index(props) {
                 <div className="Step2FOrms">
                   <CreatorForm
                     lang={lang}
-                    title={formTile?.[Currentb2bType]}
+                    title={formTile?.[Currentb2bType]?.[lang]}
                     socailLinks={socailLinks}
                     setSoicalLinks={setSoicalLinks}
                   />
@@ -578,7 +594,7 @@ function Index(props) {
               <>
                 <IduploadForm
                   currentStep={steps?.current}
-                  title={formTile?.[Currentb2bType]}
+                  title={formTile?.[Currentb2bType]?.[lang]}
                   Currentb2bType={Currentb2bType}
                   handleChange={handleIDupload}
                   UserIdsUploadForRead={UserIdsUploadForRead}
@@ -636,7 +652,7 @@ function Index(props) {
             ) : steps?.current == 3 ? (
               <>
                 <IduploadForm
-                  title={formTile?.[Currentb2bType]}
+                  title={formTile?.[Currentb2bType]?.[lang]}
                   handleChange={handleIDupload}
                   UserIdsUploadForRead={UserIdsUploadForRead}
                   UploadTermsAgree={UploadTermsAgree}
