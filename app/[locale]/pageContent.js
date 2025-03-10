@@ -51,7 +51,7 @@ function PageContent() {
           title={"Frequently Asked Questions about Hot Air Balloons in UAE"}
         />
         <BlogsComm
-        lang={lang}
+          lang={lang}
           blogData={BlogsData}
           subTitle={
             lang == "ar"

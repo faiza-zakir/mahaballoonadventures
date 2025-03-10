@@ -441,7 +441,7 @@ const MainNavbar = () => {
         </Suspense>
       ) : null}
       <Suspense fallback={"Loading..."}>
-        <Booking />
+        <Booking lang={lang} />
       </Suspense>
       <Navbar
         collapseOnSelect

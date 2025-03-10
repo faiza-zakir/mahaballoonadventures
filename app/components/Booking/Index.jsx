@@ -19,14 +19,14 @@ import {
   makeBooking,
 } from "../../api/commonApi";
 import "./styles.scss";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
-const Index = () => {
+const Index = ({lang}) => {
+  
   const router = useRouter();
   const dispatch = useDispatch();
   const isBookingModal = useSelector((state) => state.booking.isBookingModal);
-  console.log("isBookingModal", isBookingModal);
   const packageId = useSelector((state) => state?.booking?.packageId);
   const packageval = useSelector((state) => state?.booking?.package);
   const userData = useSelector((state) => state?.auth?.userData);
@@ -595,7 +595,7 @@ const Index = () => {
   }, [booking_dateQuery, adultsQuery, childQuery]);
 
   return (
-    <div className="BookingMain31">
+    <div className="BookingMain31" dir={lang == "ar" ? "rtl" : "ltr"}>
       <Modal
         show={isBookingModal}
         onHide={handleClose}
